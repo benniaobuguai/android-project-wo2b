@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:left="@dimen/dimen_0"
+        android:right="@dimen/dimen_0">
+        <shape android:shape="rectangle" >
+            <gradient
+                android:angle="-90"
+                android:endColor="@color/black"
+                android:startColor="@color/black_middle" />
+        </shape>
+    </item>
+    <!-- draw tab background -->
+    <item
+        android:bottom="26sp"
+        android:top="1sp">
+        <shape android:shape="rectangle" >
+            <solid android:color="@color/transparent" />
+        </shape>
+    </item>
+    <item
+        android:bottom="@dimen/dimen_0"
+        android:left="@dimen/dimen_0"
+        android:right="@dimen/dimen_0"
+        android:top="@dimen/dimen_0">
+        <shape android:shape="rectangle" >
+            <!-- <corners
+                android:bottomLeftRadius="@dimen/dimen_5"
+                android:bottomRightRadius="@dimen/dimen_5"
+                android:topLeftRadius="@dimen/dimen_5"
+                android:topRightRadius="@dimen/dimen_5" /> -->
+
+            <gradient
+                android:angle="-90"
+                android:endColor="#20ffffff"
+                android:startColor="#20ffffff" />
+        </shape>
+    </item>
+
+</layer-list>

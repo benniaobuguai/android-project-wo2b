@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:rocky="http://schemas.android.com/apk/res-auto"
+    style="@style/tu_container_common"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <com.wo2b.wrapper.view.XPreference
+                android:id="@+id/xp_super_power"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                rocky:label="@string/super_power"
+                rocky:position="top" />
+
+            <com.wo2b.wrapper.view.XPreferenceExtra
+                android:id="@+id/xp_wallpaper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                rocky:enabled="false"
+                rocky:indicator_state="checkbox"
+                rocky:label="@string/set_wallpaper"
+                rocky:position="top"
+                rocky:prefs_default="true"
+                rocky:prefs_key="@string/pk_wallpaper" />
+
+            <com.wo2b.wrapper.view.XPreferenceExtra
+                android:id="@+id/xp_auto_play"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                rocky:enabled="false"
+                rocky:indicator_state="checkbox"
+                rocky:label="@string/auto_play"
+                rocky:position="middle"
+                rocky:prefs_default="true"
+                rocky:prefs_key="@string/pk_auto_play" />
+
+            <com.wo2b.wrapper.view.XPreferenceExtra
+                android:id="@+id/xp_cache_local"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                rocky:enabled="false"
+                rocky:indicator_state="checkbox"
+                rocky:label="@string/cache_local"
+                rocky:position="last"
+                rocky:prefs_default="true"
+                rocky:prefs_key="@string/pk_cache_local" />
+
+            <com.wo2b.wrapper.view.XPreferenceExtra
+                android:id="@+id/xp_image_download"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                rocky:enabled="false"
+                rocky:indicator_state="checkbox"
+                rocky:label="@string/image_download"
+                rocky:position="last"
+                rocky:prefs_default="true"
+                rocky:prefs_key="@string/pk_image_download" />
+
+            <com.wo2b.wrapper.view.XPreferenceExtra
+                android:id="@+id/xp_bg_music"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                rocky:indicator_state="checkbox"
+                rocky:label="@string/bg_music"
+                rocky:position="one"
+                rocky:prefs_key="@string/pk_bg_music" />
+
+            <com.wo2b.wrapper.view.XPreference
+                android:id="@+id/xp_open_lock"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                rocky:indicator_state="arrow"
+                rocky:label="@string/lock_encode"
+                rocky:position="top"
+                rocky:prefs_default="true"
+                rocky:prefs_key="@string/pk_password_lock" />
+
+            <com.wo2b.wrapper.view.XPreference
+                android:id="@+id/xp_traffic_statistics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                rocky:label="@string/traffic_statistics"
+                rocky:position="middle" />
+
+            <com.wo2b.wrapper.view.XPreference
+                android:id="@+id/xp_storage_manager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                rocky:label="@string/storage_manager"
+                rocky:position="last" />
+
+            <com.wo2b.wrapper.view.XPreference
+                android:id="@+id/xp_plugin_center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                rocky:label="@string/plugin_center"
+                rocky:position="one" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:rocky="http://schemas.android.com/apk/res-auto"
+    style="@style/tu_container_common"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.wo2b.sdk.view.pulltorefresh.PullToRefreshScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/common_margin_bottom"
+            android:paddingTop="@dimen/common_margin_bottom" >
+
+            <com.wo2b.wrapper.view.XPreference
+                android:id="@+id/xp_user_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                rocky:label="@string/null_text"
+                rocky:position="single"
+                rocky:rocky_icon="@drawable/xp_gravatar" />
+
+            <com.wo2b.wrapper.view.XPreference
+                android:id="@+id/xp_local_album"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                rocky:label="@string/local_album"
+                rocky:position="top"
+                rocky:rocky_icon="@drawable/xp_icon_local_album" />
+
+            <com.wo2b.wrapper.view.XPreference
+                android:id="@+id/xp_my_favorites"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                rocky:label="@string/my_favorites"
+                rocky:position="last"
+                rocky:rocky_icon="@drawable/xp_icon_my_favorites" />
+
+            <com.wo2b.wrapper.view.XPreference
+                android:id="@+id/xp_support_developer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                rocky:label="@string/support_developer"
+                rocky:position="last"
+                rocky:rocky_icon="@drawable/xp_icon_support_developer" />
+
+            <com.wo2b.wrapper.view.XPreference
+                android:id="@+id/xp_wo2b"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                rocky:label="@string/wo2b_home"
+                rocky:position="top"
+                rocky:rocky_icon="@drawable/xp_icon_wo2b" />
+
+            <com.wo2b.wrapper.view.XPreference
+                android:id="@+id/xp_wo2b_app"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                rocky:label="@string/rocky_works"
+                rocky:position="middle"
+                rocky:rocky_icon="@drawable/xp_icon_rocky_works" />
+
+            <com.wo2b.wrapper.view.XPreference
+                android:id="@+id/xp_statement"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                rocky:label="@string/statement"
+                rocky:position="middle"
+                rocky:rocky_icon="@drawable/xp_icon_statement" />
+
+            <com.wo2b.wrapper.view.XPreference
+                android:id="@+id/xp_about"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                rocky:label="@string/about"
+                rocky:position="last"
+                rocky:rocky_icon="@drawable/xp_icon_about" />
+        </LinearLayout>
+    </com.wo2b.sdk.view.pulltorefresh.PullToRefreshScrollView>
+
+</LinearLayout>

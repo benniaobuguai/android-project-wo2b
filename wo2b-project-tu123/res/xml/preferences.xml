@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <CheckBoxPreference
+        android:defaultValue="@string/list_folders_first_default"
+        android:key="list_folders_first"
+        android:summaryOff="@string/list_folders_first_off_summary"
+        android:summaryOn="@string/list_folders_first_on_summary"
+        android:title="@string/list_folders_first" />
+
+    <Preference
+        android:key="root_folder"
+        android:summary="@string/root_folder_summary"
+        android:title="@string/root_folder" />
+
+</PreferenceScreen>

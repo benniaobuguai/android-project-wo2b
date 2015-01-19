@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--
+    <string name="app_name">Tú123</string>
+    <string name="app_name">ABCDE</string>-->
+    <string name="app_name">图界传说</string>
+    
+	
+	<!-- Navigator Start -->
+	<string name="home_title_chapter_book">第一回</string>
+    <string name="home_title_tu123">图界百科</string>
+    <string name="home_title_user_center">画中画</string>
+    
+    <!-- <string name="home_bottom_bar_tu123">图界百科</string> -->
+    <string name="home_bottom_bar_tu123">包罗万象</string>
+    <!-- <string name="home_bottom_bar_blossom">精品之路</string> -->
+    <string name="home_bottom_bar_blossom">百花齐放</string>
+    <string name="home_bottom_bar_user_center">世外桃源</string>
+    
+    
+    <!-- beautiful word -->
+    <string name="face_ocean">面朝大海</string>
+    <string name="warn_spring">春暖花开</string>
+    
+	<!-- Navigator End -->
+	
+	
+	<!-- 图界百科 -->
+    <string name="recommend_tips_hot">一叶落知天下秋</string>
+    <!-- <string name="recommend_tips_gif">一枝红杏出墙来</string> -->
+    <string name="recommend_tips_gif">Nothing</string>
+    
+    
+    <!-- User Center Start -->
+    <!-- 用户模块菜单 -->
+    <string name="local_album">本地相册</string>
+    <string name="lovetu_story">爱图说</string>
+    
+    
+   	
+   	<!-- 设置模块菜单 -->
+   	<string name="super_power">超能力</string>
+	<string name="set_wallpaper">设置壁纸</string>
+	<string name="auto_play">自动播放</string>
+	<string name="cache_local">永久缓存</string>
+	<string name="image_download">图片下载</string>
+	<string name="bg_music">背景音乐</string>
+	
+	<string name="lock">上锁</string>
+	<string name="lock_decode">解锁</string>
+	<string name="lock_encode">开启密码锁</string>
+	<string name="lock_changed">修改密码锁</string>
+	
+    <!-- 菜单 -->
+	<string name="menu_item_auto_play">自动播放</string>
+    <string name="menu_item_add_favorite">收藏最爱</string>
+	<string name="menu_item_set_wallpaper">设置壁纸</string>
+	<string name="menu_item_share">分享给朋友</string>
+    
+    <string name="image_beautify">美化图片</string>
+    <string name="jigsaw">拼图</string>
+    <string name="preview">预览</string>
+    
+    
+    <string name="attention">关注</string>
+    <string name="i_want_more">更多</string>
+    <string name="i_want">添加</string>
+    <!-- <string name="ko_list">KO榜</string>
+    <string name="local_focus_album">花心程度(%1$s/%2$s)</string> -->
+    <string name="local_focus_album">我关注的相册(%1$s/%2$s)</string>
+    <string name="supported_by_system">系统推荐</string>
+    <string name="supported_by_user">自行添加</string>
+    <string name="ko">移除</string>
+    <string name="remove_ok">删除成功</string>
+    <string name="file_explorer">文件浏览器</string>
+    
+    
+    
+    <string name="size_1">大小：%1$s</string>
+    <string name="file_count_1">文件数量：%1$s</string>
+    
+    
+    <!-- 关于模块菜单 -->
+   	<string name="give_mark">去评分</string>
+   	<string name="welcome_page">欢迎页</string>
+   	<string name="tujie_story">图界传说</string>
+   	<string name="function_desc">功能介绍</string>
+   	<string name="share_to_friends">分享给好友</string>
+   	<string name="i_want_feedback">我要反馈</string>
+   	<string name="check_version">检查新版本</string>
+   	
+   	
+    <!-- 超能力里面的功能列表 -->
+    
+    <!-- Welcome Page -->
+    <string name="welcome_view_link">笨鸟不乖作品集</string>
+    <string name="welcome_entry_link">寻找失落之图</string>
+    <string name="we_are_lovetuer">我是爱图士</string>
+    <string name="want_personal_tailor">我要私人订制</string>
+    <string name="time_too_fast">时间追不上白马</string>
+    <string name="where_to_go">我们去哪里呀</string>
+    
+    
+    <!-- Form Toast Start -->
+    <string name="delete_ok">%1$s删除成功！</string>
+    <string name="delete_fail">%1$s删除失败！</string>
+    
+    <string name="not_input_short">%1$s是必填项哦！</string>
+    <string name="not_below_zero">%1$s必须要大于0哦！</string>
+    <string name="not_delete_exist_reference">%1$s存在引用，无法删除!</string>
+    <string name="not_create_exist">%1$s已经存在，不能重复添加!</string>
+    
+    <!-- Update -->
+    <string name="update_not_new_version">当前已是最新版本</string>
+    <string name="update_time_out">检查更新超时!</string>
+    <string name="update_only_wifi">没有wifi连接， 只在wifi下更新</string>
+    <!-- Form Toast End -->
+
+
+	<!-- hint -->
+	<string name="hint_not_cancle_power">基础能力不能取消</string>
+	<string name="hint_pwd_input">请正确输入密码</string>
+	<string name="hint_pwd_set_complete">恭喜您, 设置成功!!!</string>
+	<string name="hint_pwd_input_new">请输入新密码!</string>
+	<string name="hint_pwd_clear">解锁成功!</string>
+	<string name="hint_wallpaper_not_found">找不到指定的壁纸</string>
+	<string name="hint_wallpaper_load_error">壁纸加载失败</string>
+	<string name="hint_add_favorite_succeed">已收藏至我的最爱!</string>
+	<string name="hint_favorite_exists">不能重复收藏</string>
+	<string name="hint_add_favorite_failed">收藏失败</string>
+	<string name="hint_wallpaper_ok">壁纸设置成功</string>
+	<string name="hint_wallpaper_fail">壁纸设置失败</string>
+	
+	<string name="hint_not_support_more_focus">不能再“偷”了^o^y</string>
+	<!-- <string name="hint_exists">一 棵花不能采两次!</string> -->
+	<string name="hint_exists">一 个心不能“偷”两次^o^y</string>
+	<string name="hint_local_remove_ok">^o^y</string>
+	<string name="hint_search_by_albumname">众里寻他千百度</string>
+	
+	
+	<!-- 数字键盘 -->
+	<string name="one">1</string>
+	<string name="two">2</string>
+	<string name="three">3</string>
+	<string name="four">4</string>
+	<string name="five">5</string>
+	<string name="six">6</string>
+	<string name="seven">7</string>
+	<string name="eight">8</string>
+	<string name="nine">9</string>
+	<string name="zero">0</string>
+	<string name="number_null"> </string>
+	<string name="forget_pwd">忘记密码?</string>
+	
+	
+	<!-- Common string start -->
+    <string name="confirm_exit">确定要退出吗？</string>
+    <string name="confirm_delete">确定要删除吗？</string>
+    <string name="confirm_restore">确定要恢复吗？</string>
+    
+    <string name="create_ok">保存成功.</string>
+    <string name="delete_failed">删除失败!</string>
+    <string name="update_ok">更新成功.</string>
+    
+    
+    <string name="date">日期</string>
+    <string name="remark">备注</string>
+    <string name="contacts">联系人</string>
+    <string name="phone">电话</string>
+    <string name="wechat">微信</string>
+    <string name="address">地址</string>
+
+    
+    <!-- Common string end -->
+    
+    
+    <!-- File Explorer Strat -->
+    <string name="folder_up">返回上一层</string>
+    <string name="is_not_a_folder">亲，这个不是文件夹哦！</string>
+    <string name="folder_isnt_readable">文件夹不可读</string>
+    <string name="folder_is_empty">文件夹为空</string>
+    
+    <string name="list_folders_first">文件排序</string>
+    <string name="list_folders_first_on_summary">先显示文件夹后普通文件</string>
+    <string name="list_folders_first_off_summary">文件和文件夹照字母顺序排列</string>
+    
+    <string name="root_folder">根文件夹</string>
+    <string name="root_folder_summary">点击修改根文件夹</string>
+    <string name="list_folders_first_default">true</string>
+    <!-- File Explorer End -->
+
+</resources>

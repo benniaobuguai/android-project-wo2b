@@ -1,0 +1,12 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- EntryActivity的样式 -->
+    <style name="Rocky.Theme.Main.Entry" parent="@style/Rocky.Theme.Main.NoTitleBar">
+        <item name="android:windowAnimationStyle">@style/anim_activity_zoom</item>
+        <!-- <item name="android:windowIsTranslucent">true</item> -->
+        
+        <!-- 可以背景色与欢迎页的主色调保持一致 -->
+        <item name="android:background">#ffffffff</item>
+    </style>
+
+</resources>

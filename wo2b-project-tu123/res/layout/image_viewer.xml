@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/tu_container_black" >
+
+    <com.wo2b.sdk.view.pulltorefresh.PullToRefreshViewPager
+        android:id="@+id/pull_refresh_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ImageView
+        android:id="@+id/favorite_tips_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:contentDescription="@string/null_image"
+        android:src="@drawable/favorite_add_tips"
+        android:visibility="gone" />
+
+</RelativeLayout>

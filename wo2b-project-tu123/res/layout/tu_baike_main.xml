@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:rocky="http://schemas.android.com/apk/res/com.wo2b.tu123"
+    style="@style/tu_container_common"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.wo2b.sdk.view.pulltorefresh.PullToRefreshScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/warning_bar"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/base_warning_bar_bg"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:weightSum="1" >
+
+                <TextView
+                    android:id="@+id/warning_homepage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:singleLine="true"
+                    android:textColor="@color/font_dark"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/warning_close"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="0"
+                    android:background="@drawable/selector_search_box_clear_btn"
+                    android:gravity="center_vertical" />
+            </LinearLayout>
+
+            <!-- 文字推广 BRAND PROMOTION -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <com.wo2b.wrapper.view.XImageSwitcher
+                    android:id="@+id/recommend_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="132dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/recommend_list_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/recommend_tips"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="@drawable/group_item_title_bg"
+                    android:gravity="center_vertical"
+                    android:includeFontPadding="false"
+                    android:paddingLeft="@dimen/dimen_10"
+                    android:text="@string/recommend_tips_hot"
+                    android:textColor="@color/font_normal" />
+
+                <com.wo2b.wrapper.view.XListView
+                    android:id="@+id/listview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    rocky:rocky_divider="@drawable/seperate_h" />
+            </LinearLayout>
+        </LinearLayout>
+    </com.wo2b.sdk.view.pulltorefresh.PullToRefreshScrollView>
+
+</LinearLayout>

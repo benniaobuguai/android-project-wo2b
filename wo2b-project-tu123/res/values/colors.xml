@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- &&&&&&&&&&&&&&&&&&&&&&&&&&&& BASIC COLORS &&&&&&&&&&&&&&&&&&&&&&&&&&&& -->
+    <color name="white">#ffffffff</color>
+    <color name="black">#ff000000</color>
+    <color name="black_middle">#ff2b2b2b</color>
+    <color name="transparent">#00000000</color>
+    <color name="background_dark">#ff000000</color>
+    <color name="background_light">#ffffffff</color>
+    <color name="bg_gray">#fff5f5f6</color>
+    <color name="darkgray">#ffefeff1</color>
+    <color name="bg_red">#ffe53539</color>
+    
+    <color name="bg_app">#ffe1e0de</color>
+    <!-- &&&&&&&&&&&&&&&&&&&&&&&&&&&& BASIC COLORS &&&&&&&&&&&&&&&&&&&&&&&&&&&& -->
+    
+    
+    
+    <!-- &&&&&&&&&&&&&&&&&&&&&&&&&&&& SELECTOR BACKGROUND COLOR &&&&&&&&&&&&&&&&&&&&&&&&&&&& -->
+    <color name="selector_gray_normal">#fff2f2f2</color>
+    <color name="selector_gray_pressed">#ffdedede</color>
+    <!-- &&&&&&&&&&&&&&&&&&&&&&&&&&&& SELECTOR BACKGROUND COLOR &&&&&&&&&&&&&&&&&&&&&&&&&&&& -->
+    
+    
+    
+    <!-- &&&&&&&&&&&&&&&&&&&&&&&&&&&& 本项目基础颜色(需要完善) &&&&&&&&&&&&&&&&&&&&&&&&&&&& -->
+    <!-- 提示输入标签文本 -->
+    <color name="font_form_label">@color/font_normal</color>
+    <!-- 提示输入文本 -->
+    <color name="font_form_hint">#ffb9b9b9</color>
+    <!-- 显示文本 -->
+    <color name="font_form_textview">#ff9097a1</color>
+    <!-- 输入文本 -->
+    <color name="font_form_editview">#ff333333</color>
+
+    
+    <color name="font_normal">#ff4a4a4a</color>
+    <color name="font_gray">#ffbebebe</color>
+    <color name="font_red_normal">#fff62829</color>
+
+    <!-- ### 线条颜色 -->
+    <!-- 首页分隔线 -->
+    <color name="line_home_entry_button">#ffe7eceb</color>
+    <color name="divider_content_normal">#ffd6d6d6</color>
+    <!-- &&&&&&&&&&&&&&&&&&&&&&&&&&&& 本项目基础颜色 &&&&&&&&&&&&&&&&&&&&&&&&&&&& -->
+
+    <!-- &&&&&&&&&&&&&&&&&&&&&&&&&&&& 特殊功能模块 &&&&&&&&&&&&&&&&&&&&&&&&&&&& -->
+
+    <!-- &&&&&&&&&&&&&&&&&&&&&&&&&&&& 特殊功能模块 &&&&&&&&&&&&&&&&&&&&&&&&&&&& -->
+
+</resources>

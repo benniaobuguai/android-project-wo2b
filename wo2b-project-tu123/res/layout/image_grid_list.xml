@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container"
+    style="@style/tu_container_white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:weightSum="1" >
+
+    <com.wo2b.sdk.view.pulltorefresh.PullToRefreshGridView
+        android:id="@+id/pullToRefreshGridView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@color/transparent"
+        android:cacheColorHint="@color/transparent"
+        android:columnWidth="100dp"
+        android:gravity="center_horizontal"
+        android:horizontalSpacing="0dp"
+        android:listSelector="@color/transparent"
+        android:numColumns="auto_fit"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="0dp" />
+
+    <!-- TODO: 广告位 -->
+
+    <LinearLayout
+        android:id="@+id/adLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+    </LinearLayout>
+
+</LinearLayout>

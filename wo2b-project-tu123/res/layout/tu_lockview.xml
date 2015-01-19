@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/tu_container_common"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/pwd_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/keyboard"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="4" >
+
+        <EditText
+            android:id="@+id/et_pwd_1"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="6dp"
+            android:layout_weight="1"
+            android:background="@drawable/selector_input_orange"
+            android:cursorVisible="false"
+            android:gravity="center"
+            android:inputType="textVisiblePassword"
+            android:maxLength="1"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/et_pwd_2"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
+            android:layout_weight="1"
+            android:background="@drawable/selector_input_orange"
+            android:cursorVisible="false"
+            android:gravity="center"
+            android:inputType="textVisiblePassword"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/et_pwd_3"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
+            android:layout_weight="1"
+            android:background="@drawable/selector_input_orange"
+            android:cursorVisible="false"
+            android:gravity="center"
+            android:inputType="textVisiblePassword"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/et_pwd_4"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="6dp"
+            android:layout_weight="1"
+            android:background="@drawable/selector_input_orange"
+            android:cursorVisible="false"
+            android:gravity="center"
+            android:inputType="textVisiblePassword"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@id/keyboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical" >
+
+        <View style="@style/line_h" />
+
+        <GridView
+            android:id="@+id/grid_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffe1e0de"
+            android:cacheColorHint="#00000000"
+            android:columnWidth="60dp"
+            android:fadingEdge="none"
+            android:fadingEdgeLength="0dp"
+            android:fastScrollEnabled="true"
+            android:horizontalSpacing="1dp"
+            android:listSelector="@null"
+            android:numColumns="3"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="1dp" >
+        </GridView>
+    </LinearLayout>
+
+</RelativeLayout>

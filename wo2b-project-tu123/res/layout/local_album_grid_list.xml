@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/tu_container_white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:weightSum="1" >
+
+    <com.wo2b.sdk.view.pulltorefresh.PullToRefreshGridView
+        android:id="@+id/pullToRefreshGridView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent"
+        android:cacheColorHint="@color/transparent"
+        android:columnWidth="150dp"
+        android:gravity="center_horizontal"
+        android:horizontalSpacing="0dp"
+        android:listSelector="@color/transparent"
+        android:numColumns="auto_fit"
+        android:scrollbars="none"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="0dp" />
+
+</LinearLayout>

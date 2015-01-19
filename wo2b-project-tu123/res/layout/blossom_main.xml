@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/tu_container_common"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/background"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dimen_10"
+        android:contentDescription="@string/null_image"
+        android:src="@drawable/scroll_wo2b_com" />
+
+    <com.wo2b.sdk.view.pulltorefresh.PullToRefreshExpandableListView
+        android:id="@+id/ptrExpandableListView"
+        style="@style/tu_expandable_listview"
+        android:background="@color/transparent" />
+
+</RelativeLayout>

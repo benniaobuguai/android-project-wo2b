@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="exit_warns">
+        <item>正在退出『图界传说』</item>
+        <item>正在退出『图界传说』</item>
+        <item>正在退出『图界传说』</item>
+    </string-array>
+    
+    <string-array name="demo_array">
+        <item>wo2b, 一个诚实的网站!</item>
+        <item>wo2b, 一个诚实的网站!</item>
+        <item>wo2b, 一个诚实的网站!</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- ScrollView时距离底部的高度 -->
+    <dimen name="common_margin_bottom">25dp</dimen>
+    
+    
+    
+    <!-- 表单默认字体大小 -->
+    <!-- <dimen name="font_form_default">@dimen/font_16</dimen> -->
+    <!-- ########################### 编辑区 ########################### -->
+    <!-- <dimen name="edit_margin">@dimen/dimen_10</dimen>
+    <dimen name="edit_margin_left">@dimen/dimen_10</dimen>
+    <dimen name="edit_margin_right">@dimen/dimen_10</dimen>
+    <dimen name="edit_margin_top">@dimen/font_10</dimen>
+    <dimen name="edit_margin_bottom">@dimen/font_10</dimen> -->
+    <!-- 提示输入的左右边距 -->
+    <!-- <dimen name="edit_label_margin_left">@dimen/font_10</dimen>
+    <dimen name="edit_label_margin_right">@dimen/font_10</dimen> -->
+    <!-- 显示的左右边距 -->
+    <!-- <dimen name="edit_textview_margin_left">@dimen/font_10</dimen>
+    <dimen name="edit_textview_margin_right">@dimen/font_10</dimen> -->
+    <!-- 输入的左右边距 -->
+    <!-- <dimen name="edit_edittext_margin_left">@dimen/font_10</dimen>
+    <dimen name="edit_edittext_margin_right">@dimen/font_10</dimen> -->
+
+    <!-- 编辑内容块1与内容块2的距离 -->
+    <!-- <dimen name="edit_item_to_item">@dimen/font_10</dimen> -->
+
+    <!-- 查看区 -->
+    <!-- <dimen name="view_margin">@dimen/dimen_10</dimen>
+    <dimen name="view_margin_left">@dimen/dimen_10</dimen>
+    <dimen name="view_margin_right">@dimen/dimen_10</dimen>
+    <dimen name="view_margin_top">@dimen/font_10</dimen>
+    <dimen name="view_margin_bottom">@dimen/font_10</dimen> -->
+    <!-- 查看内容块1与内容块2的距离 -->
+    <!-- <dimen name="view_item_to_item">@dimen/font_10</dimen> -->
+
+</resources>

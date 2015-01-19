@@ -1,0 +1,11 @@
+# cache for current jar dependency. DO NOT EDIT.
+# format is <lastModified> <length> <SHA-1> <path>
+# Encoding is UTF-8
+1390140035856 356970 1edccd37c7a288cce12bd1be1831ab6f8ed8fa12 F:\001 AndroidL\wo2b-project-tu123\libs\fastjson-1.1.38.jar
+1390140035856 356970 1edccd37c7a288cce12bd1be1831ab6f8ed8fa12 F:\001 AndroidL\wo2b-common-api\libs\fastjson-1.1.38.jar
+1390135079788 51643 8ff8c21e8d0162333559f35cafd6a2238a33e5ba F:\001 AndroidL\wo2b-project-tu123\libs\ormlite-android-4.45.jar
+1407211260458 51643 8ff8c21e8d0162333559f35cafd6a2238a33e5ba F:\001 AndroidL\wo2b-common-api\libs\ormlite-android-4.45.jar
+1407211260459 284738 3db7b73aecea723803e10b068777cf09ed42d4be F:\001 AndroidL\wo2b-common-api\libs\ormlite-core-4.45.jar
+1390135079786 284738 3db7b73aecea723803e10b068777cf09ed42d4be F:\001 AndroidL\wo2b-project-tu123\libs\ormlite-core-4.45.jar
+1413987484749 987314 3b20dc871d179ba476082efe543dc1b38db46e30 F:\001 AndroidL\wo2b-common-api\libs\android-support-v4.jar
+1413797236000 987314 3b20dc871d179ba476082efe543dc1b38db46e30 F:\001 AndroidL\wo2b-tp-android-support-v7-appcompat\libs\android-support-v4.jar

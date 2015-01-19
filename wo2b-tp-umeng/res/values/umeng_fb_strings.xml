@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="umeng_fb_contact_info_hint">QQ, 电话等笨鸟不乖能联系您的联系方式</string>
+    <string name="umeng_fb_contact_update_at">更新于 </string>
+    <string name="umeng_fb_back">返回</string>
+    <string name="umeng_fb_title">用户反馈</string>
+    <string name="umeng_fb_contact_title">填写联系信息</string>
+    <string name="umeng_fb_contact_info">联系方式</string>
+    <string name="umeng_fb_reply_content_hint">您好，我是笨鸟不乖。</string>
+    <string name="umeng_fb_send">发送</string>
+    <string name="umeng_fb_reply_content_default">您好， 欢迎您反馈使用产品的感受和建议</string>
+    <string name="umeng_fb_reply_date_default">2014年10月28日 00:00:00</string>
+    <string name="umeng_fb_notification_ticker_text">有新的回复</string>
+    
+    <string name="umeng_fb_notification_content_formatter_single_msg">新回复: %s</string>
+    <string name="umeng_fb_notification_content_formatter_multiple_msg">收到来自开发者的 %d 条回复。</string>
+    
+    <string name="umeng_fb_powered_by">Powered by</string>
+
+    
+    <color name="umeng_fb_color_btn_pressed">#1495f7</color>
+    <color name="umeng_fb_color_btn_normal">#333333</color>
+    
+    
+    <string name="umeng_fb_contact_author">笨鸟不乖邮箱地址：\nbenniaobuguai@gmail.com</string>
+    
+
+</resources>

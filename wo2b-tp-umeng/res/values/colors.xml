@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="umeng_fb_conversation_bg2">#ffe1e0de</color>
+    <color name="umeng_fb_conversation_bg">#f3f1da</color>
+    <color name="umeng_text_hint">#ffcccccc</color>
+
+</resources>

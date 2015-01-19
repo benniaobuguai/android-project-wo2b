@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- &&&&&&&&&&&&&&&&&&&&&&&&&& ActionBar &&&&&&&&&&&&&&&&&&&&&&&&&& -->
+    <dimen name="umeng_actionbar_height">50dip</dimen>
+    <dimen name="umeng_actionbar_title_textsize">18sp</dimen>
+    <dimen name="umeng_actionbar_menu_textsize">14sp</dimen>
+    <!-- &&&&&&&&&&&&&&&&&&&&&&&&&& ActionBar &&&&&&&&&&&&&&&&&&&&&&&&&& -->
+
+	<!-- ScrollView时距离底部的高度 -->
+    <dimen name="umeng_common_margin_bottom">25dp</dimen>
+    <dimen name="umeng_common_edit_margin">10dp</dimen>
+    <dimen name="umeng_common_view_margin">10dp</dimen>
+
+
+
+</resources>

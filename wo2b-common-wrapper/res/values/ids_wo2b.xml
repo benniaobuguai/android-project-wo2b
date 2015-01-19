@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="rocky_listview" type="id"/>
+    <item name="rocky_gridview" type="id"/>
+    <item name="rocky_webview" type="id"/>
+    <item name="rocky_tabhos" type="id"/>
+    <item name="rocky_toolbar" type="id"/>
+
+</resources>

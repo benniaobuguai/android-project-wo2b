@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="44dp"
+    android:background="@drawable/selector_preference_one"
+    android:clickable="true"
+    android:gravity="center_vertical" >
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="6dp"
+        
+        android:drawablePadding="12dp"
+        android:gravity="center_vertical|left"
+        android:includeFontPadding="false"
+        android:text="@string/settings"
+        android:textColor="@drawable/textcolor_black_white"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/hint_icons"
+        android:layout_toRightOf="@id/title"
+        android:contentDescription="@string/null_text"
+        android:gravity="center_vertical|left"
+        android:includeFontPadding="false"
+        android:textColor="@drawable/textcolor_black_white"
+        android:textSize="14sp"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:id="@id/hint_icons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/right_text"
+        android:gravity="center_vertical|right"
+        android:orientation="horizontal" >
+    </LinearLayout>
+
+    <TextView
+        android:id="@id/right_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/badge_view"
+        android:contentDescription="@string/null_text"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:textColor="@drawable/textcolor_black_white"
+        android:textSize="14sp" />
+    
+    <TextView
+        android:id="@id/badge_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/indicator"
+        android:contentDescription="@string/null_text"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:textSize="14sp" />
+    
+    <TextView
+        android:id="@id/indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:contentDescription="@string/null_text"
+        android:drawableRight="@drawable/selector_preference_arrow"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:textColor="@drawable/textcolor_black_white"
+        android:textSize="14sp" />
+
+</RelativeLayout>

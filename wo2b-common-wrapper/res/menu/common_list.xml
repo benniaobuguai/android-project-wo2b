@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" >
+
+    <item
+        android:id="@+id/list"
+        android:icon="@drawable/selector_actionbar_list_btn"
+        android:orderInCategory="100"
+        android:title="@string/list"
+        app:showAsAction="always"/>
+
+</menu>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<!-- ScrollView时距离底部的高度 -->
+    <dimen name="common_margin_bottom">25dp</dimen>
+    <dimen name="common_edit_margin">10dp</dimen>
+    <dimen name="common_view_margin">10dp</dimen>
+
+
+    <!-- 对齐目前的XPreference的边距 -->
+    <dimen name="common_xp_margin">16dp</dimen>
+
+    <!-- Popup Bottom Menu -->
+    <dimen name="popup_bottom_menu_height">55dp</dimen>
+    
+    
+    <!-- SlidingMenu -->
+    <dimen name="slidingmenu_offset_default">60dp</dimen>
+    <dimen name="slidingmenu_offset">45dp</dimen>
+    <dimen name="slidingmenu_shadow_width_default">15dp</dimen>
+    <dimen name="slidingmenu_shadow_width">15dp</dimen>
+    <dimen name="slidingmenu_list_padding">10dp</dimen>
+    
+    
+    
+</resources>

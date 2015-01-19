@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="rocky_api">rocky-api</string>
+    <string name="rocky_action_settings">Settings</string>
+
+    <!-- pulltorefresh library start -->
+    <string name="ptr_pull_label_placeholder">一二三四五六七八九十</string>
+    
+    <string name="ptr_pull_label">下拉可以刷新</string>
+    <string name="ptr_release_label">松开可以刷新</string>
+    <string name="ptr_refreshing_label">正在刷新&#8230;</string>
+    <string name="ptr_from_bottom_pull_label">上拉可以载入</string>
+    <string name="ptr_from_bottom_release_label">松开可以载入</string>
+    <string name="ptr_from_bottom_refreshing_label">正在载入&#8230;</string>
+    <!-- pulltorefresh library end -->
+
+
+    <string name="null_image">image</string>
+    <string name="null_text"></string>
+    
+    
+    <!-- rocky api start -->
+    <string name="api_hint_like_repeat">不能重复点赞哦</string>
+    
+    <string name="api_cancel">取消</string>
+    
+    <!-- ### Download Module -->
+    <string name="api_download_progress_100">100%</string>
+    <string name="api_download_progress_0">0%</string>
+    <string name="api_downloading">正在下载</string>
+    <string name="api_download_ok">下载完成，点击打开</string>
+    <string name="api_download_url_repeat">不能重复下载</string>
+    <string name="api_download_url_invalid">下载地址无效</string>
+    
+    <string name="api_download_file_not_found">文件找不到了</string>
+    
+    <!-- rocky api end -->
+    
+    
+    
+
+</resources>

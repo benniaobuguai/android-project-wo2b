@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <!-- &&&&&&&&&&&&&&&&&&&&&&&&&&&& BASIC COLORS &&&&&&&&&&&&&&&&&&&&&&&&&&&& -->
+    <color name="theme_text_color_hint">#ff9f9f9f</color>
+    <color name="theme_actionbar_title_color">#ffffffff</color>
+    <color name="theme_actionbar_subtitle_color">#f0ffffff</color>
+    <color name="theme_actionbar_menu_color">#ffffffff</color>
+    
+    <!-- &&&&&&&&&&&&&&&&&&&&&&&&&&&& 推荐 &&&&&&&&&&&&&&&&&&&&&&&&&&&& -->
+	<color name="windows_best_bg">#ffbbdeb6</color>
+
+
+
+    <!-- &&&&&&&&&&&&&&&&&&&&&&&&&&&& BASIC COLORS &&&&&&&&&&&&&&&&&&&&&&&&&&&& -->
+    <color name="white">#ffffffff</color>
+    <color name="black">#ff000000</color>
+    <color name="black_middle">#ff2b2b2b</color>
+    <color name="transparent">#00000000</color>
+    <color name="bg_gray">#fff5f5f6</color>
+    <color name="bg_red">#ffe53539</color>
+    <!-- 主背景颜色 -->
+    <color name="bg_app">#ffe1e0de</color>
+    
+    <color name="darkgray">#ffefeff1</color>
+    
+    <color name="tab_selector_green">#ff45c01a</color>
+    <color name="webview_progressbar_load">#ff45c01a</color>
+    <!-- &&&&&&&&&&&&&&&&&&&&&&&&&&&& BASIC COLORS &&&&&&&&&&&&&&&&&&&&&&&&&&&& -->
+    
+    
+    
+    <!-- &&&&&&&&&&&&&&&&&&&&&&&&&&&& SELECTOR BACKGROUND COLOR &&&&&&&&&&&&&&&&&&&&&&&&&&&& -->
+    <color name="selector_gray_normal">#fff2f2f2</color>
+    <color name="selector_gray_pressed">#ffdedede</color>
+    <!-- &&&&&&&&&&&&&&&&&&&&&&&&&&&& SELECTOR BACKGROUND COLOR &&&&&&&&&&&&&&&&&&&&&&&&&&&& -->
+    
+    
+    
+    <!-- &&&&&&&&&&&&&&&&&&&&&&&&&&&& 本项目基础颜色(需要完善) &&&&&&&&&&&&&&&&&&&&&&&&&&&& -->
+    <color name="font_normal">#ff4a4a4a</color>
+    <color name="font_gray">#ffbebebe</color>
+    <color name="font_red_normal">#fff62829</color>
+    <!-- 字体浅颜色 -->
+    <color name="font_light">#ff888888</color>
+    <!-- 字体深颜色 -->
+    <color name="font_white_normal">#ffbebebe</color>
+    <!-- 字体深颜色 -->
+    <color name="font_dark">#ff4b4b4b</color>
+
+    <!-- ListView 字体浅颜色 -->
+    <color name="font_listview_light">@color/font_light</color>
+    <!-- ListView 字体深颜色 -->
+    <color name="font_listview_dark">@color/font_dark</color>
+
+    <!-- 提示字体颜色 -->
+    <color name="font_text_color_hint">@color/font_gray</color>
+    
+    
+    
+    <!-- ### 线条颜色 -->
+    <!-- &&&&&&&&&&&&&&&&&&&&&&&&&&&& 本项目基础颜色 &&&&&&&&&&&&&&&&&&&&&&&&&&&& -->
+
+    <!-- &&&&&&&&&&&&&&&&&&&&&&&&&&&& 特殊功能模块 &&&&&&&&&&&&&&&&&&&&&&&&&&&& -->
+	<!-- 评论 -->
+	<color name="comment_user_info">#ff5191d2</color>
+	<color name="comment_date">#ffaeaeae</color>
+	
+	
+	
+    <!-- &&&&&&&&&&&&&&&&&&&&&&&&&&&& 特殊功能模块 &&&&&&&&&&&&&&&&&&&&&&&&&&&& -->
+
+</resources>

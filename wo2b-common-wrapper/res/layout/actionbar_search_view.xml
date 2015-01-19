@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00000000"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingBottom="6dp"
+    android:paddingLeft="0dp"
+    android:paddingRight="@dimen/common_edit_margin"
+    android:paddingTop="6dp"
+    android:weightSum="1" >
+
+    <TextView
+        android:id="@+id/actionbar_item_back"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@drawable/selector_actionbar_back_btn" />
+
+    <LinearLayout
+        android:id="@+id/search_box_area"
+        android:layout_width="0dip"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_weight="1"
+        android:background="@drawable/selector_search_input_blue"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:weightSum="1" >
+
+        <EditText
+            android:id="@+id/search_box"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="@string/hint_search_tips"
+            android:paddingLeft="8dp"
+            android:paddingRight="10dp"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textColorHint="@color/font_text_color_hint"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/remove_all"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0"
+            android:contentDescription="@string/null_image"
+            android:paddingLeft="10dp"
+            android:paddingRight="8dp"
+            android:src="@drawable/selector_search_box_clear_btn" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/actionbar_item_operate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/selector_btn_green"
+        android:gravity="center"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="@string/cancel"
+        android:textColor="@color/white"
+        android:visibility="gone" />
+
+</LinearLayout>

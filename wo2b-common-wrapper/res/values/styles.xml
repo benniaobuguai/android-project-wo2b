@@ -1,0 +1,186 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <!-- Activity Container Style Start -->
+    <style name="tu_container_common">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/bg_app</item>
+    </style>
+    
+    <style name="tu_container_black">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/black</item>
+    </style>
+    
+    <style name="tu_container_white">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/white</item>
+    </style>
+    
+    <style name="tu_container_xxx">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/bg_app</item>
+    </style>
+    <!-- Activity Container Style End -->
+    
+    
+    <!-- Custom TabView Item -->
+    <style name="rocky_base_tabview_item">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:paddingBottom">@dimen/dimen_8</item>
+        <item name="android:paddingTop">@dimen/dimen_8</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">@color/font_dark</item>
+        <item name="android:textSize">@dimen/textsize_14</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <!-- Common Theme End -->
+    
+    <!-- &&&&&&&&&&&&&&&&&&&&&&&& Common ListView Style Start &&&&&&&&&&&&&&&&&&&&&&&& -->
+    <!-- ListView基础样式 -->
+    <style name="common_listview_base">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:cacheColorHint">#00000000</item>
+        <item name="android:scrollbars">none</item>
+        <item name="android:fadingEdge">none</item>
+        <item name="android:padding">0dp</item>
+        <item name="android:layout_margin">0dp</item>
+        <item name="android:divider">@drawable/listitem_divider</item>
+        <item name="android:dividerHeight">0.5dp</item>
+        <item name="android:background">@color/white</item>
+    </style>
+    
+    <!-- 带有拟物化/立体感的ListView不需要显示背景 -->
+    <style name="common_listview_block" parent="@style/common_listview_base">
+        <item name="android:listSelector">@null</item>
+        <item name="android:background">@drawable/listitem_block_normal</item>
+    </style>
+    
+    <!-- 带有拟物化/立体感的 -->
+    <style name="common_listview_listitem_block">
+        <item name="android:background">@drawable/selector_listview_listitem_block</item>
+    </style>
+    
+    
+    <!-- ListView default style -->
+    <style name="tu_listview_default" parent="@style/common_listview_base">
+   		<item name="android:divider">@drawable/tu_listview_divider</item>
+        <item name="android:listSelector">@drawable/selector_listview_green_common</item>
+        <!-- <item name="android:background">@drawable/mm_listitem_simple</item> -->
+    </style>
+    
+    <!-- ExpandableListView default style -->
+    <style name="tu_expandable_listview" parent="@android:style/Widget.ExpandableListView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:groupIndicator">@null</item>
+        <item name="android:cacheColorHint">#00000000</item>
+        <item name="android:choiceMode">singleChoice</item>
+        <item name="android:divider">@drawable/tu_listview_divider</item>
+        <item name="android:drawSelectorOnTop">false</item>
+        <item name="android:listSelector">@drawable/selector_listview_green_common</item>
+        <item name="android:scrollbars">none</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:childDivider">@drawable/tu_listview_divider</item>
+    </style>
+    
+    <!-- GridView default style -->
+    <style name="tu_gridview_base">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:cacheColorHint">@color/transparent</item>
+        <item name="android:background">@color/transparent</item>
+        <item name="android:listSelector">@color/transparent</item>
+        <item name="android:numColumns">auto_fit</item>
+        <item name="android:fadingEdge">none</item>
+        <item name="android:stretchMode">spacingWidth</item>
+    </style>
+    
+    <!-- &&&&&&&&&&&&&&&&&&&&&&&& Common ListView Style End &&&&&&&&&&&&&&&&&&&&&&&& -->
+    
+    
+    <!-- &&&&&&&&&&&&&&&&&&&&&&&& Common Button Style &&&&&&&&&&&&&&&&&&&&&&&& -->
+    <!-- 默认主题资源全部不带索引, 如btn_xxx为默认, btn0_为第一套主题 -->
+    <style name="common_button_green">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/selector_btn_green</item>
+        <item name="android:textSize">@dimen/textsize_14</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="common_button_grey">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/selector_btn_grey</item>
+        <item name="android:textSize">@dimen/textsize_14</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="common_button_grey_warn">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/selector_btn_grey_warn</item>
+        <item name="android:textSize">@dimen/textsize_14</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="common_button_delete">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/selector_btn_delete</item>
+        <item name="android:textSize">@dimen/textsize_14</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    
+    <style name="common_button_red">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/selector_btn_red</item>
+        <item name="android:textSize">@dimen/textsize_14</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    
+    <!-- EditText -->
+    <style name="common_input_blue">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/dimen_40</item>
+        <item name="android:background">@drawable/selector_input_blue</item>
+        <item name="android:textSize">@dimen/textsize_14</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textColor">@color/font_light</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    
+    <!-- 下拉列表 -->
+    <!-- <style name="common_spinner">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minWidth">80dp</item>
+        <item name="android:background">@drawable/selector_spinner_bg</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textColor">@color/font_gray</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textStyle">bold</item>
+    </style> -->
+
+</resources>

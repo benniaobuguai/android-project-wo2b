@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/button_bar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/browser_control_bg"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:weightSum="4" >
+
+    <ImageButton
+        android:id="@+id/browser_close"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@null"
+        android:contentDescription="@string/null_image"
+        android:scaleType="center"
+        android:src="@drawable/selector_browser_close_btn" />
+
+    <ImageButton
+        android:id="@+id/browser_back"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@null"
+        android:contentDescription="@string/null_image"
+        android:scaleType="center"
+        android:src="@drawable/selector_browser_back_btn" />
+
+    <ImageButton
+        android:id="@+id/browser_forward"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@null"
+        android:contentDescription="@string/null_image"
+        android:scaleType="center"
+        android:src="@drawable/selector_browser_forward_btn" />
+
+    <ImageButton
+        android:id="@+id/browser_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@null"
+        android:contentDescription="@string/null_image"
+        android:scaleType="center"
+        android:src="@drawable/selector_browser_refresh_btn" />
+
+</LinearLayout>

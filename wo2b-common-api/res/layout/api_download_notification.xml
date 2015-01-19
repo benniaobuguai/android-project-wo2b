@@ -1,0 +1,103 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:weightSum="1" >
+
+    <!-- 撑起高度 -->
+
+    <TextView
+        android:layout_width="1dp"
+        android:layout_height="300dp"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/noti_icon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_margin="8dp"
+        android:contentDescription="@string/null_image"
+        android:src="@drawable/notification_icon" />
+
+    <RelativeLayout
+        android:id="@+id/progress_area"
+        android:layout_width="0dip"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="2dp"
+        android:layout_weight="1" >
+
+        <LinearLayout
+            android:id="@+id/title_area"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:gravity="center_vertical"
+            android:paddingTop="2dp" >
+
+            <ImageView
+                android:id="@+id/noti_file_icon"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:contentDescription="@string/null_image"
+                android:src="@drawable/noti_file_default_icon" />
+
+            <TextView
+                android:id="@+id/noti_file_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="com.wo2b.apk"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/noti_progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:layout_centerInParent="true"
+            android:progressDrawable="@drawable/api_progressbar_download_notification" />
+
+        <TextView
+            android:id="@+id/noti_progressBarLeft"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="2dp"
+            android:paddingLeft="2dp"
+            android:singleLine="true"
+            android:text="@string/api_downloading"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/noti_progressBarRight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="2dp"
+            android:gravity="right"
+            android:paddingRight="2dp"
+            android:singleLine="true"
+            android:text="@string/api_download_progress_0"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/noti_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="8dp"
+        android:background="#258369"
+        android:gravity="center"
+        android:paddingBottom="2dp"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp"
+        android:paddingTop="2dp"
+        android:text="@string/api_cancel"
+        android:textSize="14sp" />
+
+</LinearLayout>

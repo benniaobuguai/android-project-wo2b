@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- ### 基本参数配置(开始) -->
+    <!-- 动画快速 -->
+    <integer name="config_shortAnimTime">200</integer>
+
+    <!-- 动画中速 -->
+    <integer name="config_mediumAnimTime">300</integer>
+
+    <!-- 动画慢速 -->
+    <integer name="config_longAnimTime">500</integer>
+
+    <!-- ### 基本参数配置(结束) -->
+    <!-- &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& -->
+
+
+    <!-- ### Activity切换动画时间 -->
+    <integer name="config_activityAnimTime">@integer/config_mediumAnimTime</integer>
+
+</resources>

@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- APP NAME -->
+    <string name="wo2b_rocky_common_wrapper">wo2b-rocky-common-wrapper</string>
+
+    <!-- Base Strings -->
+    <string name="settings">设置</string>
+    <string name="setting">设置</string>
+    <string name="bb">bb</string>
+    <string name="menu">菜单</string>
+    <string name="more">更多</string>
+    <string name="share">分享</string>
+    <string name="list">列表</string>
+    <string name="add">添加</string>
+    <string name="edit">编辑</string>
+    <string name="search">搜索</string>
+    <string name="like">赞</string>
+    <string name="play_game">玩游戏</string>
+    <string name="wo2b_home">官方网站</string>
+    
+
+    
+    <!-- 通用模块 -->
+    <string name="null_image">image</string>
+    <string name="null_text"></string>
+    <string name="name_number">%1$s(%2$s)</string>
+    <string name="number_range">%1$d-%2$d</string>
+    <string name="string1_string2">%1$s(%2$s)</string>
+    <string name="grade_exp_range">%1$d-%2$d经验值</string>
+    <string name="position_title">%1$d.&#160;%2$s</string>
+    <string name="praise">赞</string>
+    
+    <string name="back">返回</string>
+    <string name="ok">确定</string>
+    <string name="save">保存</string>
+    <string name="finish">完成</string>
+    <string name="complete">完成</string>
+    <string name="success">成功</string>
+    <string name="no">取消</string>
+    <string name="cancel">取消</string>
+    <string name="delete">删除</string>
+    <string name="clear">清空</string>
+    <string name="select_all">全选</string>
+    <string name="filtrate">筛选</string>
+    <string name="quit">退出</string>
+    <string name="failed">失败</string>
+    <string name="install">安装</string>
+    <string name="uninstall">卸载</string>
+    <string name="default_item">默认</string>
+    <string name="default_value">默认值</string>
+    
+    <string name="remove">移除</string>
+    <string name="remove_ok">删除成功</string>
+    <string name="open">打开</string>
+    <string name="running_now">正在使用</string>
+    <string name="running_app_now">亲，你正在使用哦^o^y</string>
+    <string name="download">下载</string>
+    <string name="download_install">%1$s下载完成, 正在准备安装&#8230;</string>
+    <string name="click_to_install">点击安装</string>
+    <string name="time_out">超时</string>
+    <string name="rating_level">推荐指数: %1$s</string>
+    <string name="download_count1">%1$d次下载</string>
+    <string name="download_count2">%1$d万次下载</string>
+    
+    
+    <!-- 用户模块 -->
+    <string name="username">用户名</string>
+    <string name="password">密码</string>
+    <string name="password2">重复密码</string>
+    <string name="new_password">新密码</string>
+    <string name="nickname">昵称</string>
+    <string name="pkgname">包名</string>
+    <string name="wo2b_grade">二货等级</string>
+    <string name="register_app">二货起源</string>
+    <string name="email">注册邮箱</string>
+    <string name="register_email">邮箱地址</string>
+    <string name="send_email">发送邮件</string>
+    <string name="send_email_now">正在发送邮件</string>
+    <string name="tel">手机号码</string>
+    <string name="role">角色</string>
+    <string name="user_exp">经验值</string>
+    <string name="user_gold">二货币</string>
+    <string name="grade_name">等级名称</string>
+    <string name="grade_current">等级称号</string>
+    <string name="grade_points_range">等级积分</string>
+    <string name="grade_points_desc">等级积分说明</string>
+    <string name="user_nologin">你还没有登录呢?</string>
+    <string name="user_logging">正在登录&#8230;</string>
+    <string name="user_logouting">正在退出, 请稍候&#8230;</string>
+    <string name="user_login">用户登录</string>
+    <string name="user_login_fail">登录失败</string>
+    <string name="user_register">用户注册</string>
+    <string name="user_reset_pwd">设置新密码</string>
+    
+    
+    <string name="login">登录</string>
+    <string name="register">注册</string>
+    <string name="forget_password">找回密码</string>
+    <string name="email_phone">邮箱地址</string>
+    <string name="logout_safe">注销登录</string>
+    
+    
+    <!-- 评论模块 -->
+    <string name="comment">评论</string>
+    <string name="comment_hint">评论内容</string>
+    <string name="comment_not_null">评论内容不能为空</string>
+    <string name="comment_too_long">评论字数不能超过%1$s个字</string>
+    <string name="send_message">发送</string>
+    <string name="comment_ok">评论成功</string>
+    
+    
+    <!-- 时间周期 -->
+    <string name="period_fast">快</string>
+    <string name="period_normal">中</string>
+    <string name="period_slow">慢</string>
+    
+    <!-- Guide -->
+    <string name="guide_pre">上一步</string>
+    <string name="guide_next">下一步</string>
+    <string name="guide_ok">我知道了</string>
+    
+    
+    
+    
+    
+    
+    
+    
+	<!-- 通用菜单 -->
+	<string name="personal_detail">个人信息</string>
+	<string name="my_favorites">我的最爱</string>
+	
+	<string name="statement">声明</string>
+    <string name="disclaimer">免责声明</string>
+    <string name="about">关于</string>
+    <string name="personal_tailor">私人订制</string>
+    <string name="support_developer">支持开发者</string>
+    <string name="it_is_good">这个很赞</string>
+	<string name="no_title">无题</string>
+	<string name="help">帮助</string>
+	
+	
+	<string name="plugin_center">插件中心</string>
+	<string name="traffic_statistics">流量统计</string>
+    <string name="storage_manager">清理存储空间</string>
+	
+	<string name="version_info">版本信息</string>
+    <string name="user_feedback">用户反馈</string>
+    <string name="check_new_version">检查新版本</string>
+	
+	
+	
+	<!-- &&&&&&&&&&&&&&&& Rocky Module &&&&&&&&&&&&&&&& -->
+	<!--<string name="rocky_works">作者其它作品</string>-->
+	<!-- <string name="rocky_works">笨鸟不乖作品集</string> -->
+	<string name="rocky_works">官方出品</string>
+	
+	
+	
+	<!-- ###### Non language dependent strings ###### -->
+    <!-- Preference Key Start -->
+    <string name="pk_wallpaper">wallpaper</string>
+    <string name="pk_auto_play">auto_play</string>
+    <string name="pk_password_lock">password_lock</string>
+    <string name="pk_cache_local">cache_local</string>
+    <string name="pk_image_download">image_download</string>
+    <string name="pk_bg_music">bg_music</string>
+	<!-- Preference Key End -->
+	
+	
+	
+	<!-- Hint Strings -->
+    <string name="hint_unknown">未知错误</string>
+    <string name="hint_exception">异常</string>
+    <string name="hint_network_error">网络异常</string>
+    <string name="hint_not_take_on">暂无收录</string>
+	<string name="hint_not_available">暂无</string>
+	<string name="hint_well_done">Well Done!!</string>
+	<string name="hint_failed">不成功</string>
+	<string name="hint_not_supported">暂时不支持</string>
+	<string name="hint_goto_launcher">再按一次返回到桌面</string>
+	<string name="hint_delete">亲, 你要小心哟</string>
+	<string name="hint_confirm_delete">确定要删除 [%1$s] 吗?</string>
+	<string name="hint_pwd_error">密码错误!!!</string>
+	<string name="hint_input_username">请输入用户名</string>
+	<string name="hint_input_username_or_email">用户名或邮箱</string>
+	<string name="hint_input_register_email">输入注册使用的邮箱</string>
+	<string name="hint_input_password">请输入6&#8211;20位密码</string>
+	<string name="hint_input_password2">输入的密码不一致</string>
+	<string name="hint_input_get_pwd_easy">方便你找回密码</string>
+	<string name="hint_input_email_warn">请正确输入邮箱</string>
+	<string name="hint_install_failed">请检查是否正确安装</string>
+	<string name="hint_search_tips">输入搜索关键字</string>
+	<string name="hint_send_email_ok">邮件已经发送给您，请登录邮箱重新设置您的密码。</string>
+	
+	<string name="hint_not_support_nickname">暂不支持修改昵称</string>
+	<string name="hint_not_support_email">暂不支持修改邮箱</string>
+	<string name="hint_not_support_phonenum">暂不支持绑定手机号码</string>
+	
+	
+	<string name="hint_image_load_error">读取图片失败</string>
+	<string name="hint_image_decode_error">解析图片失败</string>
+	<string name="hint_image_too_large">可能你的图片太大了</string>
+	
+	
+	<string name="hint_loading">正在努力加载</string>
+	<string name="hint_listview_network_error">点击屏幕&#160;&#160;&#160;重新加载</string>
+	<string name="hint_listview_load_not_data">没有加载到数据</string>
+	
+	<string name="hint_no_data">暂无数据</string>
+	<string name="hint_no_more_data">已经没有数据了</string>
+	
+	<string name="hint_not_supported_download_tp">不支持下载第三方网站资源</string>
+
+</resources>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="62dp"
+    android:baselineAligned="false"
+    android:gravity="center_vertical"
+    android:weightSum="1" >
+
+    <ProgressBar
+        android:id="@+id/pb_exp"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:progressDrawable="@drawable/progress_user_grade"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/iv_level_icon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="6dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/null_image"
+        android:padding="2dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/demo" />
+
+    <TextView
+        android:id="@+id/tv_grade_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/iv_level_icon"
+        android:layout_toRightOf="@id/iv_level_icon"
+        android:ellipsize="end"
+        android:includeFontPadding="false"
+        android:singleLine="true"
+        android:text="@string/rocky_works"
+        android:textColor="@color/font_listview_dark"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_point_range"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_grade_name"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@id/iv_level_icon"
+        android:includeFontPadding="false"
+        android:singleLine="true"
+        android:text="2000-3999经验值"
+        android:textColor="@color/font_listview_light"
+        android:textSize="14sp" />
+
+    <!--
+         <ImageView
+        android:id="@+id/iv_selected_flag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|center_vertical"
+        android:layout_marginRight="20dp"
+        android:contentDescription="@string/null_image"
+        android:src="@drawable/radio_checked" />
+    -->
+
+</RelativeLayout>

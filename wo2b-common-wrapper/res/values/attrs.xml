@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- label: 文本; arrow: 箭头; icon_more: true表示更多图标,至多两个; iconx: 表示在arrow左边的第(x+1)位置的图标 -->
+    <declare-styleable name="x_preference">
+        <attr name="rocky_icon" format="reference" />
+        <attr name="label" format="reference|string" />
+        <attr name="label_ems" format="integer" />
+        
+        
+        <attr name="indicator" format="reference" />
+        <attr name="indicator_state">
+            <enum name="none" value="-1" />
+            <enum name="arrow" value="0" />
+            <enum name="checkbox" value="1" />
+        </attr>
+        <attr name="indicator_align">
+            <enum name="left" value="-1" />
+            <enum name="center" value="0" />
+            <enum name="right" value="1" />
+        </attr>
+        
+        <attr name="enabled" format="boolean" />
+        
+        <attr name="position">
+            <enum name="first" value="1" />
+            <enum name="middle" value="2" />
+            <enum name="last" value="3" />
+            <enum name="top" value="4" />
+            <enum name="one" value="5" />
+            <enum name="single" value="6" />
+        </attr>
+        
+        <attr name="prefs_key" format="reference|string" />
+        <attr name="prefs_default" format="reference|string" />
+        <attr name="prefs_value" format="reference|string" />
+        
+    </declare-styleable>
+
+    
+    <!-- X ListView -->
+    <declare-styleable name="rocky">
+        <attr name="rocky_divider" format="reference" />
+        <attr name="rocky_dividerHeight" format="reference|integer" />
+        <attr name="rocky_dividerPadding" format="reference|integer" />
+    </declare-styleable>
+    
+    
+</resources>

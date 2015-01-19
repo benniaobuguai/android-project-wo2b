@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" >
+
+    <item
+        android:id="@+id/period_fast"
+        android:orderInCategory="100"
+        android:title="@string/period_fast"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/period_normal"
+        android:orderInCategory="100"
+        android:title="@string/period_normal"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/period_slow"
+        android:orderInCategory="100"
+        android:title="@string/period_slow"
+        app:showAsAction="always"/>
+
+</menu>

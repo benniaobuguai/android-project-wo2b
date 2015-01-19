@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/tu_container_common"
+    android:orientation="vertical" >
+
+    <opensource.component.pulltorefresh.PullToRefreshListView
+        android:id="@id/rocky_listview"
+        style="@style/tu_listview_default"
+        android:layout_above="@+id/comment_content_wrapper"
+        android:fastScrollEnabled="false"
+        android:footerDividersEnabled="false"
+        android:headerDividersEnabled="false"
+        android:scrollbars="vertical"
+        android:smoothScrollbar="true" />
+
+    <RelativeLayout
+        android:id="@id/comment_content_wrapper"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/comment_content_bg"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:paddingBottom="6dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="7dp"
+        android:paddingTop="6dp" >
+
+        <TextView
+            android:id="@+id/send_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/selector_base_send_btn" />
+
+        <EditText
+            android:id="@+id/et_content"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="6dp"
+            android:layout_toLeftOf="@id/send_comment"
+            android:background="@drawable/selector_base_input_blue"
+            android:hint="@string/comment_hint"
+            android:maxLines="5"
+            
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

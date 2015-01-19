@@ -1,0 +1,11 @@
+<resources>
+
+    <!-- pulltorefresh library start -->
+    <dimen name="ptr_indicator_right_padding">10dp</dimen>
+    <dimen name="ptr_indicator_corner_radius">12dp</dimen>
+    <dimen name="ptr_indicator_internal_padding">4dp</dimen>
+    <dimen name="ptr_header_footer_left_right_padding">24dp</dimen>
+    <dimen name="ptr_header_footer_top_bottom_padding">12dp</dimen>
+    <!-- pulltorefresh library end -->
+
+</resources>

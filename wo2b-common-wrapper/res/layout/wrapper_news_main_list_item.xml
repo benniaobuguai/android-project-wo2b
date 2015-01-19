@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:baselineAligned="false"
+    android:orientation="vertical"
+    android:paddingBottom="8dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="6dp"
+    android:weightSum="1" >
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/newsPic"
+        android:ellipsize="end"
+        android:includeFontPadding="false"
+        android:lines="2"
+        android:maxLines="2"
+        android:text="title"
+        android:textColor="@color/font_listview_dark"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/source"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:includeFontPadding="false"
+        android:singleLine="true"
+        android:text="source"
+        android:textColor="@color/font_listview_light"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/source"
+        android:includeFontPadding="false"
+        android:singleLine="true"
+        android:text="2014-11-2 19:24"
+        android:textColor="@color/font_listview_light"
+        android:textSize="12sp" />
+
+    <ImageView
+        android:id="@id/newsPic"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:layout_alignParentRight="true"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/null_image"
+        android:padding="2dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/demo" />
+
+</RelativeLayout>

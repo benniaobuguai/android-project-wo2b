@@ -1,0 +1,58 @@
+<resources>
+
+    <style name="AppBaseTheme" parent="android:Theme.Light"></style>
+
+    <style name="AppTheme" parent="AppBaseTheme"></style>
+
+    <!-- the dialog style start -->
+    <style name="rocky_custom_dialog_no_title" parent="android:style/Theme.Dialog">
+        <item name="android:windowBackground">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+    
+    <style name="rocky_custom_dialog_title_text">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/rocky_black</item>
+    </style>
+
+    <style name="rocky_custom_dialog_message_text">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/rocky_gray_deep</item>
+    </style>
+    <!-- the dialog style end -->
+    
+    
+    <!-- the bottomView start -->
+    <style name="bottomView_theme_default">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="bottomView_theme_transparent">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <!-- Transparent -->
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <style name="bottomView_animation" parent="android:Animation">
+        <item name="@android:windowEnterAnimation">@anim/bottom_view_slide_bottom_in</item>
+        <item name="@android:windowExitAnimation">@anim/bottom_view_slide_bottom_out</item>
+    </style>
+	<!-- the bottomView end -->
+	
+	
+	
+</resources>

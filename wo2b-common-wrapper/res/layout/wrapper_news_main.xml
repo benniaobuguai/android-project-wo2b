@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/tu_container_common"
+    android:orientation="vertical" >
+
+    <opensource.component.pulltorefresh.PullToRefreshListView
+        android:id="@+id/rocky_listview"
+        style="@style/tu_listview_default"
+        android:dividerHeight="1dp"
+        android:fastScrollEnabled="false"
+        android:footerDividersEnabled="false"
+        android:headerDividersEnabled="false"
+        android:scrollbars="vertical"
+        android:smoothScrollbar="true" />
+
+</RelativeLayout>

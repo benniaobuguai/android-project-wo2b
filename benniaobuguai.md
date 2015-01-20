@@ -21,7 +21,7 @@ if you are accessing any 3rd partydatabases (e.g. vendor supplied), or you're wo
 
 hibernate在性能和复杂的业务上，确实存在缺点，可能是我功力不够，还没能驾驭hibernate吧。但是不得不承认，SSH的开发的确很快。目前，主流还是SSI和Spring mvc为主，尤其是Spring mvc在restful的使用上。  
 
-接着，对应用市场进行了的分析，发现图片类，尤其是美女类的app下载量特别大，然后我又做[**《图界传说》**]()。之所以起这个名字，是因为我本意想做一款能够“一图知天下事”的app，结果爬到+收集的素材全部丢失(今年最遗憾的事)，项目就搁置了。  
+接着，对应用市场进行了的分析，发现图片类，尤其是美女类的app下载量特别大，然后我又做[**《图界传说》**](https://github.com/benniaobuguai/android-project-wo2b/tree/master/wo2b-apk)。之所以起这个名字，是因为我本意想做一款能够“一图知天下事”的app，结果爬到+收集的素材全部丢失(今年最遗憾的事)，项目就搁置了。  
 
 项目应该会在这几天内[**开源**](https://github.com/benniaobuguai/android-project-wo2b)。包括自己在这一年内，业余时间写的开发框架，项目中使用了很多开源框架，有不少地方自己对开源框架进行修改或扩展，希望对大家有所帮助。图界终究只是个传说。。。  
 

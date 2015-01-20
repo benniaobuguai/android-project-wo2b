@@ -9,15 +9,17 @@
 在godaddy买好域名之后，遇到了很多问题，主机、备案、cdn、运维等，请原谅我在这一年前，一片空白。在很长一段时间里，我都在学习这些相关的知识，无数次的尝试之后，成功部署的那天，我兴奋了好久。站点属于个人博客和作品类的性质，主要是为手机客户端提供数据接口，主站点只是很单纯的门户而已。备案和主机都在[阿里云](http://www.aliyun.com/)，cdn是使用[七牛](https://portal.qiniu.com/signup?code=3lpwnkzffpetu)的，使用apache+tomcat。
 
 在开发技术上的选取，我承认我是过度自信和低估了项目的发展。经过几天的尝试和分析，最终决定选用SSH常规的框架进行开发，放弃了SSI和Spring mvc。如果再选择一次的话，我定然放弃hibernate。
-附ibatis的作者对hibernate和ibatis的评价是： 
+附ibatis的作者对hibernate和ibatis的评价是：  
 if you are starting a new project andyou're in full control of your object model and database design, hibernate is agood choice of o/r tool. 
-if you are accessing any 3rd partydatabases (e.g. vendor supplied), or you're working with a legacy database, oreven just a really poorly designed database, then an o/r mapper might not becapable of handling the situation. that's were an sql mapper comes in handy.
-hibernate在性能和复杂的业务上，确实存在缺点，可能是我功力不够，还没能驾驭hibernate吧。但是不得不承认，SSH的开发的确很快。目前，主流还是SSI和Spring mvc为主，尤其是Spring mvc在restful的使用上。
+if you are accessing any 3rd partydatabases (e.g. vendor supplied), or you're working with a legacy database, oreven just a really poorly designed database, then an o/r mapper might not becapable of handling the situation. that's were an sql mapper comes in handy.  
+hibernate在性能和复杂的业务上，确实存在缺点，可能是我功力不够，还没能驾驭hibernate吧。但是不得不承认，SSH的开发的确很快。目前，主流还是SSI和Spring mvc为主，尤其是Spring mvc在restful的使用上。  
 
 
-经过对市场的分析，发现图片类，尤其是美女类的app下载量特别大，然后我又做《图界传说》。之所以起这个名字，是因为我本意想做一款能够“一图知天下事”的app，结果爬到+收集的素材全部丢失(今年最遗憾的事)，项目就此停止了。项目应该会在这几天内[开源](https://github.com/benniaobuguai/android-project-wo2b)吧。包括自己在这一年内，业余时间写的开发框架，项目中使用了很多开源框架，有不少地方自己对开源框架进行修改或扩展，希望对大家有所帮助。图界终究只是个传说。。。
+经过对市场的分析，发现图片类，尤其是美女类的app下载量特别大，然后我又做《图界传说》。之所以起这个名字，是因为我本意想做一款能够“一图知天下事”的app，结果爬到+收集的素材全部丢失(今年最遗憾的事)，项目就此停止了。项目应该会在这几天内[开源](https://github.com/benniaobuguai/android-project-wo2b)吧。包括自己在这一年内，业余时间写的开发框架，项目中使用了很多开源框架，有不少地方自己对开源框架进行修改或扩展，希望对大家有所帮助。图界终究只是个传说。。。  
 
-在此感谢所有致力于开源的小伙伴们。
+
+在此感谢所有致力于开源的小伙伴们。  
+
 
 后来，喜欢上玩2048，参考了原作者的源码，为自己的爱好又编写了一个[《百变2048》](http://app.mi.com/detail/79886)，在小米、360、百度等市场都能找到。目前，发现一个很严重的问题，百变2048在SEO上，其实是比较失败的。用户去下载2048的游戏，搜索关键字应该是2048，而百变2048，往往不利于排名。后续，将考虑修改游戏名称。
 

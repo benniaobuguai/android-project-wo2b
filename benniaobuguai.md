@@ -14,7 +14,7 @@
 站点属于个人博客和作品类的性质，主要是为手机客户端提供数据接口，主站点只是很单纯的门户而已。备案和主机都在[阿里云](http://www.aliyun.com/)，cdn是使用[七牛](https://portal.qiniu.com/signup?code=3lpwnkzffpetu)的，使用apache+tomcat。
 
 在开发技术上的选取，我承认我是过度自信和低估了项目的发展。经过几天的尝试和分析，最终决定选用SSH常规的框架进行开发，放弃了SSI和Spring mvc。如果再选择一次的话，我定然放弃hibernate。
-附ibatis的作者对hibernate和ibatis的评价是：  
+附ibatis的作者对hibernate和ibatis的评价：  
 
 if you are starting a new project andyou're in full control of your object model and database design, hibernate is agood choice of o/r tool. 
 if you are accessing any 3rd partydatabases (e.g. vendor supplied), or you're working with a legacy database, oreven just a really poorly designed database, then an o/r mapper might not becapable of handling the situation. that's were an sql mapper comes in handy.  
@@ -32,7 +32,7 @@ hibernate在性能和复杂的业务上，确实存在缺点，可能是我功�
 
 #### 工作  
 
-总体来说，这一年的工作，不尽人意。时序图是这样的：android app1-->web app1-->android app2-->android app1.x。Android app除了业务复杂一点，并没有太多的挑战，相对而言，web app的项目最终成立了新的部门，倒是让我觉得特别的开心。不过，在成立新部门前，我极力要求回原部门，因为我还是希望专注于Android。在工作交接的两个月内，我建立了个人博客：http://blog.wo2b.com。
+总体来说，这一年的工作，不尽人意。时序图是这样的：android app1-->web app1-->android app2-->android app1.x。Android app除了业务复杂一点，并没有太多的挑战，相对而言，web app的项目最终成立了新的部门，倒是让我觉得特别的开心。不过，在成立新部门前，我极力要求回原部门，因为我还是希望专注于Android。在工作交接的两个月内，我建立了个人博客：**http://blog.wo2b.com**。
 
 
 回过头来看，发现一年时间，其实可以干很多事情。事实上，我还浪费了很多时间。  

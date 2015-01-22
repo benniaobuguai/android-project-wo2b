@@ -48,7 +48,7 @@ hibernate在性能和复杂的业务上，确实存在缺点，可能是我功�
 + 系统学习C语言，深入研究Android源码。 
 + 多读书。
 + Photoshop提升下等级。  
-  
++   
  
 <p align="right">笨鸟不乖</p>
 <p align="right">写于2015年1月16日晚</p>  

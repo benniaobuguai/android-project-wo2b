@@ -3,7 +3,7 @@
 
 ![framework](https://github.com/benniaobuguai/android-project-wo2b/blob/master/wo2b-xxx-design/framework.png)
 
-***
+---
 ## 如何让项目运行起来
     由项目结构图，大体上能够
 
@@ -13,7 +13,7 @@ wo2b-project-tu123
 \-----wo2b-tp-android-support-v7-appcompat  
 \-----wo2b-tp-android-support-v7-recyclerview  
 \-----wo2b-tp-umeng  
-***
+---
 
 
 

@@ -1,5 +1,5 @@
 ## 项目结构
-    当前项目只是其中一个例子，wo2b-common-wrapper本身是一套通用的项目框架，能够让你基于此项目快速搭建属于你自己的项目框架。
+当前项目只是其中一个例子，wo2b-common-wrapper本身是一套通用的项目框架，能够让你基于此项目快速搭建属于你自己的项目框架。
 >wo2b-project-tu123  
 \---wo2b-common-wrapper  
 \-----wo2b-common-api  
@@ -13,7 +13,7 @@
 
 ***
 ## 三步项目跑起来
-    通过项目结构图，想要让项目运行起来，下载项目代码后，只需要三步。   
+通过项目结构图，想要让项目运行起来，下载项目代码后，只需要三步。   
     
     
 + wo2b-common-wrapper工程所依赖的工程，wo2b-common-api、wo2b-tp-android-support-v7-appcompat、wo2b-tp-android-support-v7-recyclerview、wo2b-tp-umeng等全部需要转换成“is library”的方式。

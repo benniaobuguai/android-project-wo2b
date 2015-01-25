@@ -1,11 +1,12 @@
 ## 项目结构
     当前项目只是其中一个例子，wo2b-common-wrapper本身是一套通用的项目框架，能够让你基于此项目快速搭建属于你自己的项目框架。
-wo2b-project-tu123  
+>wo2b-project-tu123  
 \---wo2b-common-wrapper  
 \-----wo2b-common-api  
 \-----wo2b-tp-android-support-v7-appcompat  
 \-----wo2b-tp-android-support-v7-recyclerview  
-\-----wo2b-tp-umeng
+\-----wo2b-tp-umeng  
+
     直接上图
 
 ![framework](https://github.com/benniaobuguai/android-project-wo2b/blob/master/wo2b-xxx-design/framework.png)

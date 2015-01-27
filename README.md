@@ -2,10 +2,10 @@
 ## 部分截图
 
 <p>
-   <img src="https://github.com/benniaobuguai/android-project-wo2b/blob/master/wo2b-xxx-apk/screenshot/5.png" width="300" alt="Screenshot"/>&nbsp;&nbsp;
-   <img src="https://github.com/benniaobuguai/android-project-wo2b/blob/master/wo2b-xxx-apk/screenshot/6.png" width="300" alt="Screenshot"/>
-   &nbsp;&nbsp;
-   <img src="https://github.com/benniaobuguai/android-project-wo2b/blob/master/wo2b-xxx-apk/screenshot/11.png" width="300" alt="Screenshot"/>
+   <img src="https://github.com/benniaobuguai/android-project-wo2b/blob/master/wo2b-xxx-apk/screenshot/5.png" width="280" alt="Screenshot"/>&nbsp;
+   <img src="https://github.com/benniaobuguai/android-project-wo2b/blob/master/wo2b-xxx-apk/screenshot/6.png" width="280" alt="Screenshot"/>
+   &nbsp;
+   <img src="https://github.com/benniaobuguai/android-project-wo2b/blob/master/wo2b-xxx-apk/screenshot/11.png" width="280" alt="Screenshot"/>
 </p>
 
 

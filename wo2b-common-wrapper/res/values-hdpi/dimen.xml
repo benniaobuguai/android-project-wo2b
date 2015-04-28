@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <!--&&&&&&&&&&&&&&&&&&&&&&&&&&&& 基础尺寸(不可修改) &&&&&&&&&&&&&&&&&&&&&&&&&&&&-->
+    <dimen name="dimen_0">0dp</dimen>
+    <dimen name="dimen_1px">1px</dimen>
+    <dimen name="dimen_1">0.75dp</dimen>
+    <dimen name="dimen_2">1.5dp</dimen>
+    <dimen name="dimen_3">2.25dp</dimen>
+    <dimen name="dimen_4">3dp</dimen>
+    <dimen name="dimen_5">3.75dp</dimen>
+    <dimen name="dimen_6">4.5dp</dimen>
+    <dimen name="dimen_8">6dp</dimen>
+    <dimen name="dimen_9">6.75dp</dimen>
+    
+	<dimen name="dimen_10">7dp</dimen>
+	<dimen name="dimen_12">9dp</dimen>
+	<dimen name="dimen_13">9.75dp</dimen>
+	<dimen name="dimen_14">10.5dp</dimen>
+	<dimen name="dimen_15">11.25dp</dimen>
+	<dimen name="dimen_16">12dp</dimen>
+	<dimen name="dimen_18">13.5dp</dimen>
+	<dimen name="dimen_20">15dp</dimen>
+	<dimen name="dimen_22">16.5dp</dimen>
+	<dimen name="dimen_24">18dp</dimen>
+	<dimen name="dimen_25">18.75dp</dimen>
+	<dimen name="dimen_30">22.5dp</dimen>
+	<dimen name="dimen_32">24dp</dimen>
+	<dimen name="dimen_36">27dp</dimen>
+	<dimen name="dimen_40">30dp</dimen>
+	<dimen name="dimen_44">33dp</dimen>
+	<dimen name="dimen_48">36dp</dimen>
+	<dimen name="dimen_50">37.5dp</dimen>
+	<dimen name="dimen_55">41.25dp</dimen>
+	<dimen name="dimen_60">45dp</dimen>
+	<dimen name="dimen_65">48.75dp</dimen>
+	<dimen name="dimen_70">52.5dp</dimen>
+    
+	
+	
+	
+	<dimen name="dimen_100">75dp</dimen>
+	<dimen name="dimen_200">150dp</dimen>
+	<dimen name="dimen_240">180dp</dimen>
+	
+</resources>

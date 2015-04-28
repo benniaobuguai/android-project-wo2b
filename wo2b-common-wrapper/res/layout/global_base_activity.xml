@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/global_base_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="1" >
+
+        <FrameLayout
+            android:id="@+id/global_root_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/bottom_menu_container"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/popup_bottom_menu_height"
+            android:background="@color/transparent"
+            android:orientation="vertical"
+            android:visibility="gone" >
+        </LinearLayout>
+    </LinearLayout>
+
+    <android.support.v7.widget.Toolbar
+        android:id="@id/rocky_toolbar"
+        style="@style/Rocky.Widget.AppCompat.Toolbar"
+        android:gravity="center_vertical"
+        android:padding="0dp" >
+
+        <ProgressBar
+            android:id="@+id/progress_spinner"
+            style="@style/Rocky.Widget.ActionBar.Progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:indeterminate="true"
+            android:paddingRight="@dimen/dimen_5"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/positive_btn"
+            style="@style/Rocky.Widget.ActionBar.Button"
+            android:layout_gravity="right"
+            android:layout_marginRight="@dimen/dimen_14"
+            android:text="@string/ok"
+            android:visibility="gone" />
+    </android.support.v7.widget.Toolbar>
+
+</FrameLayout>

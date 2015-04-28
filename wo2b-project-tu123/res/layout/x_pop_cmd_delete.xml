@@ -18,20 +18,18 @@
 
         <TextView
             android:id="@+id/cmd_delete"
-            style="@style/common_button_delete"
+            style="@style/global_btn_red"
             android:layout_width="0dip"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="@string/delete"
-            android:textColor="@color/font_dark"
-            android:textStyle="bold" />
+            android:text="@string/delete" />
 
         <TextView
             android:id="@+id/cmd_selete_all"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="@dimen/dimen_6"
             android:drawableLeft="@drawable/checkbox_round_normal"
             android:gravity="center"
             android:includeFontPadding="false"
@@ -39,8 +37,7 @@
             android:paddingRight="10dp"
             android:singleLine="true"
             android:text="@string/select_all"
-            android:textColor="@color/font_dark"
-            android:textStyle="bold" />
+            android:textColor="@color/font_dark" />
     </LinearLayout>
 
 </LinearLayout>

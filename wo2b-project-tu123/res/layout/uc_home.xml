@@ -15,13 +15,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:paddingBottom="@dimen/common_margin_bottom"
-            android:paddingTop="@dimen/common_margin_bottom" >
+            android:paddingBottom="@dimen/common_margin_bottom" >
 
             <com.wo2b.wrapper.view.XPreference
                 android:id="@+id/xp_user_info"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/theme_layout_margin_top"
                 rocky:label="@string/null_text"
                 rocky:position="single"
                 rocky:rocky_icon="@drawable/xp_gravatar" />
@@ -30,6 +30,7 @@
                 android:id="@+id/xp_local_album"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/theme_xp_margin"
                 rocky:label="@string/local_album"
                 rocky:position="top"
                 rocky:rocky_icon="@drawable/xp_icon_local_album" />
@@ -55,6 +56,7 @@
                 android:id="@+id/xp_wo2b"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/theme_xp_margin"
                 rocky:label="@string/wo2b_home"
                 rocky:position="top"
                 rocky:rocky_icon="@drawable/xp_icon_wo2b" />

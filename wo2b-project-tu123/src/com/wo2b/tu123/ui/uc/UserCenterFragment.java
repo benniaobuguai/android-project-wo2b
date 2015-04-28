@@ -1,6 +1,6 @@
 package com.wo2b.tu123.ui.uc;
 
-import opensource.component.de.greenrobot.event.EventBus;
+import opensource.component.otto.Subscribe;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Message;
@@ -10,29 +10,29 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 
-import com.wo2b.sdk.assistant.event.RockyEvent;
-import com.wo2b.wrapper.app.fragment.RockyFragment;
-import com.wo2b.wrapper.component.common.StatementActivity;
-import com.wo2b.wrapper.component.common.Wo2bHomeActivity;
-import com.wo2b.wrapper.view.XPreference;
+import com.wo2b.sdk.bus.GEvent;
 import com.wo2b.tu123.R;
 import com.wo2b.tu123.ui.extra.DeveloperHomeActivity;
 import com.wo2b.tu123.ui.localalbum.LocalAlbumActivity;
 import com.wo2b.tu123.ui.settings.AboutActivity;
+import com.wo2b.wrapper.app.fragment.LazyFragment;
+import com.wo2b.wrapper.component.common.StatementActivity;
+import com.wo2b.wrapper.component.common.Wo2bAppListActivity;
+import com.wo2b.wrapper.component.common.Wo2bHomeActivity;
+import com.wo2b.wrapper.component.user.UserActivity;
+import com.wo2b.wrapper.view.XPreference;
 import com.wo2b.xxx.webapp.manager.user.User;
 import com.wo2b.xxx.webapp.manager.user.UserManager;
-import com.wo2b.wrapper.component.common.Wo2bAppListActivity;
-import com.wo2b.wrapper.component.user.UserActivity;
 
 /**
  * User Center Home.
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * @email ixueyongjia@gmail.com
  * @version 1.0.0
  * @date 2014-10-15
  */
-public class UserCenterFragment extends RockyFragment implements OnClickListener
+public class UserCenterFragment extends LazyFragment implements OnClickListener
 {
 
 	private XPreference xp_user_info;
@@ -50,8 +50,6 @@ public class UserCenterFragment extends RockyFragment implements OnClickListener
 	public void onCreate(Bundle savedInstanceState)
 	{
 		super.onCreate(savedInstanceState);
-		EventBus.getDefault().register(this);
-		
 		mUserManager = UserManager.getInstance();
 	}
 
@@ -64,11 +62,44 @@ public class UserCenterFragment extends RockyFragment implements OnClickListener
 
 		return view;
 	}
-	
+
 	@Override
 	public void onViewCreated(View view, @Nullable Bundle savedInstanceState)
 	{
 		super.onViewCreated(view, savedInstanceState);
+	}
+
+	@Override
+	public void doUserVisibleHint()
+	{
+		if (mUserManager.isLogin())
+		{
+			User memoryUser = mUserManager.getMemoryUser();
+			xp_user_info.setTitle(memoryUser.getNickname());
+			xp_user_info.setRightText(memoryUser.getUserGold().getGold() + "");
+			xp_user_info.setItemIndicatorRight(R.drawable.xp_icon_gold2);
+		}
+		else
+		{
+			User localUser = mUserManager.getLocalUser();
+			if (localUser != null)
+			{
+				xp_user_info.setTitle(localUser.getNickname());
+				xp_user_info.setRightText(localUser.getUserGold().getGold() + "");
+				xp_user_info.setItemIndicatorRight(R.drawable.xp_icon_gold2);
+			}
+			else
+			{
+				xp_user_info.setTitle(R.string.user_nologin);
+				xp_user_info.setRightText("");
+			}
+		}
+	}
+
+	@Override
+	protected boolean busEventEnable()
+	{
+		return true;
 	}
 	
 	/**
@@ -76,17 +107,18 @@ public class UserCenterFragment extends RockyFragment implements OnClickListener
 	 * 
 	 * @param msg
 	 */
-	public void onEventMainThread(Message msg)
+	@Subscribe
+	public void onLoginCallback(Message msg)
 	{
-		if (msg.what == RockyEvent.USER_LOGIN_OK)
+		if (msg.what == GEvent.USER_LOGIN_OK)
 		{
 			onLoginSuccess((User) msg.obj);
 		}
-		else if (msg.what == RockyEvent.USER_LOGIN_FAIL)
+		else if (msg.what == GEvent.USER_LOGIN_FAIL)
 		{
 			onLoginError(msg.arg1, msg.obj + "");
 		}
-		else if (msg.what == RockyEvent.USER_LOGOUT_OK)
+		else if (msg.what == GEvent.USER_LOGOUT_OK)
 		{
 			onLogout();
 		}
@@ -140,49 +172,6 @@ public class UserCenterFragment extends RockyFragment implements OnClickListener
 		xp_wo2b.setOnClickListener(this);
 		xp_support_developer.setOnClickListener(this);
 		xp_recommend_apps.setOnClickListener(this);
-	}
-
-	@Override
-	public void onActivityCreated(Bundle savedInstanceState)
-	{
-		super.onActivityCreated(savedInstanceState);
-	}
-
-	@Override
-	public void onResume()
-	{
-		super.onResume();
-
-		if (mUserManager.isLogin())
-		{
-			User memoryUser = mUserManager.getMemoryUser();
-			xp_user_info.setTitle(memoryUser.getNickname());
-			xp_user_info.setRightText(memoryUser.getUserGold().getGold() + "");
-			xp_user_info.setItemIndicatorRight(R.drawable.xp_icon_gold2);
-		}
-		else
-		{
-			User localUser = mUserManager.getLocalUser();
-			if (localUser != null)
-			{
-				xp_user_info.setTitle(localUser.getNickname());
-				xp_user_info.setRightText(localUser.getUserGold().getGold() + "");
-				xp_user_info.setItemIndicatorRight(R.drawable.xp_icon_gold2);
-			}
-			else
-			{
-				xp_user_info.setTitle(R.string.user_nologin);
-				xp_user_info.setRightText("");
-			}
-		}
-	}
-
-	@Override
-	public void onDestroy()
-	{
-		super.onDestroy();
-
-		EventBus.getDefault().unregister(this);
 	}
 
 	@Override

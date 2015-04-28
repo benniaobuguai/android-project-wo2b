@@ -20,7 +20,7 @@ import com.wo2b.sdk.common.util.Utils;
 import com.wo2b.sdk.common.util.ViewUtils;
 import com.wo2b.sdk.core.RockySdk;
 import com.wo2b.wrapper.R;
-import com.wo2b.wrapper.app.RockyListFragmentActivity;
+import com.wo2b.wrapper.app.BaseFragmentListActivity;
 import com.wo2b.wrapper.component.user.UserActivity;
 import com.wo2b.xxx.webapp.Wo2bResHandler;
 import com.wo2b.xxx.webapp.manager.comment.Comment;
@@ -30,10 +30,10 @@ import com.wo2b.xxx.webapp.manager.user.UserManager;
 /**
  * 评论
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * @email ixueyongjia@gmail.com
  */
-public class CommentActivity extends RockyListFragmentActivity<Comment> implements View.OnClickListener
+public class CommentActivity extends BaseFragmentListActivity<Comment> implements View.OnClickListener
 {
 
 	public static final String EXTRA_MODULE = "module";

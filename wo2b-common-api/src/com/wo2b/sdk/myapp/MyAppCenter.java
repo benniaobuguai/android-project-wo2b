@@ -5,7 +5,7 @@ import java.util.HashMap;
 /**
  * 应用程序的相关信息, 暂时主要是用于判断用户的来源
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * @email ixueyongjia@gmail.com
  *        FIXME: 需要优化
  */
@@ -23,7 +23,7 @@ public class MyAppCenter
 	{
 		APP_LIST.put("com.wo2b.tu123", "图界传说");
 		APP_LIST.put("com.wo2b.war3", "魔兽你好");
-		APP_LIST.put("com.wo2b.game.x2048", "2048百变版");
+		APP_LIST.put("com.wo2b.game.x2048", "百变2048");
 		APP_LIST.put("com.wo2b.tuku", "极简图库");
 	}
 

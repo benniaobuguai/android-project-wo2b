@@ -3,17 +3,17 @@ package com.wo2b.tu123.ui.temp.articles;
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.wo2b.wrapper.app.RockyWebViewActivity;
+import com.wo2b.wrapper.app.BaseWebViewActivity;
 import com.wo2b.tu123.R;
 
 /**
  * 文章阅读
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * @email ixueyongjia@gmail.com
  * 
  */
-public class ArticleReaderActivity extends RockyWebViewActivity
+public class ArticleReaderActivity extends BaseWebViewActivity
 {
 
 	/**

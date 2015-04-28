@@ -3,7 +3,7 @@ package com.wo2b.sdk.assistant.upgrade;
 /**
  * 升级操作接口
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * 
  */
 public interface UpgradeHandler

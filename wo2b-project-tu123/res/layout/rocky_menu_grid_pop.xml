@@ -25,7 +25,7 @@
 
             <GridView
                 android:id="@+id/grid_menu"
-                style="@style/tu_gridview_base"
+                style="@style/global_gridview_base"
                 android:columnWidth="63dp"
                 android:horizontalSpacing="30dp"
                 android:scrollbars="none"

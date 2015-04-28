@@ -10,15 +10,14 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.OutputStream;
 
-import opensource.component.de.greenrobot.event.EventBus;
 import android.content.Context;
 import android.content.Intent;
-import android.os.Message;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
-import com.wo2b.sdk.assistant.event.RockyEvent;
 import com.wo2b.sdk.assistant.log.Log;
+import com.wo2b.sdk.bus.GBus;
+import com.wo2b.sdk.bus.GEvent;
 import com.wo2b.sdk.common.util.DeviceInfoManager;
 import com.wo2b.sdk.common.util.io.IOUtils;
 import com.wo2b.sdk.core.RockyConfig;
@@ -32,7 +31,7 @@ import com.wo2b.xxx.webapp.openapi.security.Wo2bSecurity;
 /**
  * 用户管理类, 登录成功后, 发送一个广播.
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * @email ixueyongjia@gmail.com
  */
 public class UserManager
@@ -151,11 +150,7 @@ public class UserManager
 				// UserGold userGold = mUserInfo.getUserGold();
 				// mUserGoldManager.saveToLocal(userGold);
 
-				Message message = new Message();
-				message.what = RockyEvent.USER_LOGIN_OK;
-				message.obj = mUserInfo;
-				EventBus.getDefault().post(message);
-
+				GBus.post(GEvent.USER_LOGIN_OK, mUserInfo);
 				if (loginCallback != null)
 				{
 					loginCallback.onSuccess(code, result);
@@ -165,11 +160,7 @@ public class UserManager
 			@Override
 			public void onFailure(int code, String msg, Throwable throwable)
 			{
-				Message message = new Message();
-				message.what = RockyEvent.USER_LOGIN_FAIL;
-				message.arg1 = code;
-				message.obj = msg;
-				EventBus.getDefault().post(message);
+				GBus.post(GEvent.USER_LOGIN_FAIL, msg);
 
 				if (loginCallback != null)
 				{
@@ -198,10 +189,8 @@ public class UserManager
 
 				// 删除本地的用户记录
 				deleteUserInfoFile();
-
-				Message message = new Message();
-				message.what = RockyEvent.USER_LOGOUT_OK;
-				EventBus.getDefault().post(message);
+				
+				GBus.post(GEvent.USER_LOGOUT_OK);
 			}
 
 			@Override
@@ -215,9 +204,7 @@ public class UserManager
 				// 删除本地的用户记录
 				deleteUserInfoFile();
 
-				Message message = new Message();
-				message.what = RockyEvent.USER_LOGOUT_OK;
-				EventBus.getDefault().post(message);
+				GBus.post(GEvent.USER_LOGOUT_OK);
 			}
 		});
 	}

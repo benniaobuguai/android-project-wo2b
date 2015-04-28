@@ -3,7 +3,7 @@ package com.wo2b.sdk.core.exception;
 /**
  * 解析异常
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * 
  */
 public class SdkParseException extends Exception

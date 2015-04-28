@@ -10,7 +10,7 @@ import android.text.TextUtils;
 /**
  * Java表单验证工具类
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * @email ixueyongjia@gmail.com
  * @version 1.0.0
  * @date 2014-10-21

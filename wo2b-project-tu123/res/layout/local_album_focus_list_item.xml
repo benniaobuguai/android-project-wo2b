@@ -86,7 +86,7 @@
             android:id="@+id/operation"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/selector_listview_green_common"
+            android:background="@drawable/selector_listview_grey"
             android:drawablePadding="5dp"
             android:drawableTop="@drawable/tu_listitem_remove"
             android:gravity="center"

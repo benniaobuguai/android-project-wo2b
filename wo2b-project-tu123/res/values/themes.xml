@@ -1,7 +1,7 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android">
 
     <!-- EntryActivity的样式 -->
-    <style name="Rocky.Theme.Main.Entry" parent="@style/Rocky.Theme.Main.NoTitleBar">
+    <style name="Rocky.Theme.Main.EntryXXXXXXXXXXXXXXXXXXXXXXXXXX" parent="@style/Rocky.Theme.Main.NoTitleBar">
         <item name="android:windowAnimationStyle">@style/anim_activity_zoom</item>
         <!-- <item name="android:windowIsTranslucent">true</item> -->
         

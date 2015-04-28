@@ -20,7 +20,7 @@ import com.j256.ormlite.stmt.Where;
 /**
  * 基础的逻辑层
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * 
  * @param <Model>
  */

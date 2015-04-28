@@ -5,7 +5,7 @@ import com.wo2b.sdk.core.RockyConfig;
 /**
  * 应用目录抽象类
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * @email ixueyongjia@gmail.com
  * @version 2.0.0
  * @date 2014-9-14

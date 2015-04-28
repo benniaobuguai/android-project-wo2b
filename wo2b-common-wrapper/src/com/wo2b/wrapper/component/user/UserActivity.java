@@ -1,41 +1,34 @@
 package com.wo2b.wrapper.component.user;
 
-import opensource.component.de.greenrobot.event.EventBus;
+import opensource.component.otto.Subscribe;
 import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Message;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.ActionBar;
-import android.support.v7.widget.Toolbar;
-import android.view.View;
-import android.widget.ProgressBar;
 
-import com.wo2b.sdk.assistant.event.RockyEvent;
+import com.wo2b.sdk.bus.GEvent;
+import com.wo2b.wrapper.R;
+import com.wo2b.wrapper.app.BaseFragmentActivity;
+import com.wo2b.wrapper.view.dialog.DialogUtils;
 import com.wo2b.xxx.webapp.manager.user.User;
 import com.wo2b.xxx.webapp.manager.user.UserManager;
-import com.wo2b.wrapper.R;
-import com.wo2b.wrapper.app.RockyFragmentActivity;
-import com.wo2b.wrapper.view.dialog.DialogUtils;
 
 /**
  * 用户信息
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * @email ixueyongjia@gmail.com
  * 
  */
-public class UserActivity extends RockyFragmentActivity
+public class UserActivity extends BaseFragmentActivity
 {
 
 	/**
 	 * 需要回调时, 请设置此参数为true
 	 */
 	public static final String CALLBACK_FLAG = "callback_flag";
-	
-	private Toolbar mToolbar = null;
-	private ProgressBar mProgressBar = null;
 	
 	private UserDetailFragment mUserDetailFragment = null;
 	private UserLoginFragment mUserLoginFragment = null;
@@ -58,53 +51,10 @@ public class UserActivity extends RockyFragmentActivity
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.wrapper_cn_user_main);
 
-		mToolbar = findViewByIdExt(R.id.rocky_toolbar);
-		setSupportActionBar(mToolbar);
-		mProgressBar = findViewByIdExt(R.id.progress_spinner);
 		setSupportProgressBarIndeterminate(false);
-
-		// =============================================================================
-		// ### 下面代码主要是基于Toolbar才添加的, 后面有时间, 直接全部替换成Toolbar
-		if (!hasActionBar() && getSupportActionBar() != null)
-		{
-			getSupportActionBar().hide();
-		}
-
-		if (getSupportActionBar() != null)
-		{
-			// 设置图标
-			getSupportActionBar().setIcon(R.drawable.wo2b_logo);
-			// 设置Logo
-			// getSupportActionBar().setLogo(R.drawable.ic_launcher);
-
-			// 显示左上角"返回"图标
-			getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-			// 显示标题
-			// getSupportActionBar().setDisplayShowTitleEnabled(false);
-			// R.id.home区域可点击
-			getSupportActionBar().setHomeButtonEnabled(true);
-			// 如果有Logo, 则用Logo代替Icon.
-			// getSupportActionBar().setDisplayUseLogoEnabled(true);
-
-			getSupportActionBar().setHomeAsUpIndicator(R.drawable.selector_actionbar_back_btn);
-
-			// 显示返回+title
-			 getSupportActionBar().setDisplayOptions(
-			 ActionBar.DISPLAY_SHOW_TITLE | ActionBar.DISPLAY_HOME_AS_UP /*| ActionBar.DISPLAY_SHOW_HOME*/);
-
-			// 设置图标
-			int icon = getResources().getIdentifier("actionbar_icon", "drawable", this.getPackageName());
-			if (icon > 0)
-			{
-				getSupportActionBar().setIcon(icon);
-			}
-		}
-
 		mCallbackFlag = getIntent().getBooleanExtra(CALLBACK_FLAG, false);
 
 		initView();
-
-		EventBus.getDefault().register(this);
 	}
 
 	protected void initView()
@@ -126,39 +76,46 @@ public class UserActivity extends RockyFragmentActivity
 	{
 
 	}
+	
+	@Override
+	protected boolean busEventEnable()
+	{
+		return true;
+	}
 
 	/**
 	 * EventBus主线程回调
 	 * 
 	 * @param msg
 	 */
-	public void onEventMainThread(Message msg)
+	@Subscribe
+	public void onLoginCallback(Message msg)
 	{
-		if (msg.what == RockyEvent.USER_LOGIN_CMD)
+		if (msg.what == GEvent.USER_LOGIN_CMD)
 		{
 			onLoginCmd();
 		}
-		else if (msg.what == RockyEvent.USER_LOGIN_OK)
+		else if (msg.what == GEvent.USER_LOGIN_OK)
 		{
 			onLoginOK((User) msg.obj);
 		}
-		else if (msg.what == RockyEvent.USER_LOGIN_FAIL)
+		else if (msg.what == GEvent.USER_LOGIN_FAIL)
 		{
 			onLoginFail(msg.arg1, msg.obj + "");
 		}
-		else if (msg.what == RockyEvent.USER_LOGOUT_CMD)
+		else if (msg.what == GEvent.USER_LOGOUT_CMD)
 		{
 			onLogoutCmd();
 		}
-		else if (msg.what == RockyEvent.USER_LOGOUT_OK)
+		else if (msg.what == GEvent.USER_LOGOUT_OK)
 		{
 			onLogout();
 		}
-		else if (msg.what == RockyEvent.USER_RESET_PWD_CMD)
+		else if (msg.what == GEvent.USER_RESET_PWD_CMD)
 		{
 			resetPwdCmd();
 		}
-		else if (msg.what == RockyEvent.USER_RESET_PWD_OK)
+		else if (msg.what == GEvent.USER_RESET_PWD_OK)
 		{
 			onResetPwdOK();
 		}
@@ -327,29 +284,27 @@ public class UserActivity extends RockyFragmentActivity
 	protected void onDestroy()
 	{
 		super.onDestroy();
-
-		EventBus.getDefault().unregister(this);
 	}
 	
-	/**
-	 * 重写父类的方法, 使用Toolbar中的ProgressBar.
-	 */
-	@Override
-	public void setSupportProgressBarIndeterminate(boolean indeterminate)
-	{
-		if (mProgressBar == null)
-		{
-			return;
-		}
-
-		if (indeterminate)
-		{
-			mProgressBar.setVisibility(View.VISIBLE);
-		}
-		else
-		{
-			mProgressBar.setVisibility(View.GONE);
-		}
-	}
+//	/**
+//	 * 重写父类的方法, 使用Toolbar中的ProgressBar.
+//	 */
+//	@Override
+//	public void setSupportProgressBarIndeterminate(boolean indeterminate)
+//	{
+//		if (mProgressBar == null)
+//		{
+//			return;
+//		}
+//
+//		if (indeterminate)
+//		{
+//			mProgressBar.setVisibility(View.VISIBLE);
+//		}
+//		else
+//		{
+//			mProgressBar.setVisibility(View.GONE);
+//		}
+//	}
 
 }

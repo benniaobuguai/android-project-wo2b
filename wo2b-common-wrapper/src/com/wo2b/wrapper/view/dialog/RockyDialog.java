@@ -10,7 +10,7 @@ import com.wo2b.wrapper.R;
 /**
  * 系统所有的Dialog的基类, 此类控制所有Dialog的主题风格等.
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * @email ixueyongjia@gmail.com
  * @version 2.0.0
  * @date 2014-11-3

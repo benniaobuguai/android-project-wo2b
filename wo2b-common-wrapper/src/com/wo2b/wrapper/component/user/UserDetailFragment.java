@@ -1,12 +1,10 @@
 package com.wo2b.wrapper.component.user;
 
-import opensource.component.de.greenrobot.event.EventBus;
 import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Message;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -14,25 +12,26 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-import com.wo2b.sdk.assistant.event.RockyEvent;
+import com.wo2b.sdk.bus.GBus;
+import com.wo2b.sdk.bus.GEvent;
 import com.wo2b.sdk.myapp.MyAppCenter;
+import com.wo2b.wrapper.R;
+import com.wo2b.wrapper.app.fragment.BaseFragment;
+import com.wo2b.wrapper.view.XPreference;
+import com.wo2b.wrapper.view.dialog.DialogText;
 import com.wo2b.xxx.webapp.manager.user.GradeManager;
 import com.wo2b.xxx.webapp.manager.user.Role;
 import com.wo2b.xxx.webapp.manager.user.User;
 import com.wo2b.xxx.webapp.manager.user.UserManager;
-import com.wo2b.wrapper.R;
-import com.wo2b.wrapper.app.fragment.RockyFragment;
-import com.wo2b.wrapper.view.XPreference;
-import com.wo2b.wrapper.view.dialog.DialogText;
 
 /**
  * 个人信息详情
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * @email ixueyongjia@gmail.com
  * 
  */
-public class UserDetailFragment extends RockyFragment implements View.OnClickListener
+public class UserDetailFragment extends BaseFragment implements View.OnClickListener
 {
 
 	private XPreference xp_username;
@@ -272,9 +271,8 @@ public class UserDetailFragment extends RockyFragment implements View.OnClickLis
 	private void onLogOutClick(View v)
 	{
 		mUserManager.logout();
-		Message message = new Message();
-		message.what = RockyEvent.USER_LOGOUT_CMD;
-		EventBus.getDefault().post(message);
+
+		GBus.post(GEvent.USER_LOGOUT_CMD);
 	}
 
 }

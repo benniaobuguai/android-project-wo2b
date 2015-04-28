@@ -16,7 +16,7 @@ import com.wo2b.wrapper.R;
 /**
  * 下载广播接收器, 暂停使用, 后续完善下载功能时, 再打开.
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * @email ixueyongjia@gmail.com
  * @version 1.0.0
  * @date 2013-12-25

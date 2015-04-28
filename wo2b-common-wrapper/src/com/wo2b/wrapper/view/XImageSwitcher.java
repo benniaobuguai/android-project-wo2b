@@ -22,7 +22,7 @@ import com.wo2b.wrapper.R;
 /**
  * Image Switcher
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * @email benniaobuguai@gmail.com
  * @version 1.0.0
  * @date 2014-07-15
@@ -318,6 +318,9 @@ public class XImageSwitcher extends ImageSwitcher
 	@Override
 	public boolean onTouchEvent(MotionEvent event)
 	{
+		Log.i("info", "event: " + event);
+		
+		
 		switch (event.getAction())
 		{
 			case MotionEvent.ACTION_DOWN:
@@ -325,7 +328,9 @@ public class XImageSwitcher extends ImageSwitcher
 				// coordinate x
 				mDownX = event.getX();
 				mDownY = event.getY();
-				break;
+				
+				return super.onTouchEvent(event);
+				//break;
 			}
 			case MotionEvent.ACTION_UP:
 			{
@@ -415,6 +420,7 @@ public class XImageSwitcher extends ImageSwitcher
 			case MotionEvent.ACTION_CANCEL:
 			{
 				getParent().requestDisallowInterceptTouchEvent(false);
+				
 				return true;
 			}
 			case MotionEvent.ACTION_MOVE:
@@ -424,7 +430,7 @@ public class XImageSwitcher extends ImageSwitcher
 				if (Math.abs(lastY - mDownY) > MIN_Y)
 				{
 					// Y轴要小于20像素才执行切换
-					getParent().requestDisallowInterceptTouchEvent(false);
+					getParent().requestDisallowInterceptTouchEvent(true);
 				}
 				else
 				{
@@ -435,8 +441,8 @@ public class XImageSwitcher extends ImageSwitcher
 			}
 		}
 
-		//return true;
-		return super.onTouchEvent(event);
+		return true;
+		//return super.onTouchEvent(event);
 	}
 	
 //	@Override

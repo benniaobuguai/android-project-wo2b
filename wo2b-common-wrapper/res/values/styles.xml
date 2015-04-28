@@ -4,7 +4,8 @@
     <style name="tu_container_common">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">match_parent</item>
-        <item name="android:background">@color/bg_app</item>
+        <item name="android:background">@drawable/g_layout_bg_grey</item>
+        <!-- <item name="android:background">@color/bg_app</item> -->
     </style>
     
     <style name="tu_container_black">
@@ -28,7 +29,7 @@
     
     
     <!-- Custom TabView Item -->
-    <style name="rocky_base_tabview_item">
+    <style name="global_base_tabview_item">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_weight">1</item>
@@ -45,7 +46,7 @@
     
     <!-- &&&&&&&&&&&&&&&&&&&&&&&& Common ListView Style Start &&&&&&&&&&&&&&&&&&&&&&&& -->
     <!-- ListView基础样式 -->
-    <style name="common_listview_base">
+    <style name="global_listview_base">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">match_parent</item>
         <item name="android:cacheColorHint">#00000000</item>
@@ -59,26 +60,20 @@
     </style>
     
     <!-- 带有拟物化/立体感的ListView不需要显示背景 -->
-    <style name="common_listview_block" parent="@style/common_listview_base">
+    <style name="global_listview_block" parent="@style/global_listview_base">
         <item name="android:listSelector">@null</item>
         <item name="android:background">@drawable/listitem_block_normal</item>
     </style>
     
-    <!-- 带有拟物化/立体感的 -->
-    <style name="common_listview_listitem_block">
-        <item name="android:background">@drawable/selector_listview_listitem_block</item>
-    </style>
-    
-    
     <!-- ListView default style -->
-    <style name="tu_listview_default" parent="@style/common_listview_base">
+    <style name="global_listview_default" parent="@style/global_listview_base">
    		<item name="android:divider">@drawable/tu_listview_divider</item>
-        <item name="android:listSelector">@drawable/selector_listview_green_common</item>
+        <item name="android:listSelector">@drawable/selector_listview_grey</item>
         <!-- <item name="android:background">@drawable/mm_listitem_simple</item> -->
     </style>
     
     <!-- ExpandableListView default style -->
-    <style name="tu_expandable_listview" parent="@android:style/Widget.ExpandableListView">
+    <style name="global_expandable_listview" parent="@android:style/Widget.ExpandableListView">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">match_parent</item>
         <item name="android:groupIndicator">@null</item>
@@ -86,14 +81,14 @@
         <item name="android:choiceMode">singleChoice</item>
         <item name="android:divider">@drawable/tu_listview_divider</item>
         <item name="android:drawSelectorOnTop">false</item>
-        <item name="android:listSelector">@drawable/selector_listview_green_common</item>
+        <item name="android:listSelector">@drawable/selector_listview_grey</item>
         <item name="android:scrollbars">none</item>
         <item name="android:background">@color/white</item>
         <item name="android:childDivider">@drawable/tu_listview_divider</item>
     </style>
     
     <!-- GridView default style -->
-    <style name="tu_gridview_base">
+    <style name="global_gridview_base">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">match_parent</item>
         <item name="android:cacheColorHint">@color/transparent</item>
@@ -105,6 +100,42 @@
     </style>
     
     <!-- &&&&&&&&&&&&&&&&&&&&&&&& Common ListView Style End &&&&&&&&&&&&&&&&&&&&&&&& -->
+    
+    
+    <!-- &&&&&&&&&&&&&&&&&&&&&&&& Global Button Style &&&&&&&&&&&&&&&&&&&&&&&& -->
+    <!-- 将逐渐取代Common Button Style -->
+    <style name="global_btn_green">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/selector_g_btn_green</item>
+        <item name="android:textSize">@dimen/textsize_14</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="global_btn_grey">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/selector_g_btn_grey</item>
+        <item name="android:textSize">@dimen/textsize_14</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    
+    <style name="global_btn_red">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/selector_g_btn_red</item>
+        <item name="android:textSize">@dimen/textsize_14</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    
+    
+    
     
     
     <!-- &&&&&&&&&&&&&&&&&&&&&&&& Common Button Style &&&&&&&&&&&&&&&&&&&&&&&& -->

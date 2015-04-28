@@ -18,18 +18,18 @@ import android.widget.TextView;
 
 import com.wo2b.sdk.common.util.ViewUtils;
 import com.wo2b.wrapper.R;
-import com.wo2b.wrapper.app.RockyListFragmentActivity;
+import com.wo2b.wrapper.app.BaseFragmentListActivity;
 import com.wo2b.wrapper.component.image.DisplayImageBuilder;
 
 /**
  * 新闻列表
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * @email ixueyongjia@gmail.com
  * @version 1.0.0
  * @date 2014-11-2
  */
-public class BaiduNewsListActivity extends RockyListFragmentActivity<News>
+public class BaiduNewsListActivity extends BaseFragmentListActivity<News>
 {
 
 	private ImageLoader mImageLoader;

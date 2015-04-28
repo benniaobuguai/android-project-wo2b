@@ -1,21 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:wo2b="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/selector_listview_white_green"
+    android:background="@drawable/selector_listview_white"
     android:paddingBottom="9dp"
     android:paddingTop="10dp" >
 
-    <ImageView
+    <com.wo2b.sdk.view.RoundedImageView
         android:id="@+id/image"
-        android:layout_width="@dimen/dimen_50"
-        android:layout_height="@dimen/dimen_50"
+        android:layout_width="@dimen/dimen_55"
+        android:layout_height="@dimen/dimen_55"
         android:layout_marginLeft="12dp"
         android:layout_marginRight="6dp"
         android:adjustViewBounds="true"
         android:contentDescription="@string/null_image"
-        android:scaleType="centerCrop"
-        android:src="@drawable/warn_image_loading" />
+        android:scaleType="center"
+        android:src="@drawable/warn_image_loading"
+        wo2b:border_color="#bb666666"
+        wo2b:border_width="1dp"
+        wo2b:corner_radius="@dimen/dimen_100" />
 
     <TextView
         android:id="@+id/name"

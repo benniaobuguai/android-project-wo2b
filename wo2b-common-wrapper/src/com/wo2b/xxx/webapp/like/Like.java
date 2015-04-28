@@ -5,7 +5,7 @@ import com.j256.ormlite.field.DatabaseField;
 /**
  * 点赞
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * @email ixueyongjia@gmail.com
  */
 public class Like implements java.io.Serializable

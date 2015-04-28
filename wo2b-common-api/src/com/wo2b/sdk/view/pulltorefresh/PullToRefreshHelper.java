@@ -5,7 +5,7 @@ import opensource.component.pulltorefresh.PullToRefreshBase.Mode;
 
 /**
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * @email ixueyongjia@gmail.com
  * @version 1.0.0
  * @date 2014-11-10

@@ -7,7 +7,7 @@
 
     <ListView
         android:id="@+id/listView"
-        style="@style/tu_listview_default"
+        style="@style/global_listview_default"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/actionbar_bg_translucent"

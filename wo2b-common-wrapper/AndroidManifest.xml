@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.wo2b.wrapper"
-    android:versionCode="20140526"
+    android:versionCode="20150331"
     android:versionName="2.0.0" >
 
     <uses-sdk

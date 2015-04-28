@@ -4,7 +4,7 @@ import java.util.Random;
 
 /**
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * @email ixueyongjia@gmail.com
  */
 public class RandomString

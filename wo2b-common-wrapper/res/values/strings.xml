@@ -170,47 +170,4 @@
 	
 	
 	
-	<!-- Hint Strings -->
-    <string name="hint_unknown">未知错误</string>
-    <string name="hint_exception">异常</string>
-    <string name="hint_network_error">网络异常</string>
-    <string name="hint_not_take_on">暂无收录</string>
-	<string name="hint_not_available">暂无</string>
-	<string name="hint_well_done">Well Done!!</string>
-	<string name="hint_failed">不成功</string>
-	<string name="hint_not_supported">暂时不支持</string>
-	<string name="hint_goto_launcher">再按一次返回到桌面</string>
-	<string name="hint_delete">亲, 你要小心哟</string>
-	<string name="hint_confirm_delete">确定要删除 [%1$s] 吗?</string>
-	<string name="hint_pwd_error">密码错误!!!</string>
-	<string name="hint_input_username">请输入用户名</string>
-	<string name="hint_input_username_or_email">用户名或邮箱</string>
-	<string name="hint_input_register_email">输入注册使用的邮箱</string>
-	<string name="hint_input_password">请输入6&#8211;20位密码</string>
-	<string name="hint_input_password2">输入的密码不一致</string>
-	<string name="hint_input_get_pwd_easy">方便你找回密码</string>
-	<string name="hint_input_email_warn">请正确输入邮箱</string>
-	<string name="hint_install_failed">请检查是否正确安装</string>
-	<string name="hint_search_tips">输入搜索关键字</string>
-	<string name="hint_send_email_ok">邮件已经发送给您，请登录邮箱重新设置您的密码。</string>
-	
-	<string name="hint_not_support_nickname">暂不支持修改昵称</string>
-	<string name="hint_not_support_email">暂不支持修改邮箱</string>
-	<string name="hint_not_support_phonenum">暂不支持绑定手机号码</string>
-	
-	
-	<string name="hint_image_load_error">读取图片失败</string>
-	<string name="hint_image_decode_error">解析图片失败</string>
-	<string name="hint_image_too_large">可能你的图片太大了</string>
-	
-	
-	<string name="hint_loading">正在努力加载</string>
-	<string name="hint_listview_network_error">点击屏幕&#160;&#160;&#160;重新加载</string>
-	<string name="hint_listview_load_not_data">没有加载到数据</string>
-	
-	<string name="hint_no_data">暂无数据</string>
-	<string name="hint_no_more_data">已经没有数据了</string>
-	
-	<string name="hint_not_supported_download_tp">不支持下载第三方网站资源</string>
-
 </resources>

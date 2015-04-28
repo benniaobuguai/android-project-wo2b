@@ -15,7 +15,7 @@ import com.wo2b.xxx.webapp.Wo2bAsyncHttpClient;
 /**
  * 新闻管理器
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * @email ixueyongjia@gmail.com
  * @version 1.0.0
  * @date 2014-11-2

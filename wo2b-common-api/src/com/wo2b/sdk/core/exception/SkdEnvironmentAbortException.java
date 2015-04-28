@@ -3,7 +3,7 @@ package com.wo2b.sdk.core.exception;
 /**
  * 系统环境出异常时, 需要中止退出程序.
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * 
  */
 public class SkdEnvironmentAbortException extends RuntimeException

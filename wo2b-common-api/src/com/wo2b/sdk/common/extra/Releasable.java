@@ -3,7 +3,7 @@ package com.wo2b.sdk.common.extra;
 /**
  * 可释放的资源
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * 
  */
 public interface Releasable

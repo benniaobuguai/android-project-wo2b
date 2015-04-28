@@ -3,7 +3,7 @@ package com.wo2b.tu123.business.image;
 /**
  * 图片模块
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * @email ixueyongjia@gmail.com
  * 
  */

@@ -30,7 +30,7 @@ import com.wo2b.xxx.webapp.manager.user.UserManager;
  * 
  * </ul>
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * @email ixueyongjia@gmail.com
  */
 public abstract class Wo2bResHandler<Result> extends TextHttpResponseHandler

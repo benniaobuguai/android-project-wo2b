@@ -5,7 +5,7 @@ import com.wo2b.sdk.core.ClientInfo;
 /**
  * 基本配置, 包含常规存储至SharePreference的操作.
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * 
  */
 public final class SdkConfig

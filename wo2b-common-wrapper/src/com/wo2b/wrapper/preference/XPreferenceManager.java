@@ -8,17 +8,14 @@ import com.wo2b.wrapper.preference.RockyKeyValues.Values;
 /**
  * 偏好设置工具类
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * 
  */
 public final class XPreferenceManager extends SdkPreference
 {
 	
-	private static final byte[] mLock = new byte[0];
-
-
 	private static XPreferenceManager mInstance = null;
-	
+
 	/**
 	 * 私有构造函数
 	 * 
@@ -26,7 +23,7 @@ public final class XPreferenceManager extends SdkPreference
 	 */
 	private XPreferenceManager()
 	{
-		
+
 	}
 
 	/**
@@ -39,7 +36,7 @@ public final class XPreferenceManager extends SdkPreference
 	{
 		if (mInstance == null)
 		{
-			synchronized (mLock)
+			synchronized (XPreferenceManager.class)
 			{
 				if (mInstance == null)
 				{

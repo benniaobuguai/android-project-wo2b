@@ -15,13 +15,14 @@
         android:id="@+id/actionbar_item_back"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/dimen_10"
         android:background="@drawable/selector_actionbar_back_btn" />
 
     <LinearLayout
         android:id="@+id/search_box_area"
         android:layout_width="0dip"
         android:layout_height="match_parent"
-        android:layout_marginLeft="10dp"
+        android:layout_marginLeft="@dimen/dimen_8"
         android:layout_weight="1"
         android:background="@drawable/selector_search_input_blue"
         android:gravity="center_vertical"
@@ -40,7 +41,7 @@
             android:paddingRight="10dp"
             android:singleLine="true"
             android:textColor="@color/white"
-            android:textColorHint="@color/font_text_color_hint"
+            android:textColorHint="#66ffffff"
             android:textSize="16sp" />
 
         <ImageView

@@ -13,7 +13,7 @@ import com.umeng.analytics.onlineconfig.UmengOnlineConfigureListener;
 /**
  * 代理友盟行为统计
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * 
  */
 public final class MobclickAgentProxy

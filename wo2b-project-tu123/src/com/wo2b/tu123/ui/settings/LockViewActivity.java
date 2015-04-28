@@ -7,7 +7,6 @@ import java.util.Map;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.view.MenuCompat;
 import android.support.v4.view.MenuItemCompat;
 import android.text.Editable;
 import android.text.InputType;
@@ -16,7 +15,6 @@ import android.text.TextWatcher;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.EditText;
@@ -27,19 +25,19 @@ import android.widget.SimpleAdapter.ViewBinder;
 import android.widget.TextView;
 
 import com.wo2b.sdk.common.util.ViewUtils;
-import com.wo2b.wrapper.app.RockyFragmentActivity;
-import com.wo2b.wrapper.preference.RockyKeyValues;
-import com.wo2b.wrapper.preference.XPreferenceManager;
 import com.wo2b.tu123.R;
 import com.wo2b.tu123.ui.global.SplashActivity;
+import com.wo2b.wrapper.app.BaseFragmentActivity;
+import com.wo2b.wrapper.preference.RockyKeyValues;
+import com.wo2b.wrapper.preference.XPreferenceManager;
 
 /**
  * 锁屏UI
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * 
  */
-public class LockViewActivity extends RockyFragmentActivity
+public class LockViewActivity extends BaseFragmentActivity
 {
 
 	private GridView grid_number;
@@ -47,7 +45,6 @@ public class LockViewActivity extends RockyFragmentActivity
 	private LinearLayout pwd_content;
 	private EditText[] pwd_items;
 
-	private XPreferenceManager mPref = null;
 	private int mIndex = 0;
 
 	/** 解密 */
@@ -86,13 +83,11 @@ public class LockViewActivity extends RockyFragmentActivity
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
 	{
-		requestWindowFeature(Window.FEATURE_ACTION_BAR_OVERLAY);
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.tu_lockview);
-		mPref = XPreferenceManager.getInstance();
 		Intent intent = getIntent();
 		mAction = intent.getAction();
-
+		
 		initView();
 		setDefaultValues();
 		bindEvents();
@@ -105,7 +100,7 @@ public class LockViewActivity extends RockyFragmentActivity
 
 		generateKeyboard();
 
-		mOldPwd = mPref.getString(RockyKeyValues.Keys.ENTRY_PASSWORD, "");
+		mOldPwd = XPreferenceManager.getString(RockyKeyValues.Keys.ENTRY_PASSWORD, "");
 		
 
 		pwd_content = (LinearLayout) findViewById(R.id.pwd_content);
@@ -222,7 +217,7 @@ public class LockViewActivity extends RockyFragmentActivity
 					case LOCK_MODE_ENCODE:
 					{
 						// 加密
-						if (mPref.putString(RockyKeyValues.Keys.ENTRY_PASSWORD, newPwd))
+						if (XPreferenceManager.putString(RockyKeyValues.Keys.ENTRY_PASSWORD, newPwd))
 						{
 							showToast(R.string.hint_pwd_set_complete);
 						}
@@ -237,7 +232,7 @@ public class LockViewActivity extends RockyFragmentActivity
 							// 输入的旧密码正确, 改变状态
 							mMode = LOCK_MODE_ENCODE;
 							
-							boolean isRemoved = mPref.remove(RockyKeyValues.Keys.ENTRY_PASSWORD);
+							boolean isRemoved = XPreferenceManager.remove(RockyKeyValues.Keys.ENTRY_PASSWORD);
 							if (isRemoved)
 							{
 								inputAgain(); // 清空密码框
@@ -323,12 +318,6 @@ public class LockViewActivity extends RockyFragmentActivity
 	}
 
 	@Override
-	protected void setDefaultValues()
-	{
-
-	}
-	
-	@Override
 	public boolean onCreateOptionsMenu(Menu menu)
 	{
 		if (ACTION_LOCK_ENCODE.equalsIgnoreCase(mAction))
@@ -382,7 +371,7 @@ public class LockViewActivity extends RockyFragmentActivity
 	{
 		if (getString(R.string.lock_decode).equalsIgnoreCase(item.getTitle() + ""))
 		{
-			if (mPref.remove(RockyKeyValues.Keys.ENTRY_PASSWORD))
+			if (XPreferenceManager.remove(RockyKeyValues.Keys.ENTRY_PASSWORD))
 			{
 				inputAgain(); // 清空密码框
 				showToast(R.string.hint_pwd_clear);
@@ -448,6 +437,12 @@ public class LockViewActivity extends RockyFragmentActivity
 		}
 
 		return true;
+	}
+	
+	@Override
+	protected boolean hasActionBar()
+	{
+		return false;
 	}
 
 }

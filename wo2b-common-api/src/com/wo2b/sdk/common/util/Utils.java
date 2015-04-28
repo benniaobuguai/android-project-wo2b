@@ -9,7 +9,7 @@ import android.view.WindowManager;
 /**
  * 常用工具类, 是否有网络|是否有摄像头等.
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * @email ixueyongjia@gmail.com
  * @version 2.0.0
  * @date 2014-10-30

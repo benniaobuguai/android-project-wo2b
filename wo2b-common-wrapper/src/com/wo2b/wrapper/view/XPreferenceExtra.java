@@ -12,7 +12,7 @@ import com.wo2b.wrapper.preference.XPreferenceManager;
 /**
  * XPreferenceExtra
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * @email ixueyongjia@gmail.com
  * 
  */

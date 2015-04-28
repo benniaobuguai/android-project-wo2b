@@ -21,14 +21,14 @@ import android.widget.ImageView;
 
 import com.wo2b.sdk.assistant.log.Log;
 import com.wo2b.sdk.common.util.io.IOUtils;
-import com.wo2b.wrapper.app.RockyFragmentActivity;
+import com.wo2b.wrapper.app.BaseFragmentActivity;
 import com.wo2b.tu123.R;
 import com.wo2b.tu123.global.CommonUtils;
 
 /**
  * Wallpaper dispose.
  * 
- * @author Rocky 
+ * @author 笨鸟不乖 
  * <code> 
  * ----------------------------- 关键分析 -----------------------------
  * Intent intent = new Intent("com.android.camera.action.CROP");
@@ -57,7 +57,7 @@ import com.wo2b.tu123.global.CommonUtils;
  * ----------------------------- 关键分析-----------------------------
  * </code>
  */
-public class WallpaperDisposeActivity extends RockyFragmentActivity
+public class WallpaperDisposeActivity extends BaseFragmentActivity
 {
 
 	private static final String TAG = "WallpaperDisposeActivity";

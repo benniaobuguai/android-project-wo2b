@@ -10,7 +10,7 @@ import com.wo2b.xxx.webapp.openapi.OpenApi;
 /**
  * 评论开放接口
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * @email ixueyongjia@gmail.com
  */
 public class GameOpenApi extends OpenApi
@@ -27,7 +27,7 @@ public class GameOpenApi extends OpenApi
 	 * @param nickname
 	 * @param wo2bResHandler
 	 */
-	public void newRecordGUID(long score, String gameAppId, String gameName, String gameVersion, String guid,
+	public void newRecordGUID(long score, String gameAppId, String gameName, String gameVersion, String guid, int type,
 			Wo2bResHandler<GameRanking> wo2bResHandler)
 	{
 		RequestParams params = new RequestParams();
@@ -36,6 +36,7 @@ public class GameOpenApi extends OpenApi
 		params.put("gameName", gameName);
 		params.put("gameVersion", gameVersion);
 		params.put("guid", guid);
+		params.put("type", type);
 
 		post("/mobile/Game_addNewRecordGUID", params, wo2bResHandler);
 	}
@@ -91,11 +92,12 @@ public class GameOpenApi extends OpenApi
 	 * @param userName
 	 * @param wo2bResHandler
 	 */
-	public void findGameRanking(String gameAppId, String guid, Wo2bResHandler<GameRanking> wo2bResHandler)
+	public void findGameRanking(String gameAppId, String guid, int type, Wo2bResHandler<GameRanking> wo2bResHandler)
 	{
 		RequestParams params = new RequestParams();
 		params.put("gameAppId", gameAppId);
 		params.put("guid", guid);
+		params.put("type", type);
 
 		post("/mobile/Game_findGameRanking", params, wo2bResHandler);
 	}
@@ -109,12 +111,13 @@ public class GameOpenApi extends OpenApi
 	 * @return
 	 */
 	@SuppressWarnings("unchecked")
-	public List<GameRanking> findGameRanking(String gameAppId, int offset, int count)
+	public List<GameRanking> findGameRanking(String gameAppId, int offset, int count, int type)
 	{
 		RequestParams params = new RequestParams();
 		params.put("gameAppId", gameAppId);
 		params.put("offset", offset);
 		params.put("count", count);
+		params.put("type", type);
 
 		return (List<GameRanking>) postSyncGetList("/mobile/Game_findGameRankingList", params, GameRanking.class);
 	}

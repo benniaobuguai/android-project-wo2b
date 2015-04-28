@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * PhotoInfo Set.
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * @email ixueyongjia@gmail.com
  * 
  */

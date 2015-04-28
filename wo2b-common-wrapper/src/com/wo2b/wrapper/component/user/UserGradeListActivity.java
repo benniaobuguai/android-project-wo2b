@@ -8,9 +8,10 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import com.wo2b.sdk.assistant.log.Log;
 import com.wo2b.sdk.common.util.ViewUtils;
 import com.wo2b.wrapper.R;
-import com.wo2b.wrapper.app.RockyListFragmentActivity;
+import com.wo2b.wrapper.app.BaseFragmentListActivity;
 import com.wo2b.xxx.webapp.manager.user.Grade;
 import com.wo2b.xxx.webapp.manager.user.GradeManager;
 import com.wo2b.xxx.webapp.manager.user.User;
@@ -19,11 +20,11 @@ import com.wo2b.xxx.webapp.manager.user.UserManager;
 /**
  * 用户所有等级信息
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * @email ixueyongjia@gmail.com
  * 
  */
-public class UserGradeListActivity extends RockyListFragmentActivity<Grade> implements View.OnClickListener
+public class UserGradeListActivity extends BaseFragmentListActivity<Grade> implements View.OnClickListener
 {
 
 	private UserManager mUserManager;
@@ -33,8 +34,11 @@ public class UserGradeListActivity extends RockyListFragmentActivity<Grade> impl
 	@Override
 	public void onCreate(Bundle savedInstanceState)
 	{
+		Log.I("info", "UserGradeListActivity-->onCreate1()");
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.wrapper_user_grade_list);
+		Log.I("info", "UserGradeListActivity-->onCreate2()");
+		
 		setActionBarTitle(R.string.wo2b_grade);
 		setPullMode(Mode.DISABLED);
 

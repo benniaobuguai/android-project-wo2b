@@ -18,13 +18,12 @@ package opensource.component.pulltorefresh.extras.viewpager;
 import opensource.component.pulltorefresh.PullToRefreshBase;
 import android.content.Context;
 import android.support.v4.view.PagerAdapter;
-import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
 
 import com.wo2b.sdk.R;
-import com.wo2b.sdk.view.ViewPagerHacky;
+import com.wo2b.sdk.view.viewpager.ViewPagerCompat;
 
-public class PullToRefreshViewPager extends PullToRefreshBase<ViewPager>
+public class PullToRefreshViewPager extends PullToRefreshBase<ViewPagerCompat>
 {
 
 	public PullToRefreshViewPager(Context context)
@@ -44,10 +43,10 @@ public class PullToRefreshViewPager extends PullToRefreshBase<ViewPager>
 	}
 
 	@Override
-	protected ViewPager createRefreshableView(Context context, AttributeSet attrs)
+	protected ViewPagerCompat createRefreshableView(Context context, AttributeSet attrs)
 	{
 		// 避免多点触控异常, 使用自定义的Hacky
-		ViewPager viewPager = new ViewPagerHacky(context, attrs);
+		ViewPagerCompat viewPager = new ViewPagerCompat(context, attrs);
 		viewPager.setId(R.id.ptrViewPager);
 
 		return viewPager;
@@ -56,7 +55,7 @@ public class PullToRefreshViewPager extends PullToRefreshBase<ViewPager>
 	@Override
 	protected boolean isReadyForPullStart()
 	{
-		ViewPager refreshableView = getRefreshableView();
+		ViewPagerCompat refreshableView = getRefreshableView();
 
 		PagerAdapter adapter = refreshableView.getAdapter();
 		if (null != adapter)
@@ -70,7 +69,7 @@ public class PullToRefreshViewPager extends PullToRefreshBase<ViewPager>
 	@Override
 	protected boolean isReadyForPullEnd()
 	{
-		ViewPager refreshableView = getRefreshableView();
+		ViewPagerCompat refreshableView = getRefreshableView();
 
 		PagerAdapter adapter = refreshableView.getAdapter();
 		if (null != adapter)

@@ -3,7 +3,7 @@ package com.wo2b.tu123.ui.global;
 /**
  * 常量
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * 
  */
 public final class RockyIntent

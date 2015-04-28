@@ -28,7 +28,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.wo2b.wrapper.app.RockyFragmentActivity;
+import com.wo2b.wrapper.app.BaseFragmentActivity;
 import com.wo2b.sdk.common.util.ViewUtils;
 import com.wo2b.tu123.R;
 import com.wo2b.tu123.business.localalbum.LocalImageFactory;
@@ -38,11 +38,11 @@ import com.wo2b.tu123.ui.global.RockyIntent;
 /**
  * 文件浏览器
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * @email ixueyongjia@gmail.com
  * 
  */
-public class FileExplorerActivity extends RockyFragmentActivity implements OnItemClickListener
+public class FileExplorerActivity extends BaseFragmentActivity implements OnItemClickListener
 {
 	
 	private static final String TAG = "FileExplorerActivity";
@@ -295,14 +295,6 @@ public class FileExplorerActivity extends RockyFragmentActivity implements OnIte
 		setResult(RESULT_OK, intent);
 	}
 
-	@Override
-	public void onDestroy()
-	{
-		super.onDestroy();
-		
-		Log.d(TAG, "Main class destroyed");
-	}
-	
 	@Override
 	public void onResume()
 	{

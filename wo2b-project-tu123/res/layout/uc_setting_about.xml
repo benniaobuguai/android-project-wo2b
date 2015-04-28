@@ -31,7 +31,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="7dp"
-                    android:layout_marginTop="15dp"
+                    android:layout_marginTop="20dp"
                     android:contentDescription="@string/null_image"
                     android:src="@drawable/ic_logo" />
 
@@ -47,6 +47,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
                 android:orientation="vertical" >
 
                 <com.wo2b.wrapper.view.XPreference
@@ -62,15 +63,6 @@
                     android:layout_height="wrap_content"
                     rocky:label="@string/welcome_page"
                     rocky:position="middle" />
-
-                <!--
-                     <com.wo2b.wrapper.view.XPreference
-                    android:id="@+id/xp_tujie_story"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    rocky:label="@string/tujie_story"
-                    rocky:position="middle" />
-                -->
 
                 <com.wo2b.wrapper.view.XPreference
                     android:id="@+id/xp_feedback"

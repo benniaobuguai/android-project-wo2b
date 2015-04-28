@@ -11,7 +11,7 @@ import com.umeng.analytics.onlineconfig.UmengOnlineConfigureListener;
 /**
  * 所有接口来源于友盟MobclickAgent.java
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * 
  */
 public interface IMobclickAgent

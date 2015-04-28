@@ -18,7 +18,7 @@ import com.alibaba.fastjson.JSONObject;
  * 
  * </ul>
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * @email ixueyongjia@gmail.com
  */
 public abstract class Wo2bResListHandler<Result> extends Wo2bResHandler<Result>

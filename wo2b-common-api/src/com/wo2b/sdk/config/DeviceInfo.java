@@ -3,7 +3,7 @@ package com.wo2b.sdk.config;
 /**
  * 设备信息
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * 
  */
 public class DeviceInfo

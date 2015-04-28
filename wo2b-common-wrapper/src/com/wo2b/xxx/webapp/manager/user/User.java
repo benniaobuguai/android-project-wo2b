@@ -5,7 +5,7 @@ import java.io.Serializable;
 /**
  * 用户信息
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * @email ixueyongjia@gmail.com
  */
 public class User implements Serializable

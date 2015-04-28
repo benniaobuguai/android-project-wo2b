@@ -7,7 +7,7 @@ import com.wo2b.xxx.webapp.openapi.impl.UserGoldOpenApi;
 /**
  * 服务器金币控制器
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * @email ixueyongjia@gmail.com
  */
 public class UserGoldManager

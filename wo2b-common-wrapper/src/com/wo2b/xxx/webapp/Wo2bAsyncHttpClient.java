@@ -8,7 +8,7 @@ import com.wo2b.sdk.core.RockySdk;
 /**
  * 针对www.wo2b.com网站所有请求的封装
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * @email ixueyongjia@gmail.com
  */
 public final class Wo2bAsyncHttpClient

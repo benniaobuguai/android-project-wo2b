@@ -8,27 +8,25 @@ import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
+import android.support.v4.view.WindowCompat;
 import android.text.TextUtils;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.Window;
-import android.widget.ImageSwitcher;
 import android.widget.ImageView;
-import android.widget.RelativeLayout.LayoutParams;
-import android.widget.ViewSwitcher.ViewFactory;
 
+import com.wo2b.sdk.view.viewpager.AutoScrollPoster;
+import com.wo2b.sdk.view.viewpager.AutoScrollPoster.OnItemViewClickListener;
 import com.wo2b.wrapper.R;
-import com.wo2b.wrapper.app.RockyFragmentActivity;
-import com.wo2b.wrapper.view.XImageSwitcher;
+import com.wo2b.wrapper.app.BaseFragmentActivity;
 
 /**
  * 图片自动播放器
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * @email ixueyongjia@gmail.com
  */
-public class ImageAutoPlayActivity extends RockyFragmentActivity implements View.OnClickListener,ViewFactory
+public class ImageAutoPlayActivity extends BaseFragmentActivity
 {
 
 	public static final int ACTIONBAR_HIDE_DELAYED = 1 * 1000;
@@ -43,8 +41,8 @@ public class ImageAutoPlayActivity extends RockyFragmentActivity implements View
 	public static final String EXTRA_CACHE_ON_DISC = "cache_on_disc";
 	public static final String EXTRA_IMAGEVIEW_SCALETYPE = "imageview_scaletype";
 	
-	private XImageSwitcher imageSwitcher;
-
+	private AutoScrollPoster mAutoScrollViewPager;
+	
 	private String mTitle; // 标题
 	private String mCacheDir; // 图片缓存目录
 	private int mPeriod = SCROLL_PERIOD_DEFAULT; // 图片切换周期
@@ -52,13 +50,16 @@ public class ImageAutoPlayActivity extends RockyFragmentActivity implements View
 	private boolean mCacheOnDisc = true; // 是否缓存本地
 	private ArrayList<String> mImageList = new ArrayList<String>(); // 图片地址集合
 	
+	private DisplayImageOptions mDisplayImageOptions;
+	private SaveImageOptions mSaveImageOptions;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
 	{
-		requestWindowFeature(Window.FEATURE_ACTION_BAR_OVERLAY);
+		supportRequestWindowFeature(WindowCompat.FEATURE_ACTION_BAR_OVERLAY);
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.wrapper_cn_image_autoplay);
-
+		
 		Intent intent = getIntent();
 		mImageList = intent.getStringArrayListExtra(EXTRA_IMAGE_LIST);
 		mTitle = intent.getStringExtra(EXTRA_TITLE);
@@ -90,7 +91,7 @@ public class ImageAutoPlayActivity extends RockyFragmentActivity implements View
 		
 		getUiHandler().postDelayed(new Runnable()
 		{
-
+			
 			@Override
 			public void run()
 			{
@@ -99,41 +100,55 @@ public class ImageAutoPlayActivity extends RockyFragmentActivity implements View
 		}, ACTIONBAR_HIDE_DELAYED);
 		
 		
-		SaveImageOptions saveOptions = new SaveImageOptions.Builder()
+		mSaveImageOptions = new SaveImageOptions.Builder()
 			.medule("Image_AutoPlay")
 			.extraDir(mCacheDir)
 			.build();
 
-		DisplayImageOptions displayImageOptions = new DisplayImageOptions.Builder()
+		mDisplayImageOptions = new DisplayImageOptions.Builder()
 			.showImageForEmptyUri(R.drawable.warn_image_empty)
 			.showImageOnFail(R.drawable.warn_image_error)
 			.cacheInMemory(true)
 			.cacheOnDisc(mCacheOnDisc)
 			.considerExifParams(true)
 			.bitmapConfig(Bitmap.Config.RGB_565)
-			.saveImageOptions(saveOptions)
+			.saveImageOptions(mSaveImageOptions)
 			.build();
 
-		imageSwitcher = (XImageSwitcher) findViewById(R.id.imageSwitcher);
-		imageSwitcher.setFactory(this);
-		imageSwitcher.setOnClickListener(this);
-		imageSwitcher.addImagePath(mImageList);
-		imageSwitcher.setDisplayImageOptions(displayImageOptions);
-		imageSwitcher.startAutoScroll(mPeriod, mPosition);
+		mAutoScrollViewPager = (AutoScrollPoster) findViewById(R.id.rocky_viewpager);
+		mAutoScrollViewPager.setDisplayImageOptions(mDisplayImageOptions);
+		mAutoScrollViewPager.addItems(mImageList);
+		mAutoScrollViewPager.startAutoScroll(mPeriod, mPosition);
+		mAutoScrollViewPager.setOnItemViewClickListener(new OnItemViewClickListener()
+		{
+			
+			@Override
+			public void onItemViewClick(View view, Object item)
+			{
+				if (getSupportActionBar().isShowing())
+				{
+					getSupportActionBar().hide();
+				}
+				else
+				{
+					getSupportActionBar().show();
+				}
+			}
+		});
 	}
-
+	
 	@Override
 	protected void onResume()
 	{
 		super.onResume();
-		imageSwitcher.resumeScroll();
+		resumeScroll();
 	}
-
+	
 	@Override
 	protected void onPause()
 	{
 		super.onPause();
-		imageSwitcher.stopScroll();
+		stopScroll();
 	}
 	
 	@Override
@@ -145,37 +160,6 @@ public class ImageAutoPlayActivity extends RockyFragmentActivity implements View
 		this.overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
 	}
 
-	@Override
-	public void onClick(View v)
-	{
-		if (v.getId() == R.id.imageSwitcher)
-		{
-			if (getSupportActionBar().isShowing())
-			{
-				getSupportActionBar().hide();
-			}
-			else
-			{
-				getSupportActionBar().show();
-			}
-		}
-	}
-
-	@Override
-	public View makeView()
-	{
-		final ImageView imageView = new ImageView(this);
-		imageView.setBackgroundColor(0xff000000);
-		// imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
-		// FIXME:提供外层进行设置,或者是提供设置.
-		// imageView.setScaleType(ImageView.ScaleType.FIT_XY);
-		// imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
-		// imageView.setLayoutParams(new ImageSwitcher.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT));
-		imageView.setLayoutParams(new ImageSwitcher.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT));
-
-		return imageView;
-	}
-	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu)
 	{
@@ -203,6 +187,17 @@ public class ImageAutoPlayActivity extends RockyFragmentActivity implements View
 		return super.onOptionsItemSelected(item);
 	}
 
+	private void resumeScroll()
+	{
+		mAutoScrollViewPager.changeScrollPeriod(mPeriod);
+		mAutoScrollViewPager.resumeScroll();
+	}
+	
+	private void stopScroll()
+	{
+		mAutoScrollViewPager.stopScroll();
+	}
+	
 	/**
 	 * 切换自动播放周期
 	 * 
@@ -212,8 +207,8 @@ public class ImageAutoPlayActivity extends RockyFragmentActivity implements View
 	private void changePeriod(int period)
 	{
 		mPeriod = period;
-		imageSwitcher.changeScrollPeriod(period);
-
+		resumeScroll();
+		
 		getSupportActionBar().hide();
 	}
 

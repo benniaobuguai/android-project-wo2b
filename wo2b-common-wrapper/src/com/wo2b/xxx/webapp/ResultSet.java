@@ -5,7 +5,7 @@ import java.util.List;
 /**
  * 结果集
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * 
  * @param <T>
  */

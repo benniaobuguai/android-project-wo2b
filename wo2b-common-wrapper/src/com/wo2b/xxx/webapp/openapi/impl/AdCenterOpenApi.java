@@ -8,7 +8,7 @@ import com.wo2b.xxx.webapp.openapi.OpenApi;
 /**
  * 广告中心
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * @email ixueyongjia@gmail.com
  */
 public class AdCenterOpenApi extends OpenApi

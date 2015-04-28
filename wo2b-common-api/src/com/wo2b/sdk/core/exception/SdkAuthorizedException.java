@@ -3,7 +3,7 @@ package com.wo2b.sdk.core.exception;
 /**
  * 权限异常类
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * @email ixueyongjia@gmail.com
  */
 public class SdkAuthorizedException extends RuntimeException

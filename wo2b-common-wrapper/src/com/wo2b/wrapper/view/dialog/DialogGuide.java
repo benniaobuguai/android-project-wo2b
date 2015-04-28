@@ -17,7 +17,7 @@ import com.wo2b.wrapper.R;
 /**
  * 操作指引的对话框
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * @email ixueyongjia@gmail.com
  * @version 1.0.0
  * @date 2014-12-13
@@ -79,7 +79,7 @@ public class DialogGuide extends Dialog
 	protected void onCreate(Bundle savedInstanceState)
 	{
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.dialog_guide);
+		setContentView(R.layout.global_dialog_guide);
 		mDialog = this;
 
 		mGuideImageView = (ImageView) findViewById(R.id.guide_imageView);

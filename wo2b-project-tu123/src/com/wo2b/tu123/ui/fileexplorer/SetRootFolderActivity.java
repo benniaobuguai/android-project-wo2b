@@ -10,7 +10,7 @@ import com.wo2b.tu123.R;
 /**
  * 设置根目录
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * @email ixueyongjia@gmail.com
  * 
  */

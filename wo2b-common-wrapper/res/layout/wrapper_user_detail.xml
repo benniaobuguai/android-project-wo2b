@@ -3,7 +3,7 @@
     xmlns:rocky="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bg_app"
+    android:background="@drawable/g_layout_bg_grey"
     android:orientation="vertical" >
 
     <com.wo2b.sdk.view.pulltorefresh.PullToRefreshScrollView
@@ -15,13 +15,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:paddingBottom="@dimen/common_margin_bottom"
-            android:paddingTop="@dimen/common_margin_bottom" >
+            android:paddingBottom="@dimen/common_margin_bottom" >
 
             <com.wo2b.wrapper.view.XPreference
                 android:id="@+id/xp_username"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/theme_layout_margin_top"
                 rocky:indicator_state="none"
                 rocky:label="@string/username"
                 rocky:position="first" />
@@ -31,7 +31,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 rocky:label="@string/nickname"
-                rocky:position="middle" />
+                rocky:position="middle"
+                rocky:prefs_divider="true" />
 
             <com.wo2b.wrapper.view.XPreference
                 android:id="@+id/xp_grade_name"
@@ -44,29 +45,35 @@
                 android:id="@+id/xp_user_exp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/theme_xp_margin"
                 rocky:label="@string/user_exp"
-                rocky:position="top" />
+                rocky:position="top"
+                rocky:prefs_divider="true" />
 
             <com.wo2b.wrapper.view.XPreference
                 android:id="@+id/xp_user_gold"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 rocky:label="@string/user_gold"
-                rocky:position="last" />
+                rocky:position="last"
+                rocky:prefs_divider="true" />
 
             <com.wo2b.wrapper.view.XPreference
                 android:id="@+id/xp_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/theme_xp_margin"
                 rocky:label="@string/email"
-                rocky:position="top" />
+                rocky:position="top"
+                rocky:prefs_divider="true" />
 
             <com.wo2b.wrapper.view.XPreference
                 android:id="@+id/xp_tel"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 rocky:label="@string/tel"
-                rocky:position="middle" />
+                rocky:position="middle"
+                rocky:prefs_divider="true" />
 
             <com.wo2b.wrapper.view.XPreference
                 android:id="@+id/xp_register_app"
@@ -74,11 +81,12 @@
                 android:layout_height="wrap_content"
                 rocky:indicator_state="none"
                 rocky:label="@string/register_app"
-                rocky:position="last" />
+                rocky:position="last"
+                rocky:prefs_divider="true" />
 
             <Button
                 android:id="@+id/btn_exit_login"
-                style="@style/common_button_red"
+                style="@style/global_btn_red"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/common_xp_margin"

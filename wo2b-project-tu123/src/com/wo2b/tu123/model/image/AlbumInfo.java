@@ -8,7 +8,7 @@ import com.j256.ormlite.field.DatabaseField;
 /**
  * Album Info.
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * 
  */
 public class AlbumInfo implements Serializable

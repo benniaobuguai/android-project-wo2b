@@ -12,7 +12,7 @@ import com.wo2b.tu123.R;
 /**
  * Custom search box.
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * @email ixueyongjia@gmail.com
  * 
  */

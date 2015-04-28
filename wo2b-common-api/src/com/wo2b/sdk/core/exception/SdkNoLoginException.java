@@ -3,7 +3,7 @@ package com.wo2b.sdk.core.exception;
 /**
  * 没有登录异常
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * @email ixueyongjia@gmail.com
  */
 public class SdkNoLoginException extends RuntimeException

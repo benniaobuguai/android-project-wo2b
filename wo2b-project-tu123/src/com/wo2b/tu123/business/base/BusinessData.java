@@ -2,7 +2,7 @@ package com.wo2b.tu123.business.base;
 
 /**
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * 
  */
 public class BusinessData

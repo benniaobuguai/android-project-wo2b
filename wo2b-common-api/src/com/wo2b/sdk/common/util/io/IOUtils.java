@@ -19,7 +19,7 @@ import org.apache.http.protocol.HTTP;
 /**
  * 流工具类
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * 
  */
 public class IOUtils

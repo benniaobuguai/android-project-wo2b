@@ -7,7 +7,7 @@ import android.widget.AdapterView.OnItemClickListener;
 /**
  * 金币ListView需要实现此接口
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * @email ixueyongjia@gmail.com
  */
 public abstract class GoldListViewItemClick implements OnItemClickListener

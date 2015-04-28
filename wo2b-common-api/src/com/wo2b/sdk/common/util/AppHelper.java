@@ -1,13 +1,15 @@
 package com.wo2b.sdk.common.util;
 
+import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
+import android.widget.Toast;
 
 /**
  * 应用助手
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * @email ixueyongjia@gmail.com
  * @version 1.0.0
  * @date 2014-10-13
@@ -37,13 +39,21 @@ public class AppHelper
 	 */
 	public static void launchAppMarket(Context context, String pkgname)
 	{
-		Uri uri = Uri.parse("market://details?id=" + pkgname);
-		// uri = Uri.parse("market://details?id=" + "com.tencent.mobileqq");
-		Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-		intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-		context.startActivity(intent);
+		try
+		{
+			Uri uri = Uri.parse("market://details?id=" + pkgname);
+			// uri = Uri.parse("market://details?id=" + "com.tencent.mobileqq");
+			Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+			intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+			context.startActivity(intent);
+		}
+		catch (ActivityNotFoundException e)
+		{
+			e.printStackTrace();
+			Toast.makeText(context, "找不到应用市场, 操作无法继续!", Toast.LENGTH_LONG).show();
+		}
 	}
-	
+
 	/**
 	 * 安装应用程序
 	 * 

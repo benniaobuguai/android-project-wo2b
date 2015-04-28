@@ -16,7 +16,7 @@ package com.wo2b.xxx.webapp.manager.user.gold;
 ///**
 // * 本地金币控制器
 // * 
-// * @author Rocky
+// * @author 笨鸟不乖
 // * @email ixueyongjia@gmail.com
 // */
 //public class LocalGoldHandler implements GoldHandler

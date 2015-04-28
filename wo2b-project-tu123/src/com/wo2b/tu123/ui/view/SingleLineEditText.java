@@ -22,7 +22,7 @@ import com.wo2b.tu123.R;
 /**
  * 自定义单行的EditText
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * 
  */
 public class SingleLineEditText extends EditText

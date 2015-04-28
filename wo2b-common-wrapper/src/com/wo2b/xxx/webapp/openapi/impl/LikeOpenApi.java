@@ -7,7 +7,7 @@ import com.wo2b.xxx.webapp.openapi.OpenApi;
 
 /**
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * @email ixueyongjia@gmail.com
  */
 public class LikeOpenApi extends OpenApi

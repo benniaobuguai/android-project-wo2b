@@ -13,7 +13,7 @@ import com.wo2b.tu123.model.image.MyFavorites;
 
 /**
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * 
  */
 public class MyFavoritesBiz extends BaseBiz<MyFavorites>

@@ -11,7 +11,7 @@ import android.view.WindowManager;
 
 /**
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * 
  */
 public class CommonUtils

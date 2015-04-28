@@ -8,7 +8,7 @@ import org.apache.http.HttpStatus;
 /**
  * HTTP请求的结果
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * 
  */
 public class SyncHttpResponse

@@ -25,7 +25,7 @@ import com.wo2b.tu123.R;
 /**
  * Command List PopupWindow.
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * @email ixueyongjia@gmail.com
  * 
  */

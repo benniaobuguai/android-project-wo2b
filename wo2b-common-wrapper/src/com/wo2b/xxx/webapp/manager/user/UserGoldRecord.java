@@ -5,7 +5,7 @@ import java.util.Date;
 /**
  * 金币消费记录
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * @email ixueyongjia@gmail.com
  */
 public class UserGoldRecord implements java.io.Serializable

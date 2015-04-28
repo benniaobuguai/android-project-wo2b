@@ -14,18 +14,11 @@
             android:layout_height="wrap_content"
             android:orientation="vertical" >
 
-            <com.wo2b.wrapper.view.XPreference
-                android:id="@+id/xp_super_power"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:visibility="gone"
-                rocky:label="@string/super_power"
-                rocky:position="top" />
-
             <com.wo2b.wrapper.view.XPreferenceExtra
                 android:id="@+id/xp_wallpaper"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/theme_layout_margin_top"
                 rocky:enabled="false"
                 rocky:indicator_state="checkbox"
                 rocky:label="@string/set_wallpaper"
@@ -81,6 +74,7 @@
                 android:id="@+id/xp_open_lock"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/theme_xp_margin"
                 rocky:indicator_state="arrow"
                 rocky:label="@string/lock_encode"
                 rocky:position="top"
@@ -106,6 +100,7 @@
                 android:id="@+id/xp_plugin_center"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/theme_xp_margin"
                 rocky:label="@string/plugin_center"
                 rocky:position="one" />
         </LinearLayout>

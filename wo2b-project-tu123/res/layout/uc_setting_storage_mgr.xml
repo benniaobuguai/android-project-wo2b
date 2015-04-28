@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:wo2b="http://schemas.android.com/apk/res-auto"
     style="@style/tu_container_common"
     android:orientation="vertical" >
 
-    <ListView
-        android:id="@+id/listview"
-        style="@style/tu_listview_default" />
+    <opensource.component.pulltorefresh.PullToRefreshListView
+        android:id="@id/rocky_listview"
+        style="@style/global_listview_default"
+        android:dividerHeight="0.3dp"
+        android:fastScrollEnabled="false"
+        android:footerDividersEnabled="true"
+        android:headerDividersEnabled="true"
+        android:smoothScrollbar="true"
+        wo2b:ptrAnimationStyle="flip" />
 
 </LinearLayout>

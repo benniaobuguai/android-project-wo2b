@@ -5,7 +5,7 @@ import com.wo2b.sdk.config.SdkConfig;
 /**
  * 客户端上下文
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * @email benniaobuguai@gmail.com
  * @version 2.0.0
  * @date 2014-07-15

@@ -14,7 +14,7 @@ import com.wo2b.tu123.model.image.AlbumInfo;
 
 /**
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * 
  */
 public class AlbumBiz extends BaseBiz<AlbumInfo>

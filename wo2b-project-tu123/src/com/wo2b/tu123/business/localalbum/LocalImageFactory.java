@@ -15,7 +15,7 @@ import com.wo2b.tu123.model.localalbum.LocalImage;
  * 单实例用于存储当前所有照片信息, 根据路径分组, 接收媒体库刷新的通知.
  * 临时策略: 查询出所有的照片信息, 按照路径进行排序.
  * 遍历游标, 填充数据列表.
- * @author Rocky
+ * @author 笨鸟不乖
  * 
  */
 public class LocalImageFactory

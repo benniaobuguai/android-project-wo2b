@@ -2,7 +2,7 @@ package opensource.component.imageloader.core;
 
 /**
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * 
  */
 public class SaveImageOptions

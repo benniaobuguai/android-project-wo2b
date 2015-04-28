@@ -3,43 +3,33 @@ package com.wo2b.tu123.ui.global;
 import java.io.File;
 import java.io.InputStream;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.SystemClock;
 import android.text.TextUtils;
 import android.view.KeyEvent;
 import android.view.Window;
-import android.webkit.WebSettings;
-import android.webkit.WebView;
 
 import com.wo2b.sdk.assistant.log.Log;
-import com.wo2b.sdk.assistant.upgrade.VersionInfo;
-import com.wo2b.sdk.common.util.DateUtils;
-import com.wo2b.sdk.common.util.DeviceInfoManager;
-import com.wo2b.sdk.common.util.ManifestTools;
-import com.wo2b.sdk.config.SdkConfig;
-import com.wo2b.sdk.core.ClientInfo;
-import com.wo2b.sdk.core.RockyConfig;
 import com.wo2b.sdk.core.RockySdk;
-import com.wo2b.wrapper.app.RockyFragmentActivity;
-import com.wo2b.wrapper.app.background.DaemonService;
-import com.wo2b.wrapper.preference.RockyKeyValues;
-import com.wo2b.wrapper.preference.XPreferenceManager;
 import com.wo2b.tu123.R;
-import com.wo2b.tu123.Wo2bApplication;
 import com.wo2b.tu123.business.base.DatabaseHelper;
 import com.wo2b.tu123.business.data.RestoreManager;
+import com.wo2b.tu123.global.GApplication;
 import com.wo2b.tu123.global.provider.DataProvider;
 import com.wo2b.tu123.ui.settings.LockViewActivity;
+import com.wo2b.wrapper.app.BaseFragmentActivity;
+import com.wo2b.wrapper.app.service.DaemonService;
+import com.wo2b.wrapper.preference.RockyKeyValues;
+import com.wo2b.wrapper.preference.XPreferenceManager;
 
 /**
  * SplashActivity
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * 
  */
-public class SplashActivity extends RockyFragmentActivity
+public class SplashActivity extends BaseFragmentActivity
 {
 	
 	private static final String TAG = "Rocky.SplashActivity";
@@ -56,20 +46,17 @@ public class SplashActivity extends RockyFragmentActivity
 	private String mSavedPwd = null;
 	//private String mAction = null;
 	
-	private XPreferenceManager mXPref;
-	
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
 	{
 		super.onCreate(savedInstanceState);
 		
-		mXPref = XPreferenceManager.getInstance();
 		Intent intent = getIntent();
 		final String action = intent.getAction();
 		if (ACTION_UNCHECK_LOCK.equalsIgnoreCase(action))
 		{
 			// 不检查锁
-			if (Wo2bApplication.isEntry())
+			if (GApplication.isEntry())
 			{
 				gotoHomeActivity();
 			}
@@ -83,12 +70,12 @@ public class SplashActivity extends RockyFragmentActivity
 		else
 		{
 			// 检查锁
-			mSavedPwd = mXPref.getString(RockyKeyValues.Keys.ENTRY_PASSWORD, "");
+			mSavedPwd = XPreferenceManager.getString(RockyKeyValues.Keys.ENTRY_PASSWORD, "");
 			
 			if (TextUtils.isEmpty(mSavedPwd))
 			{
 				// UnLocked.
-				if (Wo2bApplication.isEntry())
+				if (GApplication.isEntry())
 				{
 					gotoHomeActivity();
 				}
@@ -108,18 +95,12 @@ public class SplashActivity extends RockyFragmentActivity
 		Intent service = new Intent(this, DaemonService.class);
 		startService(service);
 	}
-	
+
 	@Override
 	protected void initView()
 	{
-		
-	}
 
-	@Override
-	protected boolean hasActionBar()
-	{
-		return false;
-	};
+	}
 
 	@Override
 	protected void setDefaultValues()
@@ -130,9 +111,9 @@ public class SplashActivity extends RockyFragmentActivity
 	}
 	
 	@Override
-	protected void bindEvents()
+	protected boolean hasActionBar()
 	{
-		
+		return false;
 	}
 	
 	/**
@@ -144,7 +125,7 @@ public class SplashActivity extends RockyFragmentActivity
 		@Override
 		public void run()
 		{
-			Wo2bApplication.setEntry(true);
+			GApplication.setEntry(true);
 			systemLoader();
 			// init data.
 			initData();
@@ -176,56 +157,20 @@ public class SplashActivity extends RockyFragmentActivity
 		private void loadData()
 		{
 			DataProvider provider = DataProvider.getInstance();
-			provider.init(Wo2bApplication.getRockyApplication());
+			provider.init(GApplication.getRockyApplication());
 			provider.loadCategoryList(getContext());
 			provider.loadChapterList(getContext());
 		}
 
 		private void systemLoader()
 		{
-//			Context application = getApplicationContext();
-//			VersionInfo versionInfo = ManifestTools.getVersionInfo(application);
-//			String userAgent = mWebSettings.getUserAgentString();
-//			
-//			// Structure the ClientInfo.
-//			ClientInfo clientInfo = new ClientInfo(application.getPackageName());
-//			clientInfo.setAppicon(R.drawable.ic_launcher);
-//			clientInfo.setAppname(getResources().getString(R.string.app_name));
-//			clientInfo.setDeviceType(SdkConfig.Device.PHONE);
-//			clientInfo.setDeviceName(android.os.Build.MODEL);
-//			clientInfo.setAlias(android.os.Build.MODEL);
-//			clientInfo.setSdkVersion(android.os.Build.VERSION.SDK_INT);
-//			clientInfo.setMac(DeviceInfoManager.getMacAddress(application));
-//			
-//			// Webkit user-agent
-//			clientInfo.setUserAgent(userAgent);
-//			
-//			if (versionInfo != null)
-//			{
-//				clientInfo.setVersionCode(versionInfo.getVersionCode());
-//				clientInfo.setVersionName(versionInfo.getVersionName());
-//			}
-//			
-//			// FIXME: Take attention...
-//			clientInfo.addFlags(ClientInfo.FLAG_DEBUG | ClientInfo.FLAG_RELEASE);
-//			// clientContext.addFlags(ClientContext.FLAG_DEBUG);
-//			
-//			// TODO: 广告
-//			RockyConfig config = new RockyConfig.Builder(application)
-//				.clientInfo(clientInfo)
-//				.hasAdBanner(false)		// 显示积分Banner
-//				.hasAdPointsWall(true)	// 显示积分墙
-//				.build();
-//			
-//			RockySdk.getInstance().init(config);
-			
 			// Record the use total count.
-			long loginCount = mXPref.getUseTotalCount();
-			mXPref.putUseTotalCount(loginCount + 1); // Login count++
-			
+			long loginCount = XPreferenceManager.getUseTotalCount();
+			XPreferenceManager.putUseTotalCount(loginCount + 1); // Login count++
+
 			// Record the use day count
-			mXPref.putUseDayCount(mXPref.getUseDayCount() + 1);			
-			
+			XPreferenceManager.putUseDayCount(XPreferenceManager.getUseDayCount() + 1);
+
 			Log.I(TAG, String.format("Entry %1s %2s Times.", getString(R.string.app_name), loginCount));
 		}
 		
@@ -250,7 +195,7 @@ public class SplashActivity extends RockyFragmentActivity
 			//		+ DateUtils.toString(mXPref.getUseDayCountDate()));
 			
 			
-			final int oldVersion = mXPref.getAppVersion();
+			final int oldVersion = XPreferenceManager.getAppVersion();
 			final int latestVersion = RockySdk.getInstance().getClientInfo().getVersionCode();
 			
 			getUiHandler().postDelayed(new Runnable()
@@ -258,10 +203,10 @@ public class SplashActivity extends RockyFragmentActivity
 				public void run()
 				{
 					//if (latestVersion > oldVersion || latestVersion <= oldVersion)
-					if (latestVersion > oldVersion || mXPref.getUseDayCount() % 30 == 0)
+					if (latestVersion > oldVersion || XPreferenceManager.getUseDayCount() % 30 == 0)
 					{
 						// 第一次安装时, 或者是使用30天的时候, 会进入引导面.
-						mXPref.putAppVersion(latestVersion);
+						XPreferenceManager.putAppVersion(latestVersion);
 						gotoWelcomeActivity();
 					}
 					else

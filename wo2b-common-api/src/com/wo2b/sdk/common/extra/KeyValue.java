@@ -3,7 +3,7 @@ package com.wo2b.sdk.common.extra;
 /**
  * 简单键值对象
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * @email ixueyongjia@gmail.com
  * @version 1.0.0
  * @date 2014-9-17

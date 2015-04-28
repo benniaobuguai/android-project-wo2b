@@ -5,7 +5,7 @@ import java.net.SocketTimeoutException;
 /**
  * 连接超时
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * @email ixueyongjia@gmail.com
  */
 public class SdkSocketTimeoutException extends SocketTimeoutException

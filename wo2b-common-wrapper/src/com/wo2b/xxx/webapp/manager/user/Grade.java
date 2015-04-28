@@ -3,7 +3,7 @@ package com.wo2b.xxx.webapp.manager.user;
 /**
  * 等级信息
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * @email ixueyongjia@gmail.com
  */
 public class Grade implements java.io.Serializable

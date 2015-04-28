@@ -6,7 +6,7 @@
 
     <opensource.component.pulltorefresh.PullToRefreshListView
         android:id="@id/rocky_listview"
-        style="@style/tu_listview_default"
+        style="@style/global_listview_default"
         android:layout_above="@+id/comment_content_wrapper"
         android:fastScrollEnabled="false"
         android:footerDividersEnabled="false"

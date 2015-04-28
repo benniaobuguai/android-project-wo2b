@@ -15,7 +15,7 @@ import com.wo2b.xxx.webapp.Wo2bResHandler;
 /**
  * 开放平台接口
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * @email ixueyongjia@gmail.com
  */
 public class OpenApi

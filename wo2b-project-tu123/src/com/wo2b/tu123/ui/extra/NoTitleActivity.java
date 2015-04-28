@@ -4,17 +4,17 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.wo2b.wrapper.app.RockyWebViewActivity;
+import com.wo2b.wrapper.app.BaseWebViewActivity;
 import com.wo2b.tu123.R;
 
 /**
  * 无题
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * @email ixueyongjia@gmail.com
  * 
  */
-public class NoTitleActivity extends RockyWebViewActivity
+public class NoTitleActivity extends BaseWebViewActivity
 {
 
 	@Override

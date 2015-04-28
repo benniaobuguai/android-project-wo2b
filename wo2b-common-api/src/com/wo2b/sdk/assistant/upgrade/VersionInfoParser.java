@@ -14,7 +14,7 @@ import com.wo2b.sdk.core.exception.SdkParseException;
 /**
  * 版本解析器
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * 
  */
 public abstract class VersionInfoParser

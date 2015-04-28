@@ -3,8 +3,8 @@
     style="@style/tu_container_black"
     android:overScrollMode="never" >
 
-    <com.wo2b.wrapper.view.XImageSwitcher
-        android:id="@+id/imageSwitcher"
+    <com.wo2b.sdk.view.viewpager.AutoScrollPoster
+        android:id="@id/rocky_viewpager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:overScrollMode="never" />

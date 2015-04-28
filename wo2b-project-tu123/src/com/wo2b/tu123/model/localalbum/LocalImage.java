@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 /**
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * 
  */
 public class LocalImage implements Serializable

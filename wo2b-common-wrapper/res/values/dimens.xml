@@ -1,6 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+	<!-- &&&&&&&&&&&&&&&&&&&&&&&& Theme Dimens &&&&&&&&&&&&&&&&&&&&&&&& -->
+    <dimen name="theme_actionbar_title_textsize">@dimen/textsize_20</dimen>
+    <dimen name="theme_actionbar_subtitle_textsize">@dimen/textsize_14</dimen>
+    <dimen name="theme_actionbar_height">50dp</dimen>
+    <dimen name="theme_actionbar_menu_textsize">@dimen/textsize_14</dimen>
+    
+    <dimen name="theme_textsize">@dimen/textsize_14</dimen>
+    
+    
+    <dimen name="theme_layout_margin_top">@dimen/dimen_16</dimen>
+    
+    <dimen name="theme_xp_margin">@dimen/dimen_16</dimen>
+    <dimen name="theme_xp_margin_m">@dimen/dimen_22</dimen>
+    <dimen name="theme_xp_margin_l">@dimen/dimen_30</dimen>
+    
+    <!-- &&&&&&&&&&&&&&&&&&&&&&&& Theme Dimens &&&&&&&&&&&&&&&&&&&&&&&& -->
+    
+    <!-- 通用界面底部距离 -->
+    <dimen name="theme_common_margin_bottom">@dimen/dimen_50</dimen>
+    <dimen name="theme_order_height">@dimen/dimen_50</dimen>
+    
 	<!-- ScrollView时距离底部的高度 -->
     <dimen name="common_margin_bottom">25dp</dimen>
     <dimen name="common_edit_margin">10dp</dimen>

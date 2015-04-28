@@ -294,7 +294,7 @@ public class ImageRecommendView extends ViewPager
 	 * 其中一个页面的位置是-0.5，另一个页面的位置是0.5。基于屏幕上页面的位置，通过使用诸如setAlpha()、setTranslationX()、或setScaleY()方法来设置页面的属性，来创建自定义的滑动动画。
 	 * 当有了一个PageTransformer接口实现时，就可以调用你实现的setPageTransformer()方法来应用自定义动画。
 	 * 
-	 * @author Rocky
+	 * @author 笨鸟不乖
 	 * @email ixueyongjia@gmail.com
 	 */
 	public static class DepthPageTransformer implements ViewPager.PageTransformer

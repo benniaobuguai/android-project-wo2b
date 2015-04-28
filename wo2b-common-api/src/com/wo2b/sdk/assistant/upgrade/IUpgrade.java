@@ -4,7 +4,7 @@ package com.wo2b.sdk.assistant.upgrade;
 /**
  * 应用升级接口
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * 
  */
 public interface IUpgrade

@@ -1,18 +1,30 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <!-- &&&&&&&&&&&&&&&&&&&&&&&& Theme Dimens &&&&&&&&&&&&&&&&&&&&&&&& -->
-    <dimen name="theme_actionbar_title_textsize">@dimen/textsize_20</dimen>
-    <dimen name="theme_actionbar_subtitle_textsize">@dimen/textsize_14</dimen>
-    <dimen name="theme_actionbar_height">@dimen/dimen_50</dimen>
-    <dimen name="theme_actionbar_menu_textsize">@dimen/textsize_14</dimen>
+    <!-- Android SDK 5.0 For Toolbar theme -->
     
-    <dimen name="theme_textsize">@dimen/textsize_14</dimen>
-    <!-- &&&&&&&&&&&&&&&&&&&&&&&& Theme Dimens &&&&&&&&&&&&&&&&&&&&&&&& -->
-    
-    
-    
-    <!-- Android SDK 5.0 For Toolbar -->
+    <!-- 应用主题 -->
     <style name="Rocky.Theme.Main.Toolbar" parent="@style/Rocky.Theme.LeftRight">
+        <item name="windowActionBar">false</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+        
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        
+        <!-- 去除阴影 -->
+    	<item name="android:windowContentOverlay">@null</item>
+    	
+    	<!-- <item name="android:windowAnimationStyle">@null</item> -->
+    </style>
+    
+    <!-- 进入页 -->
+    <style name="Rocky.Theme.Main.Toolbar.Entry" parent="@style/Rocky.Theme.Main.Toolbar">
+    	<item name="android:windowIsTranslucent">true</item>
+    	<!-- <item name="android:windowBackground">@android:color/white</item> -->
+    </style>
+    
+    <!-- 应用主题(无标题) -->
+    <style name="Rocky.Theme.Main.NoToolbar" parent="@style/Rocky.Theme.Main.Toolbar">
         <item name="windowActionBar">false</item>
         <item name="android:windowActionBar">false</item>
         <item name="android:windowNoTitle">true</item>
@@ -24,7 +36,22 @@
     	<item name="android:windowContentOverlay">@null</item>
     </style>
     
-    <!--  -->
+    <!-- 全屏 -->
+    <style name="Rocky.Theme.Main.Toolbar.Fullscreen" parent="@style/Rocky.Theme.Main.Toolbar">
+        <item name="android:windowFullscreen">true</item>
+        <item name="windowActionBarOverlay">true</item>
+        <!-- 去除阴影 -->
+    	<item name="android:windowContentOverlay">@null</item>
+    
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        
+        <item name="windowActionModeOverlay">true</item>
+        
+        <item name="actionBarStyle">@style/Rocky.Widget.AppCompat.ActionBar.Solid.Translucent</item>
+    </style>
+    
+    <!-- Toolbar Style -->
     <style name="Rocky.Widget.AppCompat.Toolbar" parent="Widget.AppCompat.Toolbar">
  		<item name="colorPrimary">@null</item>
         <item name="colorPrimaryDark">@null</item>
@@ -35,7 +62,7 @@
         <item name="titleTextAppearance">@style/Rocky.TextAppearance.AppCompat.Widget.ActionBar.Title</item>
         <item name="subtitleTextAppearance">@style/Rocky.TextAppearance.AppCompat.Widget.ActionBar.Subtitle</item>
         <item name="android:minHeight">?attr/actionBarSize</item>
-        <item name="titleMargins">@dimen/dimen_0</item>
+        <item name="titleMargins">0dp</item>
         <item name="maxButtonHeight">56dp</item>
         <item name="buttonGravity">top</item>
         <item name="collapseIcon">?attr/homeAsUpIndicator</item>
@@ -54,9 +81,9 @@
     
     <!-- Common Theme Start -->
     <!-- Application Theme -->
-    <style name="Rocky.Theme.Main" parent="@style/Rocky.Theme.LeftRight">
+    <!-- <style name="Rocky.Theme.Main" parent="@style/Rocky.Theme.LeftRight">
         
-    </style>
+    </style> -->
     
     <!-- 淡入淡出 -->
     <style name="Rocky.Theme.Zoom" parent="@style/Rocky.Theme.LeftRight">
@@ -106,8 +133,8 @@
         <item name="windowActionBarOverlay">true</item>
         <!-- 去除阴影 -->
     	<item name="android:windowContentOverlay">@null</item>
-    
-        <item name="android:windowBackground">@android:color/transparent</item>
+    	
+        <item name="android:windowBackground">@color/transparent</item>
         <item name="android:colorBackgroundCacheHint">@null</item>
     </style>
     
@@ -139,8 +166,8 @@
         <item name="android:colorBackgroundCacheHint">@color/abc_background_cache_hint_selector_material_dark</item>
         <item name="android:disabledAlpha">0.5</item>
         <item name="android:backgroundDimAmount">0.6</item>
-        <!-- <item name="android:windowBackground">@color/background_material_dark</item> -->
-        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 窗口的背景颜色 -->
+        <item name="android:windowBackground">@color/background_material_dark</item>
 
         <!-- Text colors -->
         <item name="android:textColorPrimary">@color/abc_primary_text_material_dark</item>
@@ -175,19 +202,24 @@
         
         <!-- ########################### ActionBar Start -->
         <item name="windowActionBar">true</item>
-        <item name="windowActionBarOverlay">false</item>
+        <item name="windowActionBarOverlay">true</item>
+        <item name="android:windowActionBarOverlay">true</item>
 
         <!-- Used by MediaRouter -->
         <item name="isLightTheme">false</item>
 
         <!-- 点击背景,不使用 -->
-        <item name="selectableItemBackground">@color/transparent</item>
-        <item name="selectableItemBackgroundBorderless">?attr/selectableItemBackground</item>
+        <!-- <item name="selectableItemBackground">@drawable/selector_actionbar_item</item>
+        <item name="selectableItemBackgroundBorderless">@drawable/selector_actionbar_item</item> -->
+        <item name="selectableItemBackground">@null</item>
+        <item name="selectableItemBackgroundBorderless">@null</item>
+        
         <!-- 返回按钮 -->
         <item name="homeAsUpIndicator">@drawable/selector_actionbar_back_btn</item>
 
-        <item name="dividerVertical">@drawable/abc_list_divider_mtrl_alpha</item>
-        <item name="dividerHorizontal">@drawable/abc_list_divider_mtrl_alpha</item>
+        <item name="dividerVertical">@drawable/actionbar_divider</item>
+        <item name="dividerHorizontal">@drawable/actionbar_divider</item>
+		<!-- <item name="dividerHorizontal">@drawable/abc_list_divider_mtrl_alpha</item> -->
         
         <!-- Action Bar Styles -->
         <item name="actionBarTabStyle">@style/Widget.AppCompat.ActionBar.TabView</item>
@@ -203,7 +235,9 @@
         <item name="actionBarWidgetTheme">@null</item>
         <item name="actionBarTheme">@style/ThemeOverlay.AppCompat.ActionBar</item>
         <item name="actionBarSize">@dimen/theme_actionbar_height</item>
-        <item name="actionBarDivider">?attr/dividerVertical</item>
+        <item name="android:actionBarSize">@dimen/theme_actionbar_height</item>
+        <!-- <item name="actionBarDivider">@color/transparent</item> -->
+        <item name="actionBarDivider">@drawable/actionbar_divider</item>
         <item name="actionBarItemBackground">?attr/selectableItemBackgroundBorderless</item>
         <item name="actionMenuTextAppearance">@style/Rocky.TextAppearance.AppCompat.Widget.ActionBar.Menu</item>
         <item name="actionMenuTextColor">?android:attr/textColorPrimaryDisableOnly</item>
@@ -271,7 +305,9 @@
         <item name="editTextColor">?android:attr/textColorPrimary</item>
 
         <!-- Color palette -->
+        <!-- 状态栏颜色 --> 
         <item name="colorPrimaryDark">@color/primary_dark_material_dark</item>
+        <!-- toolbar（actionbar）颜色 --> 
         <item name="colorPrimary">@color/primary_material_dark</item>
         <item name="colorAccent">@color/accent_material_dark</item>
 
@@ -290,7 +326,7 @@
     
     <style name="Rocky.Widget.AppCompat.ActionBar.Solid" parent="@style/Widget.AppCompat.ActionBar.Solid">
         <!-- ActionBar本身的背景颜色 -->
-        <item name="background">@drawable/actionbar_bg</item>
+        <item name="background">@drawable/actionbar_bg_translucent</item>
         <!-- ActionBar被分离时Tab 的背景颜色 -->
         <item name="backgroundStacked">@color/white</item>
         <!-- ActionBar Item 在分割到底部时的背景颜色 -->
@@ -313,6 +349,12 @@
         <item name="popupTheme">?attr/actionBarPopupTheme</item>
         
         <item name="android:paddingLeft">0dip</item>
+    </style>
+    
+    <!-- 透明 -->
+    <style name="Rocky.Widget.AppCompat.ActionBar.Solid.Translucent" parent="@style/Rocky.Widget.AppCompat.ActionBar.Solid">
+        <!-- ActionBar本身的背景颜色 -->
+        <item name="background">@drawable/actionbar_bg_translucent</item>
     </style>
     
     <!-- 默认字体风格 -->
@@ -343,17 +385,56 @@
     </style>
     
     
+    <!-- ActionBar按钮的样式, 自定义在右侧按钮(如: ActionBar右侧的确认按钮) -->
+    <style name="Rocky.Widget.ActionBar.Button" parent="@android:style/Widget.Button">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/selector_actionbar_btn_green</item>
+        <item name="android:textSize">@dimen/textsize_17</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+    
+    
     <!-- 不确定进度的进度条样式 -->
-    <style name="Rocky_Abs_ActionBar_Progress_Indeterminate" parent="@android:style/Widget.ProgressBar">
+    <style name="Rocky.Widget.ActionBar.Progress" parent="@android:style/Widget.ProgressBar">
+        <item name="android:indeterminateOnly">true</item>
+        <item name="android:indeterminateDrawable">@drawable/progress_indeterminate</item>
+        <item name="android:indeterminateBehavior">repeat</item>
+        <item name="android:indeterminateDuration">1500</item>
+        <item name="android:minWidth">30dip</item>
+        <item name="android:maxWidth">30dip</item>
+        <item name="android:minHeight">30dip</item>
+        <item name="android:maxHeight">30dip</item>
+    </style>
+    
+    <!-- 不确定进度的进度条样式 -->
+    <style name="Rocky.Widget.ActionBar.Progress2" parent="@android:style/Widget.ProgressBar">
         <item name="android:indeterminateOnly">true</item>
         <item name="android:indeterminateDrawable">@drawable/progress_indeterminate2</item>
         <item name="android:indeterminateBehavior">repeat</item>
         <item name="android:indeterminateDuration">1500</item>
-        <item name="android:minWidth">@dimen/dimen_30</item>
-        <item name="android:maxWidth">@dimen/dimen_30</item>
-        <item name="android:minHeight">@dimen/dimen_30</item>
-        <item name="android:maxHeight">@dimen/dimen_30</item>
+        <item name="android:minWidth">30dip</item>
+        <item name="android:maxWidth">30dip</item>
+        <item name="android:minHeight">30dip</item>
+        <item name="android:maxHeight">30dip</item>
     </style>
+    
+    <!-- 不确定进度的进度条样式 -->
+    <style name="Rocky.Widget.ProgressBar.Circle.Orange" parent="@android:style/Widget.ProgressBar">
+        <item name="android:indeterminateOnly">true</item>
+        <item name="android:indeterminateDrawable">@drawable/progress_circle_orange</item>
+        <item name="android:indeterminateBehavior">repeat</item>
+        <item name="android:indeterminateDuration">1500</item>
+        <item name="android:minWidth">30dip</item>
+        <item name="android:maxWidth">30dip</item>
+        <item name="android:minHeight">30dip</item>
+        <item name="android:maxHeight">30dip</item>
+    </style>
+    
+    
+    
+    
+    
     
     
     

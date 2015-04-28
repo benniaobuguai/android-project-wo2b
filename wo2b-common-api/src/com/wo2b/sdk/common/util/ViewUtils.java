@@ -22,7 +22,7 @@ import android.widget.TextView;
 /**
  * 常用视图工具类
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * @email ixueyongjia@gmail.com
  * @version 2.0.0
  * @date 2014-10-22
@@ -54,6 +54,19 @@ public class ViewUtils
 		}
 
 		return (T) childView;
+	}
+	
+	/**
+	 * findViewById
+	 * 
+	 * @param view
+	 * @param id
+	 * @return
+	 */
+	@SuppressWarnings("unchecked")
+	public static <T extends View> T findViewById(View view, int id)
+	{
+		return (T) view.findViewById(id);
 	}
 
 	// ========================================================================================================================

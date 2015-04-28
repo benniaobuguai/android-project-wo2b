@@ -5,7 +5,7 @@ import com.wo2b.sdk.common.util.encrypt.AESUtil;
 /**
  * 数据安全, 考虑使用JNI进行调用.
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * @email ixueyongjia@gmail.com
  */
 public final class RockySecurity

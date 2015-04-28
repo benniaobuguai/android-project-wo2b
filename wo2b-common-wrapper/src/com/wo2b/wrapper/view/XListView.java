@@ -16,7 +16,7 @@ import com.wo2b.sdk.assistant.log.Log;
 /**
  * ListView implements by LinearLayout.
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * 
  */
 public class XListView extends LinearLayout

@@ -5,25 +5,23 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 
-import com.wo2b.wrapper.app.RockyFragmentActivity;
+import com.wo2b.tu123.R;
+import com.wo2b.wrapper.app.BaseFragmentActivity;
 import com.wo2b.wrapper.view.XPreference;
 import com.wo2b.wrapper.view.XPreferenceExtra;
 import com.wo2b.wrapper.view.XPreferenceExtra.OnXPreferenceSelectListener;
-import com.wo2b.tu123.R;
-import com.wo2b.wrapper.component.common.PluginCenterActivity;
 
 /**
  * Settings Activity.
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * 
  */
-public class SettingsActivity extends RockyFragmentActivity implements OnClickListener
+public class SettingsActivity extends BaseFragmentActivity implements OnClickListener
 {
 	
 	private static final String TAG = "SettingsActivity";
 	
-	private XPreference xp_super_power;
 	private XPreference xp_traffic_statistics;
 	private XPreference xp_clear_storage;
 	private XPreference xp_plugin_center;
@@ -43,19 +41,17 @@ public class SettingsActivity extends RockyFragmentActivity implements OnClickLi
 		setContentView(R.layout.uc_setting_main);
 		
 		initView();
-		bindEvents();
 	}
-	
+
 	@Override
 	protected void initView()
 	{
 		setActionBarTitle(R.string.setting);
-		
-		xp_super_power = (XPreference) findViewById(R.id.xp_super_power);
+
 		xp_traffic_statistics = (XPreference) findViewById(R.id.xp_traffic_statistics);
 		xp_clear_storage = (XPreference) findViewById(R.id.xp_storage_manager);
 		xp_plugin_center = (XPreference) findViewById(R.id.xp_plugin_center);
-		
+
 		xp_wallpaper = (XPreferenceExtra) findViewById(R.id.xp_wallpaper);
 		xp_auto_play = (XPreferenceExtra) findViewById(R.id.xp_auto_play);
 		xp_cache_local = (XPreferenceExtra) findViewById(R.id.xp_cache_local);
@@ -69,12 +65,7 @@ public class SettingsActivity extends RockyFragmentActivity implements OnClickLi
 		xp_image_download.setOnXPreferenceChangeListener(new OnXPreferenceSelectListenerImpl());
 		xp_bg_music.setOnXPreferenceChangeListener(new OnXPreferenceSelectListenerImpl());
 		xp_open_lock.setOnClickListener(new OnLockClickListener());
-	}
-	
-	@Override
-	protected void bindEvents()
-	{
-		xp_super_power.setOnClickListener(this);
+
 		xp_traffic_statistics.setOnClickListener(this);
 		xp_clear_storage.setOnClickListener(this);
 		xp_plugin_center.setOnClickListener(this);
@@ -85,11 +76,6 @@ public class SettingsActivity extends RockyFragmentActivity implements OnClickLi
 	{
 		switch (v.getId())
 		{
-			case R.id.xp_super_power:
-			{
-				onSuperPowerClick(v);
-				break;
-			}
 			case R.id.xp_traffic_statistics:
 			{
 				onTrafficStatisticsClick(v);

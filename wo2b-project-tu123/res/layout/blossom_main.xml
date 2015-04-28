@@ -17,7 +17,7 @@
 
     <com.wo2b.sdk.view.pulltorefresh.PullToRefreshExpandableListView
         android:id="@+id/ptrExpandableListView"
-        style="@style/tu_expandable_listview"
+        style="@style/global_expandable_listview"
         android:background="@color/transparent" />
 
 </RelativeLayout>

@@ -12,12 +12,10 @@ import android.net.Uri;
 import android.os.Environment;
 import android.util.Pair;
 
-import com.wo2b.sdk.common.util.http.FileAsyncHttpResponseHandler;
-
 /**
  * 下载管理器
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * @email ixueyongjia@gmail.com
  * @version 1.0.0
  * @date 2014-10-4

@@ -7,7 +7,7 @@ import com.j256.ormlite.field.DatabaseField;
 /**
  * My Favorites
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * 
  */
 public class MyFavorites extends PhotoInfo

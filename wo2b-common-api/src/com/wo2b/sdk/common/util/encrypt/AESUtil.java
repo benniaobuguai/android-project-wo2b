@@ -7,7 +7,7 @@ import javax.crypto.spec.SecretKeySpec;
 /**
  * AES加密工具类
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * 
  */
 public class AESUtil

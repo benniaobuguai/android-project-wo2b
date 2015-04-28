@@ -10,6 +10,7 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -22,7 +23,7 @@ import com.wo2b.wrapper.preference.XPreferenceManager;
 /**
  * XPreference
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * @email ixueyongjia@gmail.com
  * 
  */
@@ -40,32 +41,34 @@ public class XPreference extends RelativeLayout
 	private TextView mTitle;
 	
 	/** display content */
-	private TextView mContent;
-	
+	private TextView mContentView;
+
 	/** right text */
 	private TextView mRightText;
-	
+	private TextView mBadgeDefaultView;
+	private ImageView mDivider;
+
 	/** the indicator aling right */
 	private TextView mIndicator;
 	private int mState;
 	protected static final int STATE_NONE = -1;
 	protected static final int STATE_ARROW = STATE_NONE + 1;
 	protected static final int STATE_CHECKBOX = STATE_ARROW + 1;
-	
+	protected static final int STATE_CUSTOM = 100;
+
 	private boolean mEnabled;
 	
 	private LinearLayout mHintIcons;
 	
 	/** XPreference click callback */
 	protected OnClickListener mOnClickListener;
-	
+	protected OnClickListener mIndicatorClickListener;
+
 	public XPreference(Context context, AttributeSet attrs)
 	{
 		super(context, attrs);
 		this.mContext = context;
-		initView(attrs);
-		setDefaultValues();
-		bindEvents();
+		init(attrs);
 	}
 	
 	
@@ -82,16 +85,18 @@ public class XPreference extends RelativeLayout
 	 * 
 	 * @param attrs
 	 */
-	private void initView(AttributeSet attrs)
+	private void init(AttributeSet attrs)
 	{
 		mRootView = (XPreference) LayoutInflater.from(mContext).inflate(R.layout.x_preference, this);
 		mContainer = (RelativeLayout) mRootView.findViewById(R.id.container);
 		
 		mTitle = (TextView) mRootView.findViewById(R.id.title);
-		mContent = (TextView) mRootView.findViewById(R.id.content);
+		mContentView = (TextView) mRootView.findViewById(R.id.content);
 		mIndicator = (TextView) mRootView.findViewById(R.id.indicator);
 		mHintIcons = (LinearLayout) mRootView.findViewById(R.id.hint_icons);
 		mRightText = (TextView) mRootView.findViewById(R.id.right_text);
+		mBadgeDefaultView = (TextView) this.findViewById(R.id.badge_view);
+		mDivider = (ImageView) this.findViewById(R.id.divider);
 		
 		TypedArray typedArray = mContext.obtainStyledAttributes(attrs, R.styleable.x_preference);
 		
@@ -105,6 +110,7 @@ public class XPreference extends RelativeLayout
 		}
 
 		Drawable icon = typedArray.getDrawable(R.styleable.x_preference_rocky_icon);
+		Drawable indicator = typedArray.getDrawable(R.styleable.x_preference_indicator);
 		// Drawable indicator = typedArray.getDrawable(R.styleable.x_preference_indicator);
 		// <enum name="arrow" value="0" /> as default.
 		mState = typedArray.getInt(R.styleable.x_preference_indicator_state, STATE_ARROW);
@@ -113,11 +119,22 @@ public class XPreference extends RelativeLayout
 		// show notice or not?
 		
 		mEnabled = typedArray.getBoolean(R.styleable.x_preference_enabled, true);
-		
+
+		// 分隔线
+		boolean divider = typedArray.getBoolean(R.styleable.x_preference_prefs_divider, false);
+		if (divider)
+		{
+			mDivider.setVisibility(View.VISIBLE);
+		}
+		else
+		{
+			mDivider.setVisibility(View.GONE);
+		}
+
 		setTitle(label);
 		setIcon(icon);
 		
-		setItemIndicator(mState);
+		setItemIndicator(mState, indicator);
 		setItemBackground(mContainer, position);
 		
 		typedArray.recycle();
@@ -138,18 +155,20 @@ public class XPreference extends RelativeLayout
 				}
 			}
 		});
+		mIndicator.setOnClickListener(new OnClickListener()
+		{
+
+			@Override
+			public void onClick(View v)
+			{
+				if (mIndicatorClickListener != null)
+				{
+					mIndicatorClickListener.onClick(v);
+				}
+			}
+		});
 	}
-	
-	private void bindEvents()
-	{
-		
-	}
-	
-	private void setDefaultValues()
-	{
-		
-	}
-	
+
 	/**
 	 * Need to save preferece.
 	 * 
@@ -168,42 +187,44 @@ public class XPreference extends RelativeLayout
 	 */
 	protected void setItemBackground(View item, final int position)
 	{
+		item.setBackgroundResource(R.drawable.selector_preference_grey);
+
 		switch (position)
 		{
 			case 1:
 			{
-				item.getLayoutParams().height += ViewUtils.dip2px(mContext, 0.5f);
-				item.setBackgroundResource(R.drawable.selector_preference_first);
+				// first
+				mDivider.setVisibility(View.VISIBLE);
 				break;
 			}
 			case 2:
 			{
-				item.getLayoutParams().height += ViewUtils.dip2px(mContext, 0.5f);
-				item.setBackgroundResource(R.drawable.selector_preference_middle);
+				// middle
+				mDivider.setVisibility(View.VISIBLE);
 				break;
 			}
 			case 3:
 			{
-				item.getLayoutParams().height += ViewUtils.dip2px(mContext, 3);
-				item.setBackgroundResource(R.drawable.selector_preference_last);
+				// last
+				mDivider.setVisibility(View.GONE);
 				break;
 			}
 			case 4:
 			{
-				item.getLayoutParams().height += ViewUtils.dip2px(mContext, 14);
-				item.setBackgroundResource(R.drawable.selector_preference_top);
+				// top
+				mDivider.setVisibility(View.VISIBLE);
 				break;
 			}
 			case 5:
 			{
-				item.getLayoutParams().height += ViewUtils.dip2px(mContext, 16.5f);
-				item.setBackgroundResource(R.drawable.selector_preference_one);
+				// one
+				mDivider.setVisibility(View.GONE);
 				break;
 			}
 			case 6:
 			{
-				item.getLayoutParams().height += ViewUtils.dip2px(mContext, 3);
-				item.setBackgroundResource(R.drawable.selector_preference_single);
+				// single
+				mDivider.setVisibility(View.GONE);
 				break;
 			}
 			default:
@@ -219,7 +240,7 @@ public class XPreference extends RelativeLayout
 	 * @param container
 	 * @param position
 	 */
-	protected void setItemIndicator(final int state)
+	protected void setItemIndicator(final int state, Drawable indicator)
 	{
 		switch (state)
 		{
@@ -244,32 +265,11 @@ public class XPreference extends RelativeLayout
 				this.mIndicator.setCompoundDrawables(null, null, null, null);
 				break;
 			}
-			default:
+			case STATE_CUSTOM:
 			{
-				throw new IllegalArgumentException("Illegal XPreference state: " + state);
-			}
-		}
-	}
-	
-	
-	/**
-	 * Set the background to view depend on the position.
-	 * 
-	 * @param container
-	 * @param position
-	 */
-	protected void setItemIndicator_Bak(final int state)
-	{
-		switch (state)
-		{
-			case STATE_ARROW:
-			{
-				mIndicator.setBackgroundResource(R.drawable.selector_preference_arrow);
-				break;
-			}
-			case STATE_CHECKBOX:
-			{
-				mIndicator.setBackgroundResource(R.drawable.selector_preference_checkbox);
+				indicator.setBounds(0, 0, indicator.getIntrinsicWidth(), indicator.getIntrinsicHeight());
+				this.mIndicator.setCompoundDrawablePadding(ViewUtils.dip2px(mContext, 4));
+				this.mIndicator.setCompoundDrawables(null, null, indicator, null);
 				break;
 			}
 			default:
@@ -327,7 +327,7 @@ public class XPreference extends RelativeLayout
 	{
 		this.mTitle.setText(title);
 	}
-	
+
 	/**
 	 * Set the title.
 	 * 
@@ -337,7 +337,7 @@ public class XPreference extends RelativeLayout
 	{
 		this.mTitle.setText(titleId);
 	}
-	
+
 	/**
 	 * Set the content.
 	 * 
@@ -345,8 +345,18 @@ public class XPreference extends RelativeLayout
 	 */
 	public void setContent(CharSequence content)
 	{
-		this.mContent.setVisibility(View.VISIBLE);
-		this.mContent.setText(content);
+		this.mContentView.setVisibility(View.VISIBLE);
+		this.mContentView.setText(content);
+	}
+
+	/**
+	 * Return content text.
+	 * 
+	 * @return
+	 */
+	public CharSequence getContent()
+	{
+		return this.mContentView.getText();
 	}
 
 	/**
@@ -356,8 +366,8 @@ public class XPreference extends RelativeLayout
 	 */
 	public void setContent(int contentId)
 	{
-		this.mContent.setVisibility(View.VISIBLE);
-		this.mContent.setText(contentId);
+		this.mContentView.setVisibility(View.VISIBLE);
+		this.mContentView.setText(contentId);
 	}
 	
 	/**
@@ -367,15 +377,15 @@ public class XPreference extends RelativeLayout
 	 */
 	public void setContent2(CharSequence content)
 	{
-		this.mContent.setVisibility(View.VISIBLE);
+		this.mContentView.setVisibility(View.VISIBLE);
 
 		if (TextUtils.isEmpty(content))
 		{
-			this.mContent.setText(R.string.hint_no_data);
+			this.mContentView.setText(R.string.hint_no_data);
 		}
 		else
 		{
-			this.mContent.setText(content);
+			this.mContentView.setText(content);
 		}
 	}
 	
@@ -502,6 +512,16 @@ public class XPreference extends RelativeLayout
 	{
 		return this.mIndicator.isSelected();
 	}
+	
+	/**
+	 * Indicator click event
+	 * 
+	 * @param l
+	 */
+	public void setIndicatorClickListener(OnClickListener l)
+	{
+		this.mIndicatorClickListener = l;
+	}
 
 	@Override
 	public void setOnClickListener(OnClickListener l)
@@ -545,9 +565,9 @@ public class XPreference extends RelativeLayout
 	 */
 	public void bindBadgeViewWarning(final String key, int showTimes)
 	{
-		bindBadgeViewWarning(mContent, key, showTimes, R.drawable.xp_badge_warning);
+		bindBadgeViewWarning(mContentView, key, showTimes, R.drawable.xp_badge_warning);
 	}
-	
+
 	/**
 	 * 绑定至标题
 	 * 
@@ -557,11 +577,12 @@ public class XPreference extends RelativeLayout
 	@Deprecated
 	public void bindBadgeViewWarningRightText(final String key, int showTimes)
 	{
-		final int count = XPreferenceManager.getInstance().getIntTemp(key, 0);
+		final int count = XPreferenceManager.getIntTemp(key, 0);
 
 		if (count < showTimes)
 		{
-			BadgeView badgeView = bindBadgeView(mRightText, key, count, R.drawable.xp_badge_warning);
+			BadgeView badgeView = bindBadgeView(mRightText, BadgeView.POSITION_CENTER_RIGHT, key, count,
+					R.drawable.xp_badge_warning);
 		}
 	}
 
@@ -575,29 +596,29 @@ public class XPreference extends RelativeLayout
 	 */
 	public void bindBadgeViewWarning(View target, final String key, int showTimes, int drawableId)
 	{
-		final int count = XPreferenceManager.getInstance().getIntTemp(key, 0);
+		final int count = XPreferenceManager.getIntTemp(key, 0);
 
 		if (count < showTimes)
 		{
 			// 在指定的次数内都进行
-			bindBadgeView(target, key, count, drawableId);
+			bindBadgeView(target, BadgeView.POSITION_RIGHT, key, count, drawableId);
 		}
 	}
-	
+
 	/**
 	 * 
 	 * @param target
 	 * @param drawableId
 	 * @return
 	 */
-	public BadgeView bindBadgeView(View target, final String key, final int count, int drawableId)
+	public BadgeView bindBadgeView(View target, int position, final String key, final int count, int drawableId)
 	{
 		final BadgeView badgeView = new BadgeView(getContext(), target);
 		badgeView.setBackgroundResource(drawableId);
-		badgeView.setBadgePosition(BadgeView.POSITION_CENTER_RIGHT);
+		badgeView.setBadgePosition(position);
 		badgeView.setWidth(ViewUtils.dip2px(getContext(), 10));
 		badgeView.setHeight(ViewUtils.dip2px(getContext(), 10));
-		
+
 		badgeView.show();
 
 		mContainer.setOnClickListener(new OnClickListener()
@@ -606,7 +627,7 @@ public class XPreference extends RelativeLayout
 			@Override
 			public void onClick(View v)
 			{
-				XPreferenceManager.getInstance().putIntTemp(key, count + 1);
+				XPreferenceManager.putIntTemp(key, count + 1);
 				if (mEnabled)
 				{
 					onPreferenceClick(mRootView, mState);
@@ -621,6 +642,79 @@ public class XPreference extends RelativeLayout
 		});
 
 		return badgeView;
+	}
+
+	/**
+	 * 绑定标记到默认的位置视图
+	 * 
+	 * @param drawableId
+	 */
+	public void bindBadgeViewForever(int drawableId)
+	{
+		final BadgeView badgeView = new BadgeView(getContext(), mBadgeDefaultView);
+		badgeView.setBackgroundResource(drawableId);
+		badgeView.setBadgePosition(BadgeView.POSITION_CENTER);
+		// badgeView.setWidth(ViewUtils.dip2px(getContext(), 10));
+		// badgeView.setHeight(ViewUtils.dip2px(getContext(), 10));
+
+		badgeView.show();
+
+		mContainer.setOnClickListener(new OnClickListener()
+		{
+
+			@Override
+			public void onClick(View v)
+			{
+				if (mEnabled)
+				{
+					onPreferenceClick(mRootView, mState);
+				}
+			}
+		});
+	}
+
+	/**
+	 * 绑定标记到标题右侧的位置视图
+	 * 
+	 * @param key
+	 * @param showTimes
+	 * @param drawableId
+	 */
+	public void bindBadgeViewToTitle(final String key, final int showTimes, final int drawableId)
+	{
+		final int count = XPreferenceManager.getIntTemp(key, 0);
+
+		if (count >= showTimes)
+		{
+			return;
+		}
+
+		final BadgeView badgeView = new BadgeView(getContext(), mContentView);
+		badgeView.setBackgroundResource(drawableId);
+		badgeView.setBadgePosition(BadgeView.POSITION_LEFT);
+
+		badgeView.show();
+
+		mContainer.setOnClickListener(new OnClickListener()
+		{
+
+			@Override
+			public void onClick(View v)
+			{
+				XPreferenceManager.putIntTemp(key, count + 1);
+				if (mEnabled)
+				{
+					onPreferenceClick(mRootView, mState);
+				}
+
+				if (badgeView.isShown())
+				{
+					badgeView.hide(true);
+				}
+			}
+		});
+
+		// bindBadgeViewWarning(mTitle, key, showTimes, drawableId);
 	}
 
 }

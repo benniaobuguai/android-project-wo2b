@@ -17,7 +17,7 @@ import com.wo2b.sdk.common.util.ManifestTools;
 import com.wo2b.sdk.core.RockySdk;
 import com.wo2b.sdk.umeng.UmengUpdateAgentProxy;
 import com.wo2b.sdk.view.pulltorefresh.PullToRefreshScrollView;
-import com.wo2b.wrapper.app.RockyFragmentActivity;
+import com.wo2b.wrapper.app.BaseFragmentActivity;
 import com.wo2b.wrapper.view.XPreference;
 import com.wo2b.wrapper.view.dialog.DialogText;
 import com.wo2b.tu123.R;
@@ -27,10 +27,10 @@ import com.wo2b.tu123.ui.global.WelcomeActivity;
 /**
  * AboutActivity.
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * 
  */
-public class AboutActivity extends RockyFragmentActivity implements OnClickListener
+public class AboutActivity extends BaseFragmentActivity implements OnClickListener
 {
 
 	private static final String TAG = "Rocky.About";

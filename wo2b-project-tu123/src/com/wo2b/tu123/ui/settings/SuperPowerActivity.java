@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 
-import com.wo2b.wrapper.app.RockyFragmentActivity;
+import com.wo2b.wrapper.app.BaseFragmentActivity;
 import com.wo2b.wrapper.view.XPreference;
 import com.wo2b.wrapper.view.XPreferenceExtra;
 import com.wo2b.wrapper.view.XPreferenceExtra.OnXPreferenceSelectListener;
@@ -14,10 +14,10 @@ import com.wo2b.tu123.R;
 /**
  * SuperPowerActivity.
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * 
  */
-public class SuperPowerActivity extends RockyFragmentActivity
+public class SuperPowerActivity extends BaseFragmentActivity
 {
 
 	private XPreferenceExtra xp_wallpaper;

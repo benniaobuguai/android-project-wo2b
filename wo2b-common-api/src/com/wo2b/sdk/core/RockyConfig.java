@@ -10,7 +10,7 @@ import android.os.Environment;
  * <li>2014-01-15 Library更改包名<b> [2.0.0]</b></li>
  * </pre>
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * 
  */
 public class RockyConfig

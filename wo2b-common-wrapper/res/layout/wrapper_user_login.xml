@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:rocky="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/bg_app"
+    xmlns:wo2b="http://schemas.android.com/apk/res-auto"
+    style="@style/tu_container_common"
     android:orientation="vertical" >
 
     <com.wo2b.sdk.view.pulltorefresh.PullToRefreshScrollView
@@ -18,62 +16,26 @@
             android:paddingBottom="@dimen/common_margin_bottom"
             android:paddingTop="@dimen/common_margin_bottom" >
 
-            <LinearLayout
+            <com.wo2b.wrapper.view.LabelEditText
+                android:id="@+id/username_let"
                 android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:background="@drawable/selector_preference_first"
-                android:clickable="false"
-                android:gravity="center_vertical"
-                android:orientation="horizontal" >
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_15"
+                android:layout_marginRight="@dimen/dimen_15"
+                wo2b:wo2b_hint="@string/hint_input_username_or_email"
+                wo2b:wo2b_label="@string/username"
+                wo2b:wo2b_label_ems="4" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:includeFontPadding="false"
-                    android:maxEms="3"
-                    android:minEms="3"
-                    android:text="@string/username"
-                    android:textColor="@drawable/textcolor_black_white"
-                    android:textSize="14sp" />
-
-                <EditText
-                    android:id="@+id/et_user_name"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@null"
-                    android:hint="@string/hint_input_username_or_email"
-                    android:textColor="@color/font_normal"
-                    android:textSize="14sp" />
-            </LinearLayout>
-
-            <LinearLayout
+            <com.wo2b.wrapper.view.LabelEditText
+                android:id="@+id/password_let"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:background="@drawable/selector_preference_last"
-                android:clickable="false"
-                android:gravity="center_vertical"
-                android:orientation="horizontal" >
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:includeFontPadding="false"
-                    android:maxEms="3"
-                    android:minEms="3"
-                    android:text="@string/password"
-                    android:textColor="@drawable/textcolor_black_white"
-                    android:textSize="14sp" />
-
-                <EditText
-                    android:id="@+id/et_password"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@null"
-                    android:hint="@string/hint_input_password"
-                    android:inputType="textPassword"
-                    android:textColor="@color/font_normal"
-                    android:textSize="14sp" />
-            </LinearLayout>
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_15"
+                android:layout_marginRight="@dimen/dimen_15"
+                android:layout_marginTop="@dimen/dimen_25"
+                wo2b:wo2b_hint="@string/hint_input_password"
+                wo2b:wo2b_label="@string/password"
+                wo2b:wo2b_label_ems="4" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -86,7 +48,7 @@
 
                 <Button
                     android:id="@+id/btn_login"
-                    style="@style/common_button_green"
+                    style="@style/global_btn_green"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -94,7 +56,7 @@
 
                 <Button
                     android:id="@+id/forget_password"
-                    style="@style/common_button_grey"
+                    style="@style/global_btn_grey"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="6dp"

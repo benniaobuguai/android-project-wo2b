@@ -3,13 +3,12 @@ package com.wo2b.xxx.webapp.manager.game;
 import java.util.List;
 
 import com.wo2b.xxx.webapp.Wo2bResHandler;
-import com.wo2b.xxx.webapp.manager.game.GameRanking;
 import com.wo2b.xxx.webapp.openapi.impl.GameOpenApi;
 
 /**
  * 游戏开放接口
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * @email ixueyongjia@gmail.com
  * @version 1.0.0
  * @date 2014-11-30
@@ -30,9 +29,9 @@ public class GameManager
 	 * @param wo2bResHandler
 	 */
 	public void addNewRecordGUID(long score, String gameAppId, String gameName, String gameVersion, String guid,
-			Wo2bResHandler<GameRanking> wo2bResHandler)
+			int type, Wo2bResHandler<GameRanking> wo2bResHandler)
 	{
-		mGameOpenApi.newRecordGUID(score, gameAppId, gameName, gameVersion, guid, wo2bResHandler);
+		mGameOpenApi.newRecordGUID(score, gameAppId, gameName, gameVersion, guid, type, wo2bResHandler);
 	}
 
 	/**
@@ -65,7 +64,7 @@ public class GameManager
 	{
 		mGameOpenApi.modifyNickname(gameAppId, guid, nickname, wo2bResHandler);
 	}
-	
+
 	/**
 	 * 异步获取某个游戏某个用户的积分信息
 	 * 
@@ -73,9 +72,9 @@ public class GameManager
 	 * @param userName
 	 * @param wo2bResHandler
 	 */
-	public void findGameRanking(String gameAppId, String guid, Wo2bResHandler<GameRanking> wo2bResHandler)
+	public void findGameRanking(String gameAppId, String guid, int type, Wo2bResHandler<GameRanking> wo2bResHandler)
 	{
-		mGameOpenApi.findGameRanking(gameAppId, guid, wo2bResHandler);
+		mGameOpenApi.findGameRanking(gameAppId, guid, type, wo2bResHandler);
 	}
 
 	/**
@@ -84,11 +83,12 @@ public class GameManager
 	 * @param gameAppId
 	 * @param offset
 	 * @param count
+	 * @param type
 	 * @return
 	 */
-	public List<GameRanking> findGameRanking(String gameAppId, int offset, int count)
+	public List<GameRanking> findGameRanking(String gameAppId, int offset, int count, int type)
 	{
-		return mGameOpenApi.findGameRanking(gameAppId, offset, count);
+		return mGameOpenApi.findGameRanking(gameAppId, offset, count, type);
 	}
 
 }

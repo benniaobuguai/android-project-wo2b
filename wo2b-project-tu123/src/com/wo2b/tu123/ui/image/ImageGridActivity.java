@@ -25,7 +25,6 @@ import android.widget.TextView;
 
 import com.wo2b.sdk.common.util.ViewUtils;
 import com.wo2b.sdk.view.pulltorefresh.PullToRefreshGridView;
-import com.wo2b.wrapper.component.security.SecurityTu123;
 import com.wo2b.tu123.R;
 import com.wo2b.tu123.business.base.DatabaseHelper;
 import com.wo2b.tu123.business.image.Module;
@@ -37,11 +36,12 @@ import com.wo2b.tu123.model.image.PhotoInfoSet;
 import com.wo2b.tu123.ui.global.RockyIntent;
 import com.wo2b.tu123.ui.global.RockyIntentUtils;
 import com.wo2b.wrapper.component.common.CommentActivity;
+import com.wo2b.wrapper.component.security.SecurityTu123;
 
 /**
  * Image Grid List Preview.
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * @email ixueyongjia@gmail.com
  * 
  */
@@ -219,7 +219,6 @@ public class ImageGridActivity extends AbsListViewBaseActivity
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu)
 	{
-		// menu.add(1, 100, 0, "评论").setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
 		getMenuInflater().inflate(R.menu.common_comment, menu);
 
 		return super.onCreateOptionsMenu(menu);

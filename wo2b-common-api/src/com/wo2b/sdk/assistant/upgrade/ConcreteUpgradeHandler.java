@@ -3,7 +3,7 @@ package com.wo2b.sdk.assistant.upgrade;
 
 /**
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * 
  */
 public class ConcreteUpgradeHandler implements UpgradeHandler

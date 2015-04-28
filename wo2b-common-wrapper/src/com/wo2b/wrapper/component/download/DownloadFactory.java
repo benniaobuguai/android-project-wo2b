@@ -16,7 +16,7 @@ import android.webkit.MimeTypeMap;
 /**
  * 下载器, 不推荐使用. 推荐使用api包下的DownloadManager类
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * 
  */
 @Deprecated

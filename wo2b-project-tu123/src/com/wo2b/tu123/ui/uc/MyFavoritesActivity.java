@@ -42,9 +42,10 @@ import com.wo2b.tu123.ui.widget.PopupWindow4Delete.OnPopupDeleteClickListener;
 /**
  * 我的最爱
  * 
- * @author Rocky
- * @email ixueyongjia@gmail.com
- * 
+ * @author 笨鸟不乖
+ * @email benniaobuguai@gmail.com
+ * @version 1.0.0
+ * @date 2015-4-12
  */
 public class MyFavoritesActivity extends AbsListViewBaseActivity
 {

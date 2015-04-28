@@ -5,7 +5,7 @@ import com.wo2b.sdk.common.util.encrypt.AESUtil;
 /**
  * 外星人
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * @email ixueyongjia@gmail.com
  */
 public class SecurityWar3

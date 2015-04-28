@@ -8,16 +8,16 @@ import android.os.Bundle;
 import android.widget.AbsListView;
 
 import com.wo2b.sdk.view.pulltorefresh.PullToRefreshGridView;
-import com.wo2b.wrapper.app.RockyFragmentActivity;
+import com.wo2b.wrapper.app.BaseFragmentActivity;
 
 /**
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * @email ixueyongjia@gmail.com
  * @version 2.0.0
  * @date 2014-11-12
  */
-public class AbsListViewBaseActivity extends RockyFragmentActivity
+public class AbsListViewBaseActivity extends BaseFragmentActivity
 {
 
 	protected static final String STATE_PAUSE_ON_SCROLL = "STATE_PAUSE_ON_SCROLL";

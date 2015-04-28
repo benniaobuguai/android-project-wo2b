@@ -8,7 +8,7 @@ import com.j256.ormlite.android.apptools.OrmLiteSqliteOpenHelper;
 /**
  * 基础的逻辑层, 提供单表的CRUD; 后续对接云端, 构造函数可能需要调整
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * 
  * @param <Model>
  */

@@ -9,7 +9,7 @@ import com.wo2b.xxx.webapp.localcache.LocalDbCacheHelper;
 /**
  * 数据访问对象
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * @email ixueyongjia@gmail.com
  */
 public class LikeDao extends RockyDao<Like>

@@ -3,7 +3,7 @@ package com.wo2b.sdk.common.online;
 /**
  * 下载接口
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * 
  */
 @Deprecated

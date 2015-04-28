@@ -14,27 +14,27 @@ import android.view.MenuItem;
 import com.wo2b.sdk.assistant.log.Log;
 import com.wo2b.sdk.umeng.MobclickAgentProxy;
 import com.wo2b.sdk.umeng.UmengUpdateAgentProxy;
-import com.wo2b.wrapper.app.extra.RockyTabFragmentActivity;
-import com.wo2b.wrapper.view.BottomView;
-import com.wo2b.wrapper.view.BottomView.OnBottomViewItemClick;
-import com.wo2b.wrapper.view.dialog.DialogUtils;
 import com.wo2b.tu123.R;
 import com.wo2b.tu123.ui.baike.BaikeFragment;
 import com.wo2b.tu123.ui.blossom.BlossomHomeFragment;
 import com.wo2b.tu123.ui.settings.SettingsActivity;
 import com.wo2b.tu123.ui.uc.UserCenterFragment;
+import com.wo2b.wrapper.app.extra.BaseFragmentTabActivity;
+import com.wo2b.wrapper.view.dialog.BottomMenu;
+import com.wo2b.wrapper.view.dialog.BottomMenu.OnBottomMenuClick;
+import com.wo2b.wrapper.view.dialog.DialogUtils;
 import com.wo2b.xxx.webapp.manager.user.User;
 import com.wo2b.xxx.webapp.manager.user.UserManager;
 
 /**
  * Home Activity
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * @email ixueyongjia@gmail.com
  * @version 1.0.0
  * @date 2014-11-9
  */
-public class HomeActivity extends RockyTabFragmentActivity
+public class HomeActivity extends BaseFragmentTabActivity
 {
 
 	private static final String TAG = "Rocky.HomeActivity";
@@ -139,21 +139,21 @@ public class HomeActivity extends RockyTabFragmentActivity
 		return super.onKeyDown(keyCode, event);
 	}
 	
-	private BottomView bottomView = null;
+	private BottomMenu bottomView = null;
 	
-	private BottomView createBottomView()
+	private BottomMenu createBottomView()
 	{
-		BottomView bottomView = new BottomView.Builder(this)
+		BottomMenu bottomView = new BottomMenu.Builder(this)
 			//.setTransparency(Transparency.LEVEL_3)
 			.setFocusable(true)
 			.setTouchable(true)
 			.setOutsideTouchable(false)
 			.setCommandList(new int[]{R.string.quit})
-			.setOnBottomViewItemClick(new OnBottomViewItemClick()
+			.setOnBottomMenuClick(new OnBottomMenuClick()
 			{
 				
 				@Override
-				public void onClick(final BottomView bottomView, int which)
+				public void onClick(final BottomMenu bottomMenu, int which)
 				{
 					switch (which)
 					{
@@ -179,7 +179,7 @@ public class HomeActivity extends RockyTabFragmentActivity
 								@Override
 								public void onShow(DialogInterface dialog)
 								{
-									bottomView.dismissBottomView();
+									bottomMenu.dismiss();
 								}
 							});
 							exitDialog.show();

@@ -3,7 +3,7 @@ package com.wo2b.sdk.view;
 /**
  * 透明度, 分五个等级
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * @email ixueyongjia@gmail.com
  * 
  */

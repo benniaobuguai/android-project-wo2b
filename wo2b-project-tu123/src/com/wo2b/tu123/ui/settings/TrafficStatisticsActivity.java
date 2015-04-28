@@ -3,16 +3,16 @@ package com.wo2b.tu123.ui.settings;
 import android.net.TrafficStats;
 import android.os.Bundle;
 
-import com.wo2b.wrapper.app.RockyFragmentActivity;
+import com.wo2b.wrapper.app.BaseFragmentActivity;
 import com.wo2b.tu123.R;
 
 /**
  * TrafficStatisticsActivity.
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * 
  */
-public class TrafficStatisticsActivity extends RockyFragmentActivity
+public class TrafficStatisticsActivity extends BaseFragmentActivity
 {
 	
 	@Override

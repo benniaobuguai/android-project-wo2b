@@ -1,6 +1,6 @@
 package com.wo2b.wrapper.component.user;
 
-import opensource.component.de.greenrobot.event.EventBus;
+import opensource.component.otto.Subscribe;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,30 +14,32 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.EditText;
 
-import com.wo2b.sdk.assistant.event.RockyEvent;
+import com.wo2b.sdk.bus.GBus;
+import com.wo2b.sdk.bus.GEvent;
 import com.wo2b.sdk.common.util.ViewUtils;
+import com.wo2b.wrapper.R;
+import com.wo2b.wrapper.app.fragment.BaseFragment;
+import com.wo2b.wrapper.view.LabelEditText;
 import com.wo2b.xxx.webapp.manager.user.User;
 import com.wo2b.xxx.webapp.manager.user.UserManager;
-import com.wo2b.wrapper.R;
-import com.wo2b.wrapper.app.fragment.RockyFragment;
 
 /**
- * 登录片段
+ * 登录
  * 
- * @author Rocky
- * @email ixueyongjia@gmail.com
- * 
+ * @author 笨鸟不乖
+ * @email benniaobuguai@gmail.com
+ * @version 1.0.0
+ * @date 2015-4-13
  */
-public class UserLoginFragment extends RockyFragment implements View.OnClickListener
+public class UserLoginFragment extends BaseFragment implements View.OnClickListener
 {
 
 	private static final int MENU_GROUP = 100;
 	private static final int MENU_ITEM_REGISTER = 1001;
 
-	private EditText et_user_name;
-	private EditText et_password;
+	private LabelEditText username_let;
+	private LabelEditText password_let;
 	private Button btn_login;
 	private Button forget_password;
 
@@ -56,8 +58,6 @@ public class UserLoginFragment extends RockyFragment implements View.OnClickList
 		super.onCreate(savedInstanceState);
 		setHasOptionsMenu(true);
 		mUserManager = UserManager.getInstance();
-		
-		EventBus.getDefault().register(this);
 	}
 	
 	@Override
@@ -75,18 +75,18 @@ public class UserLoginFragment extends RockyFragment implements View.OnClickList
 	{
 		setActionBarTitle(R.string.user_login);
 
-		et_user_name = (EditText) view.findViewById(R.id.et_user_name);
-		et_password = (EditText) view.findViewById(R.id.et_password);
+		username_let = (LabelEditText) view.findViewById(R.id.username_let);
+		password_let = (LabelEditText) view.findViewById(R.id.password_let);
 		btn_login = (Button) view.findViewById(R.id.btn_login);
 		forget_password = (Button) view.findViewById(R.id.forget_password);
 
-		
 		User localUser = mUserManager.getLocalUser();
 		if (localUser != null)
 		{
-			et_user_name.setText(localUser.getUsername());
-			et_password.setText(localUser.getPassword());
+			username_let.setText(localUser.getUsername());
+			password_let.setText(localUser.getPassword());
 		}
+		username_let.editTextFocus();
 	}
 
 	@Override
@@ -94,13 +94,6 @@ public class UserLoginFragment extends RockyFragment implements View.OnClickList
 	{
 		btn_login.setOnClickListener(this);
 		forget_password.setOnClickListener(this);
-	}
-	
-	@Override
-	public void onDestroy()
-	{
-		EventBus.getDefault().unregister(this);
-		super.onDestroy();
 	}
 	
 	@Override
@@ -137,22 +130,28 @@ public class UserLoginFragment extends RockyFragment implements View.OnClickList
 		}
 	}
 
+	@Override
+	protected boolean busEventEnable()
+	{
+		return true;
+	}
 	
 	/**
 	 * EventBus主线程回调
 	 * 
 	 * @param msg
 	 */
-	public void onEventMainThread(Message msg)
+	@Subscribe
+	public void onLoginCallback(Message msg)
 	{
-		if (msg.what == RockyEvent.USER_LOGIN_OK)
+		if (msg.what == GEvent.USER_LOGIN_OK)
 		{
 			isLogging = false;
 
 			// 隐藏输入法
 			ViewUtils.hideSoftInput(getRockyActivity());
 		}
-		else if (msg.what == RockyEvent.USER_LOGIN_FAIL)
+		else if (msg.what == GEvent.USER_LOGIN_FAIL)
 		{
 			isLogging = false;
 		}
@@ -169,8 +168,8 @@ public class UserLoginFragment extends RockyFragment implements View.OnClickList
 			return;
 		}
 
-		final String username = et_user_name.getText().toString();
-		final String password = et_password.getText().toString();
+		final String username = username_let.getText().toString();
+		final String password = password_let.getText().toString();
 
 		if (TextUtils.isEmpty(username))
 		{
@@ -191,10 +190,8 @@ public class UserLoginFragment extends RockyFragment implements View.OnClickList
 	 */
 	private void onLoginCmd(final String username, final String password)
 	{
-		Message msg = new Message();
-		msg.what = RockyEvent.USER_LOGIN_CMD;
-		EventBus.getDefault().post(msg);
-
+		GBus.post(GEvent.USER_LOGIN_CMD);
+		
 		isLogging = true; // 正在登录
 		mUserManager.login(username, password);
 	}
@@ -218,9 +215,7 @@ public class UserLoginFragment extends RockyFragment implements View.OnClickList
 	 */
 	private void onGetPwd()
 	{
-		Message msg = new Message();
-		msg.what = RockyEvent.USER_RESET_PWD_CMD;
-		EventBus.getDefault().post(msg);
+		GBus.post(GEvent.USER_RESET_PWD_CMD);
 	}
 
 }

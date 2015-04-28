@@ -6,7 +6,7 @@ import android.widget.TextView;
 
 /**
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * 
  */
 public class TextViewMarquee extends TextView

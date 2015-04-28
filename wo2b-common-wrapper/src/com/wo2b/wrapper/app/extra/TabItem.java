@@ -3,7 +3,7 @@ package com.wo2b.wrapper.app.extra;
 /**
  * Tab Item Info.
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * @email ixueyongjia@gmail.com
  */
 public class TabItem

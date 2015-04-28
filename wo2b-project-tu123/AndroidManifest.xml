@@ -2,8 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.wo2b.tu123"
-    android:versionCode="20150119"
-    android:versionName="2.0.0" >
+    android:versionCode="20150426"
+    android:versionName="3.0.2" >
 
     <uses-sdk
         android:minSdkVersion="8"
@@ -44,20 +44,22 @@
     <!--以下为可选权限-->
     <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT"/>
     
+    <!-- 自定义权限 -->
+    <permission android:name="com.wo2b.permission.SYSTEM_SERVICE" />
     
     <application
-        android:name=".Wo2bApplication"
+        android:name=".global.GApplication"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/Rocky.Theme.Main" >
+        android:theme="@style/Rocky.Theme.Main.Toolbar" >
         
         <!-- Splash Activity -->
         <activity
             android:name=".ui.global.SplashActivity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"
-            android:theme="@style/Rocky.Theme.Main.Entry" >
+            android:theme="@style/Rocky.Theme.Main.Toolbar.Entry" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -68,13 +70,24 @@
         <!-- Home Activity -->
         <activity
             android:name=".ui.global.HomeActivity"
-            android:label="@string/app_name"
-            android:theme="@style/Rocky.Theme.Main.Home" />
+            android:label="@string/app_name" />
         <activity android:name=".ui.global.SearchActivity" />
         <activity android:name=".ui.global.WelcomeActivity" />
         
+        <!-- 应用服务 -->
+        <service
+            android:name=".global.GInitService"
+            android:permission="com.wo2b.permission.SYSTEM_SERVICE" >
+            <intent-filter>
+                <action android:name="com.wo2b.app.INIT_SERVICE" />
+            </intent-filter>
+        </service>
+		
         
-        <!-- Image Modules Start -->
+        
+        
+        
+		<!-- Image Modules Start -->
         <!-- android:screenOrientation="sensor" -->
         <activity
             android:name=".ui.image.ImageGridActivity"
@@ -82,7 +95,8 @@
         <activity
             android:name=".ui.image.ImageViewerActivity"
             android:configChanges="keyboardHidden|screenSize|orientation"
-            android:theme="@style/Rocky.Theme.Main.Fullscreen" />
+            android:theme="@style/Rocky.Theme.Main.Toolbar.Fullscreen" />
+        
         
         <activity android:name=".ui.image.WallpaperDisposeActivity" />
         <!-- Image Modules End -->
@@ -98,6 +112,7 @@
         <activity android:name=".ui.settings.SuperPowerActivity" />
         <activity android:name=".ui.settings.TrafficStatisticsActivity" />
         <activity android:name=".ui.settings.StorageManagerActivity" />
+        <activity android:name=".ui.settings.PluginCenterActivity" />
         <activity android:name=".ui.settings.AboutActivity" />
         <activity 
             android:name=".ui.settings.LockViewActivity"
@@ -205,11 +220,10 @@
         <activity android:name="com.wo2b.wrapper.component.user.UserGradeListActivity" />
         <activity android:name="com.wo2b.wrapper.component.common.CommentActivity" />
         <activity android:name="com.wo2b.wrapper.component.common.Wo2bAppListActivity" />
-        <activity android:name="com.wo2b.wrapper.component.common.PluginCenterActivity" />
         <activity
             android:name="com.wo2b.wrapper.component.image.ImageAutoPlayActivity"
             android:configChanges="keyboardHidden|screenSize|orientation"
-            android:theme="@style/Rocky.Theme.Main.Fullscreen" />
+            android:theme="@style/Rocky.Theme.Main.Toolbar.Fullscreen" />
         <activity
             android:name="com.wo2b.wrapper.component.image.CropperActivity"
             android:configChanges="keyboardHidden|screenSize|orientation" />
@@ -220,10 +234,10 @@
 		
 		<!-- 浏览器(支持视频播放) -->
         <activity
-            android:name="com.wo2b.wrapper.app.RockyWebViewActivity"
+            android:name="com.wo2b.wrapper.app.BaseWebViewActivity"
             android:hardwareAccelerated="true" />
 		
-        <service android:name="com.wo2b.wrapper.app.background.DaemonService"></service>
+        <service android:name="com.wo2b.wrapper.app.service.DaemonService"></service>
         
         <!-- 后台下载 -->
         <service

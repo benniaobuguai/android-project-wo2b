@@ -15,20 +15,21 @@ import com.wo2b.sdk.common.util.ViewUtils;
 import com.wo2b.xxx.webapp.Wo2bResHandler;
 import com.wo2b.xxx.webapp.manager.user.UserManager;
 import com.wo2b.wrapper.R;
-import com.wo2b.wrapper.app.fragment.RockyFragment;
+import com.wo2b.wrapper.app.fragment.BaseFragment;
+import com.wo2b.wrapper.view.LabelEditText;
 
 /**
  * 通过邮件找回密码
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * @email ixueyongjia@gmail.com
  * @version 2.0.0
  * @date 2014-10-29
  */
-public class UserGetPwdByEmailFragment extends RockyFragment
+public class UserGetPwdByEmailFragment extends BaseFragment
 {
 
-	private EditText et_register_email;
+	private LabelEditText register_email_let;
 	private TextView tv_result;
 	private Button btn_send_email;
 
@@ -62,9 +63,9 @@ public class UserGetPwdByEmailFragment extends RockyFragment
 	{
 		setActionBarTitle(R.string.user_reset_pwd);
 
-		et_register_email = (EditText) view.findViewById(R.id.et_register_email);
-		tv_result = (TextView) view.findViewById(R.id.tv_result);
-		btn_send_email = (Button) view.findViewById(R.id.btn_send_email);
+		register_email_let = findViewByIdExt(view, R.id.register_email_let);
+		tv_result = findViewByIdExt(view, R.id.tv_result);
+		btn_send_email = findViewByIdExt(view, R.id.btn_send_email);
 
 		btn_send_email.setOnClickListener(new OnClickListener()
 		{
@@ -84,7 +85,7 @@ public class UserGetPwdByEmailFragment extends RockyFragment
 	 */
 	private void onSendEmail(View view)
 	{
-		final String registerEmail = et_register_email.getText().toString();
+		final String registerEmail = register_email_let.getText().toString();
 		if (!RegexUtil.isEmail(registerEmail))
 		{
 			showToast(R.string.hint_input_email_warn);

@@ -35,7 +35,7 @@ import com.wo2b.tu123.ui.image.AbsListViewBaseActivity;
 /**
  * Local album.
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * @email ixueyongjia@gmail.com
  * @version 2.0.0
  * @date 2014-11-12

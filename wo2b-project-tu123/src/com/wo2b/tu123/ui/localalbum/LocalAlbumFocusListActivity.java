@@ -24,7 +24,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.wo2b.sdk.common.util.ViewUtils;
-import com.wo2b.wrapper.app.RockyFragmentActivity;
+import com.wo2b.wrapper.app.BaseFragmentActivity;
 import com.wo2b.tu123.R;
 import com.wo2b.tu123.business.base.BusinessData;
 import com.wo2b.tu123.business.localalbum.LocalImageFactory;
@@ -35,11 +35,11 @@ import com.wo2b.tu123.ui.global.RockyIntent;
 /**
  * 关注列表
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * @email ixueyongjia@gmail.com
  * 
  */
-public class LocalAlbumFocusListActivity extends RockyFragmentActivity
+public class LocalAlbumFocusListActivity extends BaseFragmentActivity
 {
 	
 	private ListView listView;

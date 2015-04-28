@@ -6,7 +6,7 @@
     <opensource.component.pulltorefresh.PullToRefreshListView
         xmlns:ptr="http://schemas.android.com/apk/res-auto"
         android:id="@+id/rocky_listview"
-        style="@style/tu_listview_default"
+        style="@style/global_listview_default"
         android:dividerHeight="0.3dp"
         android:fastScrollEnabled="false"
         android:footerDividersEnabled="true"

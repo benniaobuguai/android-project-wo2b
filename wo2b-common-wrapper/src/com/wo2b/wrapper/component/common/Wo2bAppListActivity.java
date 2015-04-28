@@ -29,7 +29,7 @@ import com.wo2b.sdk.common.util.ViewUtils;
 import com.wo2b.sdk.common.util.io.FileUtils;
 import com.wo2b.sdk.core.cache.RockyCacheFactory;
 import com.wo2b.wrapper.R;
-import com.wo2b.wrapper.app.RockyListFragmentActivity;
+import com.wo2b.wrapper.app.BaseFragmentListActivity;
 import com.wo2b.wrapper.component.image.DisplayImageBuilder;
 import com.wo2b.xxx.webapp.manager.app.AppInfo;
 import com.wo2b.xxx.webapp.manager.app.AppManager;
@@ -37,10 +37,10 @@ import com.wo2b.xxx.webapp.manager.app.AppManager;
 /**
  * Rocky作品集
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * @email ixueyongjia@gmail.com
  */
-public class Wo2bAppListActivity extends RockyListFragmentActivity<AppInfo>
+public class Wo2bAppListActivity extends BaseFragmentListActivity<AppInfo>
 {
 
 	private ImageLoader mImageLoader;

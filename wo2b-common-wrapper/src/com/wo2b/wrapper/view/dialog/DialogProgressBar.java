@@ -15,7 +15,7 @@ import com.wo2b.wrapper.R;
 /**
  * 显示文本的对话框
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * @email ixueyongjia@gmail.com
  * @version 2.0.0
  * @date 2014-11-3
@@ -40,7 +40,7 @@ public class DialogProgressBar extends RockyDialog
 	protected void onCreate(Bundle savedInstanceState)
 	{
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.dialog_progress_loading);
+		setContentView(R.layout.global_dialog_progress_loading);
 
 		if (mAutoWidth)
 		{

@@ -6,7 +6,6 @@ import java.util.List;
 
 import android.content.Context;
 
-import com.wo2b.sdk.assistant.log.Log;
 import com.wo2b.tu123.business.base.DatabaseHelper;
 import com.wo2b.tu123.business.image.AlbumBiz;
 import com.wo2b.tu123.business.image.Module;
@@ -16,7 +15,7 @@ import com.wo2b.tu123.model.image.AlbumInfo;
 /**
  * Data Provider.
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * @email ixueyongjia@gmail.com
  * 
  */
@@ -37,7 +36,6 @@ public final class DataProvider
 	private static final byte[] mLock = new byte[0];
 	private static final byte[] mCategoryLock = new byte[0];
 	private static final byte[] mChapterLock = new byte[0];
-	// private static final byte[] mPluginLock = new byte[0];
 	
 	private static volatile DataProvider mInstance = null;
 	

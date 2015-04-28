@@ -20,10 +20,9 @@ import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.ExpandableListView;
 import android.widget.ExpandableListView.OnChildClickListener;
-import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.wo2b.wrapper.app.fragment.RockyFragment;
+import com.wo2b.sdk.view.RoundedImageView;
 import com.wo2b.tu123.R;
 import com.wo2b.tu123.global.AppCacheFactory.ExtraDir;
 import com.wo2b.tu123.global.provider.DataProvider;
@@ -31,16 +30,17 @@ import com.wo2b.tu123.model.global.XGroup;
 import com.wo2b.tu123.model.image.AlbumInfo;
 import com.wo2b.tu123.ui.global.RockyIntent;
 import com.wo2b.tu123.ui.image.ImageGridActivity;
+import com.wo2b.wrapper.app.fragment.LazyFragment;
 
 /**
  * 百花齐放
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * @email ixueyongjia@gmail.com
  * @version 2.0.0
  * @date 2014-11-12
  */
-public class BlossomHomeFragment extends RockyFragment
+public class BlossomHomeFragment extends LazyFragment
 {
 
 	private PullToRefreshExpandableListView ptrExpandableListView;
@@ -55,6 +55,7 @@ public class BlossomHomeFragment extends RockyFragment
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
 	{
+		super.onCreateView(inflater, container, savedInstanceState);
 		View view = inflater.inflate(R.layout.blossom_main, container, false);
 		initView(view);
 		bindEvents();
@@ -69,15 +70,6 @@ public class BlossomHomeFragment extends RockyFragment
 		expandableListView = ptrExpandableListView.getRefreshableView();
 		mAdapter = new ImageGroupListAdapter(getActivity(), mGroupList, mItemList);
 		expandableListView.setAdapter(mAdapter);
-
-		if (mGroupList != null && !mGroupList.isEmpty())
-		{
-			notifyDataSetChanged(mGroupList, mItemList);
-		}
-		else
-		{
-			getSubHandler().sendEmptyMessage(MSG_LOAD);
-		}
 	}
 
 	@Override
@@ -298,7 +290,7 @@ public class BlossomHomeFragment extends RockyFragment
 			{
 				holder = new ChildHolder();
 				convertView = mLayoutInflater.inflate(R.layout.blossom_album_list_item, parent, false);
-				holder.image = (ImageView) convertView.findViewById(R.id.image);
+				holder.image = (RoundedImageView) convertView.findViewById(R.id.image);
 				holder.name = (TextView) convertView.findViewById(R.id.name);
 				holder.desc = (TextView) convertView.findViewById(R.id.desc);
 				holder.picnum = (TextView) convertView.findViewById(R.id.picnum);
@@ -335,10 +327,23 @@ public class BlossomHomeFragment extends RockyFragment
 		class ChildHolder
 		{
 
-			ImageView image;
+			RoundedImageView image;
 			TextView name;
 			TextView desc;
 			TextView picnum;
+		}
+	}
+
+	@Override
+	public void doUserVisibleHint()
+	{
+		if (mGroupList != null && !mGroupList.isEmpty())
+		{
+			notifyDataSetChanged(mGroupList, mItemList);
+		}
+		else
+		{
+			getSubHandler().sendEmptyMessage(MSG_LOAD);
 		}
 	}
 

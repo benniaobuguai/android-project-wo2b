@@ -6,7 +6,7 @@ import android.view.animation.AnimationUtils;
 
 /**
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * @email ixueyongjia@gmail.com
  */
 public class AnimationUtil

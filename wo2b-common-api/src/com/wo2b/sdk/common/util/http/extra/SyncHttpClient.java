@@ -19,7 +19,7 @@ import com.wo2b.sdk.common.util.http.RequestParams;
 /**
  * Sync http client
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * @email ixueyongjia@gmail.com
  */
 public class SyncHttpClient

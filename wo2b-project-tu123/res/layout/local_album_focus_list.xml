@@ -5,6 +5,6 @@
 
     <ListView
         android:id="@+id/listview"
-        style="@style/tu_listview_default" />
+        style="@style/global_listview_default" />
 
 </LinearLayout>

@@ -3,7 +3,7 @@ package com.wo2b.sdk.assistant.log;
 /**
  * 日志工具类
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * 
  */
 public final class Log

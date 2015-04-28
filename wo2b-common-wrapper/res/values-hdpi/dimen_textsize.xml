@@ -2,20 +2,33 @@
 <resources>
 
     <!-- &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& -->
-    <dimen name="textsize_10">8sp</dimen>
-    <dimen name="textsize_12">10sp</dimen>
-    <dimen name="textsize_13">10sp</dimen>
-    <dimen name="textsize_14">11sp</dimen>
-    <dimen name="textsize_15">11sp</dimen>
-    <dimen name="textsize_16">12sp</dimen>
-    <dimen name="textsize_18">14sp</dimen>
-    <dimen name="textsize_20">16sp</dimen>
+    <!-- ###Index Home -->
+    <!-- <dimen name="font_home_index_shop_name">14sp</dimen>
+    <dimen name="font_home_index_synch_date">12sp</dimen>
+    <dimen name="font_home_debt">14sp</dimen>
+    <dimen name="font_home_index_debt_lable">10sp</dimen>
+    <dimen name="font_home_index_gross_profit">12sp</dimen>
+    <dimen name="font_home_index_sale_profit">12sp</dimen> -->
     
-    <dimen name="textsize_22">18sp</dimen>
-    <dimen name="textsize_24">20sp</dimen>
-    <dimen name="textsize_26">22sp</dimen>
-    <dimen name="textsize_28">24sp</dimen>
+    
+    
+    <dimen name="textsize_36">32sp</dimen>
+    <dimen name="textsize_34">30sp</dimen>
+    <dimen name="textsize_32">28sp</dimen>
     <dimen name="textsize_30">26sp</dimen>
-	<dimen name="textsize_36">32sp</dimen>
-    <dimen name="textsize_48">44sp</dimen>
+    <dimen name="textsize_28">24sp</dimen>
+    <dimen name="textsize_26">22sp</dimen>
+    <dimen name="textsize_24">20sp</dimen>
+    <dimen name="textsize_22">18sp</dimen>
+    <dimen name="textsize_20">16sp</dimen>
+    <dimen name="textsize_18">14sp</dimen>
+    <dimen name="textsize_17">13sp</dimen>
+    <dimen name="textsize_16">12sp</dimen>
+    <dimen name="textsize_15">11sp</dimen>
+    <dimen name="textsize_14">11sp</dimen>
+    <dimen name="textsize_13">10sp</dimen>
+    <dimen name="textsize_12">10sp</dimen>
+    <dimen name="textsize_10">8sp</dimen>
+    
+
 </resources>

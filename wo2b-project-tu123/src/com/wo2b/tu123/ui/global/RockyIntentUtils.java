@@ -10,7 +10,7 @@ import com.wo2b.tu123.ui.image.ImageViewerActivity;
 /**
  * Activity间通讯的辅助类
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * 
  */
 public class RockyIntentUtils

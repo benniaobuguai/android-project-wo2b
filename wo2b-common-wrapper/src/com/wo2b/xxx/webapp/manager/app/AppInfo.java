@@ -6,7 +6,7 @@ import java.util.Date;
 /**
  * 应用的信息
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * 
  */
 public class AppInfo implements Serializable

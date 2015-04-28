@@ -20,7 +20,7 @@ import com.wo2b.xxx.webapp.Wo2bResHandler;
 /**
  * 开放平台接口, 当前仅为测试阶段
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * @email ixueyongjia@gmail.com
  */
 public class OpenApiExt
@@ -35,7 +35,7 @@ public class OpenApiExt
 	/**
 	 * 新增加扩展接口实现原接口
 	 * 
-	 * @author Rocky
+	 * @author 笨鸟不乖
 	 * @email ixueyongjia@gmail.com
 	 * @version 1.0.0
 	 * @date 2014-9-18

@@ -3,7 +3,7 @@ package com.wo2b.tu123.model.storage;
 /**
  * 文件信息
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * @email ixueyongjia@gmail.com
  * 
  */

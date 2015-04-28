@@ -53,6 +53,16 @@
     </style>
 	<!-- the bottomView end -->
 	
-	
+	<!-- 不确定进度的进度条样式 -->
+    <style name="Rocky.Widget.ProgressBar.Circle.Orange" parent="@android:style/Widget.ProgressBar">
+        <item name="android:indeterminateOnly">true</item>
+        <item name="android:indeterminateDrawable">@drawable/api_progress_circle_orange</item>
+        <item name="android:indeterminateBehavior">repeat</item>
+        <item name="android:indeterminateDuration">1500</item>
+        <item name="android:minWidth">30dip</item>
+        <item name="android:maxWidth">30dip</item>
+        <item name="android:minHeight">30dip</item>
+        <item name="android:maxHeight">30dip</item>
+    </style>
 	
 </resources>

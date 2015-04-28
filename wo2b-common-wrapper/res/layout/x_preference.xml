@@ -2,10 +2,9 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/container"
     android:layout_width="match_parent"
-    android:layout_height="44dp"
-    android:background="@drawable/selector_preference_one"
-    android:clickable="true"
-    android:gravity="center_vertical" >
+    android:layout_height="@dimen/dimen_50"
+    android:background="@drawable/selector_preference_grey"
+    android:clickable="true" >
 
     <TextView
         android:id="@+id/title"
@@ -13,13 +12,12 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_centerVertical="true"
-        android:layout_marginLeft="6dp"
-        
+        android:layout_marginLeft="@dimen/dimen_15"
         android:drawablePadding="12dp"
         android:gravity="center_vertical|left"
         android:includeFontPadding="false"
-        android:text="@string/settings"
-        android:textColor="@drawable/textcolor_black_white"
+        android:text="@string/login"
+        android:textColor="#ff4f4f4f"
         android:textSize="14sp" />
 
     <TextView
@@ -30,7 +28,7 @@
         android:layout_toLeftOf="@+id/hint_icons"
         android:layout_toRightOf="@id/title"
         android:contentDescription="@string/null_text"
-        android:gravity="center_vertical|left"
+        android:gravity="center_vertical|right"
         android:includeFontPadding="false"
         android:textColor="@drawable/textcolor_black_white"
         android:textSize="14sp"
@@ -57,29 +55,45 @@
         android:includeFontPadding="false"
         android:textColor="@drawable/textcolor_black_white"
         android:textSize="14sp" />
-    
+
     <TextView
         android:id="@id/badge_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/dimen_10"
         android:layout_toLeftOf="@+id/indicator"
         android:contentDescription="@string/null_text"
         android:gravity="center"
         android:includeFontPadding="false"
         android:textSize="14sp" />
-    
+
     <TextView
         android:id="@id/indicator"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/dimen_15"
         android:contentDescription="@string/null_text"
         android:drawableRight="@drawable/selector_preference_arrow"
         android:gravity="center"
         android:includeFontPadding="false"
         android:textColor="@drawable/textcolor_black_white"
         android:textSize="14sp" />
+
+    <ImageView
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/dimen_15"
+        android:layout_marginRight="@dimen/dimen_15"
+        android:contentDescription="@string/null_text"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:scaleType="fitXY"
+        android:src="@drawable/xp_divider"
+        android:visibility="gone" />
 
 </RelativeLayout>

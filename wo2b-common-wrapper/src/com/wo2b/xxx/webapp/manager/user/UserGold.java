@@ -3,7 +3,7 @@ package com.wo2b.xxx.webapp.manager.user;
 /**
  * 用户登录
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * @email ixueyongjia@gmail.com
  */
 public class UserGold implements java.io.Serializable

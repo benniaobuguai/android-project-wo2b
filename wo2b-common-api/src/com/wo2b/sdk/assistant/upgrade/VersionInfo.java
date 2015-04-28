@@ -5,7 +5,7 @@ import java.io.Serializable;
 /**
  * 版本信息
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * 
  */
 public class VersionInfo implements Serializable

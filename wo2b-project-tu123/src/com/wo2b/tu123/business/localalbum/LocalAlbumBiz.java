@@ -13,7 +13,7 @@ import com.wo2b.tu123.model.localalbum.FocusItemInfo;
 /**
  * Local album biz.
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * @email ixueyongjia@gmail.com
  * 
  */

@@ -10,7 +10,7 @@ import android.widget.Toast;
 /**
  * 网络连接管理器
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * @email ixueyongjia@gmail.com
  */
 public final class NetworkConnectivityManager

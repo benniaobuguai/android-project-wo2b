@@ -15,7 +15,7 @@ import com.wo2b.tu123.business.base.DatabaseHelper;
 
 /**
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * 
  */
 public class RestoreManager implements IRestore

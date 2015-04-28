@@ -7,7 +7,7 @@ import opensource.component.imageloader.cache.disc.naming.Md5FileNameGenerator;
 /**
  * 图片辅助类
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * @email ixueyongjia@gmail.com
  * 
  */

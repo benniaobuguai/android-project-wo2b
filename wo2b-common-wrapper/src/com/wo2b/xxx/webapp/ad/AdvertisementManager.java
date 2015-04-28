@@ -6,7 +6,7 @@ import com.wo2b.xxx.webapp.openapi.impl.AdCenterOpenApi;
 /**
  * 广告管理类
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * @email ixueyongjia@gmail.com
  */
 public class AdvertisementManager

@@ -8,7 +8,7 @@ package com.wo2b.xxx.webapp.manager.user.gold;
 ///**
 // * 金币系统门面, 同时封装本地和服务器积分控制, 控制实际处理逻辑.
 // * 
-// * @author Rocky
+// * @author 笨鸟不乖
 // * @email ixueyongjia@gmail.com
 // */
 //public class UserGoldManager2 implements GoldHandler

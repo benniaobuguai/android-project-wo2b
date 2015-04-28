@@ -2,7 +2,7 @@ package com.wo2b.sdk.common.util.encrypt;
 
 /**
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * 
  */
 public class Base64

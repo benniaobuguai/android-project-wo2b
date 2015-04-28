@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:rocky="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/bg_app"
+    xmlns:wo2b="http://schemas.android.com/apk/res-auto"
+    style="@style/tu_container_common"
     android:orientation="vertical" >
 
     <com.wo2b.sdk.view.pulltorefresh.PullToRefreshScrollView
@@ -18,35 +16,15 @@
             android:paddingBottom="@dimen/common_margin_bottom"
             android:paddingTop="@dimen/common_margin_bottom" >
 
-            <LinearLayout
+            <com.wo2b.wrapper.view.LabelEditText
+                android:id="@+id/register_email_let"
                 android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:background="@drawable/selector_preference_single"
-                android:clickable="false"
-                android:gravity="center_vertical"
-                android:orientation="horizontal" >
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:includeFontPadding="false"
-                    android:maxEms="4"
-                    android:minEms="4"
-                    android:text="@string/register_email"
-                    android:textColor="@drawable/textcolor_black_white"
-                    android:textSize="14sp" />
-
-                <EditText
-                    android:id="@+id/et_register_email"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@null"
-                    android:hint="@string/hint_input_register_email"
-                    android:inputType="textEmailAddress"
-                    android:singleLine="true"
-                    android:textColor="@color/font_normal"
-                    android:textSize="14sp" />
-            </LinearLayout>
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_15"
+                android:layout_marginRight="@dimen/dimen_15"
+                wo2b:wo2b_hint="@string/hint_input_register_email"
+                wo2b:wo2b_label="@string/register_email"
+                wo2b:wo2b_label_ems="4" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -58,7 +36,7 @@
 
                 <Button
                     android:id="@+id/btn_send_email"
-                    style="@style/common_button_green"
+                    style="@style/global_btn_green"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/send_email" />

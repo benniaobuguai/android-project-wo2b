@@ -8,7 +8,7 @@ import com.wo2b.xxx.webapp.openapi.OpenApi;
 /**
  * 金币接口
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * @email ixueyongjia@gmail.com
  */
 public class UserGoldOpenApi extends OpenApi

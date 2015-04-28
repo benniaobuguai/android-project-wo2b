@@ -7,7 +7,7 @@ import com.j256.ormlite.field.DatabaseField;
 /**
  * Local album focus item.
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * @email ixueyongjia@gmail.com
  * 
  */

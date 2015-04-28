@@ -8,7 +8,7 @@ import android.telephony.TelephonyManager;
 /**
  * 设备信息
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * 
  */
 public class DeviceInfoManager

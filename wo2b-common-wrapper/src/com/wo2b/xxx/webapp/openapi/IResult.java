@@ -3,7 +3,7 @@ package com.wo2b.xxx.webapp.openapi;
 /**
  * 请求结果返回
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * @email ixueyongjia@gmail.com
  * @param <Model>
  */

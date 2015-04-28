@@ -6,7 +6,7 @@ package com.wo2b.xxx.webapp.manager.user.gold;
 ///**
 // * 金币发生变化
 // * 
-// * @author Rocky
+// * @author 笨鸟不乖
 // * @email ixueyongjia@gmail.com
 // */
 //public interface OnGoldChangedListener

@@ -130,7 +130,6 @@ android.support.v4.app.Fragment:
     597:597:public final android.support.v4.app.Fragment getTargetFragment()
     604:604:public final int getTargetRequestCode()
     631:631:public final java.lang.CharSequence getText(int)
-    641:641:public final java.lang.String getString(int)
     654:654:public final varargs java.lang.String getString(int,java.lang.Object[])
     668:668:public final android.support.v4.app.FragmentManager getFragmentManager()
     696:696:public final android.support.v4.app.Fragment getParentFragment()
@@ -3522,6 +3521,124 @@ android.support.v7.widget.Toolbar$LayoutParams:
     static final int EXPANDED
     1804:1806:public Toolbar$LayoutParams(int,int,int)
     1809:1810:public Toolbar$LayoutParams(int)
+com.android.volley.Cache
+com.android.volley.Cache$Entry
+com.android.volley.CacheDispatcher
+com.android.volley.CacheDispatcher$1
+com.android.volley.DefaultRetryPolicy
+com.android.volley.ExecutorDelivery
+com.android.volley.ExecutorDelivery$1
+com.android.volley.ExecutorDelivery$ResponseDeliveryRunnable
+com.android.volley.Network
+com.android.volley.NetworkDispatcher
+com.android.volley.NetworkResponse:
+    public final int statusCode
+    public final byte[] data
+    public final java.util.Map headers
+    public final boolean notModified
+    35:41:public NetworkResponse(int,byte[],java.util.Map,boolean)
+    44:45:public NetworkResponse(byte[])
+    48:49:public NetworkResponse(byte[],java.util.Map)
+com.android.volley.Request:
+    private static final java.lang.String DEFAULT_PARAMS_ENCODING
+    private final com.android.volley.VolleyLog$MarkerLog mEventLog
+    private final int mMethod
+    private final com.android.volley.Response$ErrorListener mErrorListener
+    private com.android.volley.RequestQueue mRequestQueue
+    private boolean mShouldCache
+    private boolean mResponseDelivered
+    private long mRequestBirthTime
+    private static final long SLOW_REQUEST_THRESHOLD_MS
+    private com.android.volley.RetryPolicy mRetryPolicy
+    private com.android.volley.Cache$Entry mCacheEntry
+    private java.lang.Object mTag
+    122:123:public Request(java.lang.String,com.android.volley.Response$ErrorListener)
+    131:138:public Request(int,java.lang.String,com.android.volley.Response$ErrorListener)
+    144:144:public int getMethod()
+    154:155:public com.android.volley.Request setTag(java.lang.Object)
+    163:163:public java.lang.Object getTag()
+    177:186:private static int findDefaultTrafficStatsTag(java.lang.String)
+    195:196:public com.android.volley.Request setRetryPolicy(com.android.volley.RetryPolicy)
+    203:208:public void addMarker(java.lang.String)
+    216:243:void finish(java.lang.String)
+    252:253:public com.android.volley.Request setRequestQueue(com.android.volley.RequestQueue)
+    262:263:public final com.android.volley.Request setSequence(int)
+    270:273:public final int getSequence()
+    287:287:public java.lang.String getCacheKey()
+    297:298:public com.android.volley.Request setCacheEntry(com.android.volley.Cache$Entry)
+    305:305:public com.android.volley.Cache$Entry getCacheEntry()
+    312:313:public void cancel()
+    319:319:public boolean isCanceled()
+    329:329:public java.util.Map getHeaders()
+    345:345:protected java.util.Map getPostParams()
+    364:364:protected java.lang.String getPostParamsEncoding()
+    372:372:public java.lang.String getPostBodyContentType()
+    388:392:public byte[] getPostBody()
+    404:404:protected java.util.Map getParams()
+    420:420:protected java.lang.String getParamsEncoding()
+    424:424:public java.lang.String getBodyContentType()
+    433:437:public byte[] getBody()
+    444:454:private byte[] encodeParameters(java.util.Map,java.lang.String)
+    464:465:public final com.android.volley.Request setShouldCache(boolean)
+    472:472:public final boolean shouldCache()
+    499:499:public final int getTimeoutMs()
+    506:506:public com.android.volley.RetryPolicy getRetryPolicy()
+    514:515:public void markDelivered()
+    521:521:public boolean hasHadResponseDelivered()
+    protected abstract com.android.volley.Response parseNetworkResponse(com.android.volley.NetworkResponse)
+    543:543:protected com.android.volley.VolleyError parseNetworkError(com.android.volley.VolleyError)
+    protected abstract void deliverResponse(java.lang.Object)
+    562:565:public void deliverError(com.android.volley.VolleyError)
+    61:61:static synthetic com.android.volley.VolleyLog$MarkerLog access$1(com.android.volley.Request)
+com.android.volley.Request$1
+com.android.volley.Request$Method
+com.android.volley.RequestQueue
+com.android.volley.RequestQueue$1
+com.android.volley.RequestQueue$RequestFilter
+com.android.volley.Response
+com.android.volley.Response$ErrorListener
+com.android.volley.Response$Listener
+com.android.volley.ResponseDelivery
+com.android.volley.RetryPolicy
+com.android.volley.VolleyLog
+com.android.volley.VolleyLog$MarkerLog
+com.android.volley.VolleyLog$MarkerLog$Marker
+com.android.volley.toolbox.AndroidAuthenticator
+com.android.volley.toolbox.Authenticator
+com.android.volley.toolbox.BasicNetwork
+com.android.volley.toolbox.ByteArrayPool
+com.android.volley.toolbox.ByteArrayPool$1
+com.android.volley.toolbox.ClearCacheRequest
+com.android.volley.toolbox.DiskBasedCache
+com.android.volley.toolbox.DiskBasedCache$CacheHeader
+com.android.volley.toolbox.DiskBasedCache$CountingInputStream
+com.android.volley.toolbox.HttpClientStack
+com.android.volley.toolbox.HttpClientStack$HttpPatch
+com.android.volley.toolbox.HttpHeaderParser
+com.android.volley.toolbox.HttpStack
+com.android.volley.toolbox.HurlStack
+com.android.volley.toolbox.HurlStack$UrlRewriter
+com.android.volley.toolbox.ImageLoader
+com.android.volley.toolbox.ImageLoader$1
+com.android.volley.toolbox.ImageLoader$2
+com.android.volley.toolbox.ImageLoader$3
+com.android.volley.toolbox.ImageLoader$4
+com.android.volley.toolbox.ImageLoader$BatchedImageRequest
+com.android.volley.toolbox.ImageLoader$ImageCache
+com.android.volley.toolbox.ImageLoader$ImageContainer
+com.android.volley.toolbox.ImageLoader$ImageListener
+com.android.volley.toolbox.ImageRequest
+com.android.volley.toolbox.JsonArrayRequest
+com.android.volley.toolbox.JsonObjectRequest
+com.android.volley.toolbox.JsonRequest
+com.android.volley.toolbox.NetworkImageView
+com.android.volley.toolbox.NetworkImageView$1
+com.android.volley.toolbox.NetworkImageView$1$1
+com.android.volley.toolbox.NoCache
+com.android.volley.toolbox.PoolingByteArrayOutputStream
+com.android.volley.toolbox.RequestFuture
+com.android.volley.toolbox.StringRequest
+com.android.volley.toolbox.Volley
 com.wo2b.sdk.R:
     9:9:public R()
 com.wo2b.sdk.R$anim:
@@ -3547,13 +3664,6 @@ com.wo2b.sdk.R$string:
 com.wo2b.sdk.R$style
 com.wo2b.sdk.R$styleable:
     325:325:public R$styleable()
-com.wo2b.sdk.RockyApplication:
-    protected abstract void tearDown()
-com.wo2b.sdk.RockyApplication$Config
-com.wo2b.sdk.assistant.RockyUncaughtExceptionHandler
-com.wo2b.sdk.assistant.RockyUncaughtExceptionHandler$1
-com.wo2b.sdk.assistant.event.Event
-com.wo2b.sdk.assistant.event.RockyEvent
 com.wo2b.sdk.assistant.exception.upload.AppInfo
 com.wo2b.sdk.assistant.exception.upload.Attachment
 com.wo2b.sdk.assistant.exception.upload.ContactInfo
@@ -3577,13 +3687,17 @@ com.wo2b.sdk.assistant.log.Log:
     176:180:public static void WTF(java.lang.String,java.lang.String)
     188:192:public static void WTF(java.lang.String,java.lang.Throwable)
 com.wo2b.sdk.assistant.log.LogcatService
-com.wo2b.sdk.assistant.sound.RockySoundPool
+com.wo2b.sdk.assistant.sound.SoundPoolUtils
 com.wo2b.sdk.assistant.upgrade.ConcreteUpgradeHandler
 com.wo2b.sdk.assistant.upgrade.ConcreteUpgradeHandler$OnStartCheckListener
 com.wo2b.sdk.assistant.upgrade.IUpgrade
 com.wo2b.sdk.assistant.upgrade.UpgradeHandler
 com.wo2b.sdk.assistant.upgrade.VersionInfoDefaultParser
 com.wo2b.sdk.assistant.upgrade.VersionInfoParser
+com.wo2b.sdk.bus.GBus:
+    143:147:public static void post(int,com.wo2b.sdk.bus.GBus$EO)
+com.wo2b.sdk.bus.GBus$EO
+com.wo2b.sdk.bus.GEvent
 com.wo2b.sdk.common.download.DownloadManager$Request
 com.wo2b.sdk.common.download.DownloadService:
     public static final java.lang.String TAG
@@ -3627,8 +3741,8 @@ com.wo2b.sdk.common.extra.Releasable
 com.wo2b.sdk.common.online.IDownload
 com.wo2b.sdk.common.util.AnimationUtil
 com.wo2b.sdk.common.util.AppHelper:
-    15:15:public AppHelper()
-    71:71:public static final void uninstall(android.content.Context,java.lang.String)
+    17:17:public AppHelper()
+    81:81:public static final void uninstall(android.content.Context,java.lang.String)
 com.wo2b.sdk.common.util.BitmapUtils
 com.wo2b.sdk.common.util.BitmapUtils$BitmapSize
 com.wo2b.sdk.common.util.CommonUtils:
@@ -3786,21 +3900,22 @@ com.wo2b.sdk.common.util.Utils:
     87:105:public static final boolean hasCamera(android.content.Context)
 com.wo2b.sdk.common.util.ViewUtils:
     30:30:public ViewUtils()
-    71:72:public static void showSoftInputFast(android.os.Handler,android.content.Context,android.widget.TextView)
-    83:84:public static void showSoftInputFastest(android.os.Handler,android.content.Context,android.widget.TextView)
-    97:109:public static void showSoftInputDelay(android.os.Handler,android.content.Context,android.widget.TextView,long)
-    119:121:public static void showSoftInput(android.content.Context,android.view.View)
-    182:203:public static void openSoftInput(android.app.Activity,android.widget.EditText)
-    213:222:public static boolean isTextViewEmpty(android.widget.TextView)
-    252:253:public static int px2dip(android.content.Context,float)
-    265:266:public static int px2sp(android.content.Context,float)
-    278:279:public static int sp2px(android.content.Context,float)
-    291:291:public static int px2dip(float,float)
-    303:303:public static int dip2px(float,float)
-    315:315:public static int px2sp(float,float)
-    327:327:public static int sp2px(float,float)
-    338:342:public static int getFontHeight(float)
-    353:371:public static void setListViewHeightBasedOnChildren(android.widget.ListView)
+    69:69:public static android.view.View findViewById(android.view.View,int)
+    84:85:public static void showSoftInputFast(android.os.Handler,android.content.Context,android.widget.TextView)
+    96:97:public static void showSoftInputFastest(android.os.Handler,android.content.Context,android.widget.TextView)
+    110:122:public static void showSoftInputDelay(android.os.Handler,android.content.Context,android.widget.TextView,long)
+    132:134:public static void showSoftInput(android.content.Context,android.view.View)
+    195:216:public static void openSoftInput(android.app.Activity,android.widget.EditText)
+    226:235:public static boolean isTextViewEmpty(android.widget.TextView)
+    265:266:public static int px2dip(android.content.Context,float)
+    278:279:public static int px2sp(android.content.Context,float)
+    291:292:public static int sp2px(android.content.Context,float)
+    304:304:public static int px2dip(float,float)
+    316:316:public static int dip2px(float,float)
+    328:328:public static int px2sp(float,float)
+    340:340:public static int sp2px(float,float)
+    351:355:public static int getFontHeight(float)
+    366:384:public static void setListViewHeightBasedOnChildren(android.widget.ListView)
 com.wo2b.sdk.common.util.ViewUtils$1
 com.wo2b.sdk.common.util.ZLibUtils
 com.wo2b.sdk.common.util.csv.CSVAnalysis
@@ -4030,20 +4145,22 @@ com.wo2b.sdk.config.SdkPreference:
     public static final java.lang.String PREF_USE_TOTAL_COUNT
     public static final java.lang.String PREF_USE_DAY_COUNT
     public static final java.lang.String PREF_USE_DAY_COUNT_DATE
-    58:58:public android.content.Context getContext()
-    91:91:public float getFloat(java.lang.String,float)
-    120:122:public boolean putFloat(java.lang.String,float)
-    162:162:public long getLongTemp(java.lang.String,long)
-    167:167:public float getFloatTemp(java.lang.String,float)
-    172:172:public boolean getBooleanTemp(java.lang.String,boolean)
-    184:186:public boolean putLongTemp(java.lang.String,long)
-    191:193:public boolean putFloatTemp(java.lang.String,float)
-    198:200:public boolean putBooleanTemp(java.lang.String,boolean)
-    205:207:public boolean putStringTemp(java.lang.String,java.lang.String)
-    212:212:public java.lang.String getStringTemp(java.lang.String,java.lang.String)
-    217:219:public boolean removeTemp(java.lang.String)
-    236:236:public java.lang.String getKeyString(int)
-    345:352:public java.lang.String getDeviceGUID()
+    80:80:public static float getFloat(java.lang.String,float)
+    109:111:public static boolean putFloat(java.lang.String,float)
+    151:151:public static long getLongTemp(java.lang.String,long)
+    156:156:public static float getFloatTemp(java.lang.String,float)
+    161:161:public static boolean getBooleanTemp(java.lang.String,boolean)
+    173:175:public static boolean putLongTemp(java.lang.String,long)
+    180:182:public static boolean putFloatTemp(java.lang.String,float)
+    187:189:public static boolean putBooleanTemp(java.lang.String,boolean)
+    194:196:public static boolean putStringTemp(java.lang.String,java.lang.String)
+    201:201:public static java.lang.String getStringTemp(java.lang.String,java.lang.String)
+    206:208:public static boolean removeTemp(java.lang.String)
+    225:225:public java.lang.String getKeyString(int)
+    334:341:public static java.lang.String getDeviceGUID()
+com.wo2b.sdk.core.BaseApplication:
+    protected abstract void tearDown()
+com.wo2b.sdk.core.BaseApplication$Config
 com.wo2b.sdk.core.ClientInfo:
     public static final int DEVICE_PHONE
     public static final int DEVICE_PAD
@@ -4091,6 +4208,11 @@ com.wo2b.sdk.core.cache.RockyCacheFactory:
     173:173:public java.lang.String getAppDownloadDir()
     183:183:public java.lang.String getAppUserDir()
     193:193:public java.lang.String getAppBackupDir()
+com.wo2b.sdk.core.exception.CrashHandler:
+    private static final java.lang.String TAG
+    200:228:public void collectDeviceInfo()
+    239:298:private java.lang.String saveCrashInfo2File(java.lang.Throwable)
+    318:347:public void reStart()
 com.wo2b.sdk.core.security.RockySecurity:
     private static final java.lang.String USER_IV
     private static final java.lang.String USER_PWD
@@ -4102,7 +4224,6 @@ com.wo2b.sdk.database.RockyDao
 com.wo2b.sdk.myapp.MyAppCenter:
     13:13:public MyAppCenter()
 com.wo2b.sdk.network.NetworkConnectivityManager
-com.wo2b.sdk.network.NetworkSettings
 com.wo2b.sdk.umeng.IMobclickAgent
 com.wo2b.sdk.umeng.MobclickAgentProxy:
     private static final java.lang.String TAG
@@ -4113,7 +4234,6 @@ com.wo2b.sdk.umeng.MobclickAgentProxy:
     52:56:public static void setEnableEventBuffer(boolean)
     60:64:public static void setOnlineConfigureListener(com.umeng.analytics.onlineconfig.UmengOnlineConfigureListener)
     68:72:public static void setOpenGLContext(javax.microedition.khronos.opengles.GL10)
-    76:80:public static void openActivityDurationTrack(boolean)
     100:104:public static void setDebugMode(boolean)
     124:128:public static void onResume(android.content.Context,java.lang.String,java.lang.String)
     132:136:public static void reportError(android.content.Context,java.lang.String)
@@ -4154,38 +4274,80 @@ com.wo2b.sdk.view.BadgeView:
     public static final int POSITION_CENTER
     public static final int POSITION_CENTER_LEFT
     public static final int POSITION_CENTER_RIGHT
+    public static final int POSITION_LEFT
+    public static final int POSITION_RIGHT
     private static final int DEFAULT_MARGIN_DIP
     private static final int DEFAULT_LR_PADDING_DIP
     private static final int DEFAULT_CORNER_RADIUS_DIP
     private static final int DEFAULT_POSITION
     private static final int DEFAULT_TEXT_COLOR
-    68:69:public BadgeView(android.content.Context)
-    73:74:public BadgeView(android.content.Context,android.util.AttributeSet)
-    100:101:public BadgeView(android.content.Context,android.widget.TabWidget,int)
-    105:106:public BadgeView(android.content.Context,android.util.AttributeSet,int)
-    211:212:public void show(boolean)
-    221:222:public void show(android.view.animation.Animation)
-    230:231:public void hide()
-    250:251:public void hide(android.view.animation.Animation)
-    259:260:public void toggle()
-    269:270:public void toggle(boolean)
-    280:281:public void toggle(android.view.animation.Animation,android.view.animation.Animation)
-    315:323:private void toggle(boolean,android.view.animation.Animation,android.view.animation.Animation)
-    333:352:public int increment(int)
-    363:363:public int decrement(int)
-    505:507:public void setBadgeMargin(int,int)
+    70:71:public BadgeView(android.content.Context)
+    75:76:public BadgeView(android.content.Context,android.util.AttributeSet)
+    102:103:public BadgeView(android.content.Context,android.widget.TabWidget,int)
+    107:108:public BadgeView(android.content.Context,android.util.AttributeSet,int)
+    213:214:public void show(boolean)
+    223:224:public void show(android.view.animation.Animation)
+    232:233:public void hide()
+    252:253:public void hide(android.view.animation.Animation)
+    261:262:public void toggle()
+    271:272:public void toggle(boolean)
+    282:283:public void toggle(android.view.animation.Animation,android.view.animation.Animation)
+    317:325:private void toggle(boolean,android.view.animation.Animation,android.view.animation.Animation)
+    335:354:public int increment(int)
+    365:365:public int decrement(int)
+    513:515:public void setBadgeMargin(int,int)
 com.wo2b.sdk.view.HorizontalListView
 com.wo2b.sdk.view.HorizontalListView$1
 com.wo2b.sdk.view.HorizontalListView$2
 com.wo2b.sdk.view.HorizontalListView$3
-com.wo2b.sdk.view.RoundedDrawable
-com.wo2b.sdk.view.RoundedImageView
+com.wo2b.sdk.view.RoundedDrawable:
+    public static final java.lang.String TAG
+    public static final int DEFAULT_BORDER_COLOR
+    354:354:public float getCornerRadius()
+    365:365:public float getBorderWidth()
+    377:377:public int getBorderColor()
+    382:382:public com.wo2b.sdk.view.RoundedDrawable setBorderColor(int)
+    387:387:public android.content.res.ColorStateList getBorderColors()
+    399:399:public boolean isOval()
+    410:410:public android.widget.ImageView$ScaleType getScaleType()
+    429:429:public android.graphics.Bitmap toBitmap()
+com.wo2b.sdk.view.RoundedImageView:
+    public static final java.lang.String TAG
+    public static final float DEFAULT_RADIUS
+    public static final float DEFAULT_BORDER_WIDTH
+    355:355:public boolean isOval()
+    368:368:public boolean isMutateBackground()
 com.wo2b.sdk.view.TextViewMarquee
 com.wo2b.sdk.view.VerticalScrollView
 com.wo2b.sdk.view.VerticalSeekBar
 com.wo2b.sdk.view.VerticalTextView
-com.wo2b.sdk.view.ViewPagerHacky:
-    20:21:public ViewPagerHacky(android.content.Context)
+com.wo2b.sdk.view.viewpager.ViewPagerCompat:
+    private static final java.lang.String TAG
+    private static final boolean DEBUG
+    private static final boolean USE_CACHE
+    private static final int DEFAULT_OFFSCREEN_PAGES
+    private static final int MAX_SETTLE_DURATION
+    private static final int MIN_DISTANCE_FOR_FLING
+    private static final int DEFAULT_GUTTER_SIZE
+    private static final int MIN_FLING_VELOCITY
+    private boolean mIgnoreGutter
+    private static final int INVALID_POINTER
+    private static final int CLOSE_ENOUGH
+    private long mFakeDragBeginTime
+    private static final int DRAW_ORDER_DEFAULT
+    private static final int DRAW_ORDER_FORWARD
+    private static final int DRAW_ORDER_REVERSE
+    public static final int SCROLL_STATE_IDLE
+    public static final int SCROLL_STATE_DRAGGING
+    public static final int SCROLL_STATE_SETTLING
+    626:637:public void setPageTransformer(boolean,android.support.v4.view.ViewPager$PageTransformer)
+    671:673:android.support.v4.view.ViewPager$OnPageChangeListener setInternalPageChangeListener(android.support.v4.view.ViewPager$OnPageChangeListener)
+    795:796:void smoothScrollTo(int,int)
+    2297:2313:public boolean beginFakeDrag()
+    2323:2344:public void endFakeDrag()
+    2354:2392:public void fakeDragBy(float)
+    2404:2404:public boolean isFakeDragging()
+com.wo2b.sdk.view.viewpager.ViewPagerCompat$SimpleOnPageChangeListener
 com.wo2b.sdk.view.pulltorefresh.PullToRefreshHelper:
     13:13:public PullToRefreshHelper()
 com.wo2b.tu123.BuildConfig
@@ -4193,10 +4355,6 @@ com.wo2b.tu123.Manifest
 com.wo2b.tu123.Manifest$permission
 com.wo2b.tu123.R:
     10:10:public R()
-com.wo2b.tu123.Wo2bApplication:
-    private static final java.lang.String TAG
-    47:58:public void test()
-    82:82:protected void tearDown()
 com.wo2b.tu123.business.base.BaseBiz:
     38:38:public int create(java.lang.Object)
     49:49:public int update(java.lang.Object)
@@ -4262,25 +4420,45 @@ com.wo2b.tu123.business.localalbum.LocalImageFactory:
     294:331:public java.util.List getCustomAlbumList_BAK()
     355:355:public java.util.List queryAllImages()
 com.wo2b.tu123.global.AppCacheFactory$ExtraDir
-com.wo2b.tu123.global.AppConfig
 com.wo2b.tu123.global.CommonUtils:
     17:17:public CommonUtils()
     42:42:public static int getScreenWidth(android.content.Context)
     52:52:public static int getScreenHeight(android.content.Context)
     90:104:public static boolean isAppExists(android.content.Context,java.lang.String)
-com.wo2b.tu123.global.config.GoldStore
-com.wo2b.tu123.global.config.SaveImageOptionsGenerate
-com.wo2b.tu123.global.provider.ADSData:
-    12:12:public ADSData()
-com.wo2b.tu123.global.provider.ArticleProvider
+com.wo2b.tu123.global.GAdTempData:
+    13:13:public GAdTempData()
+com.wo2b.tu123.global.GApplication:
+    private static final java.lang.String TAG
+    80:80:protected void tearDown()
+    110:110:public void loadSharedPreferences()
+    131:131:public static android.content.Context getContext()
+    141:141:public static boolean isUpdateCheck()
+    151:152:public static void setUpdateCheck(boolean)
+com.wo2b.tu123.global.GApplicationHandler
+com.wo2b.tu123.global.GInitService:
+    private static final java.lang.String TAG
+    public static final java.lang.String ACTION_INIT_SERVICE
+    100:109:public void showToast(java.lang.String)
+    118:118:public boolean isInitCompleted()
+    129:132:public static void startService(android.content.Context)
+    141:144:public static void stopService(android.content.Context)
+com.wo2b.tu123.global.GInitService$2
+com.wo2b.tu123.global.GIntent
+com.wo2b.tu123.global.Global:
+    public static final int VIEW_REPEAT_CLICK_TIME_SPAN
+    public static final java.lang.String SYSTEM_CACHE_PREFIX
+    public static final java.lang.String GLOBAL_CACHE_PREFIX
+    22:22:public Global()
+    58:58:public static java.lang.String systemCacheKey(java.lang.String)
+    69:69:public static java.lang.String globalCacheKey(java.lang.String)
 com.wo2b.tu123.global.provider.DataProvider:
     private static final java.lang.String TAG
 com.wo2b.tu123.ui.baike.BaikeFragment:
     private static final java.lang.String TAG
     private static final int MSG_LOAD
     private static final int MSG_ADS_LOAD
-    513:513:public void onImageListClick(android.view.View)
-    517:517:public void onImageGridClick(android.view.View)
+    339:339:public void onImageListClick(android.view.View)
+    343:343:public void onImageGridClick(android.view.View)
 com.wo2b.tu123.ui.blossom.BlossomHomeFragment:
     private static final int MSG_LOAD
 com.wo2b.tu123.ui.blossom.BlossomHomeFragment$ImageGroupListAdapter$GroupHolder:
@@ -4303,7 +4481,7 @@ com.wo2b.tu123.ui.global.SplashActivity:
     private static final java.lang.String TAG
     private static final long MINI_WAIT_TIME
     public static final java.lang.String ACTION_UNCHECK_LOCK
-    334:334:protected void setBackground(android.view.Window)
+    279:279:protected void setBackground(android.view.Window)
 com.wo2b.tu123.ui.global.WelcomeActivity:
     public static final java.lang.String MODE_WELCOME
     public static final java.lang.String MODE_PERSONAL_TAILOR
@@ -4315,7 +4493,7 @@ com.wo2b.tu123.ui.image.ImageGridActivity:
     private static final int MSG_LOAD_PHOTOS
     public static final int FLAG_TITLE_DISPLAY
     public static final int FLAG_EDIT_SUPPORT
-    254:255:public com.wo2b.tu123.ui.image.ImageGridActivity setFlags(int)
+    253:254:public com.wo2b.tu123.ui.image.ImageGridActivity setFlags(int)
 com.wo2b.tu123.ui.image.ImageHelper:
     14:14:public ImageHelper()
 com.wo2b.tu123.ui.image.ImageViewerActivity:
@@ -4332,7 +4510,7 @@ com.wo2b.tu123.ui.image.ImageViewerActivity:
     private android.net.Uri mCurrentUri
     private static final java.lang.String STATE_POSITION
     private android.view.Menu mMenu
-    385:398:private void gotoCropActivity(android.net.Uri,android.net.Uri,int,int,int)
+    374:387:private void gotoCropActivity(android.net.Uri,android.net.Uri,int,int,int)
 com.wo2b.tu123.ui.image.WallpaperDisposeActivity:
     private static final java.lang.String TAG
     private static final int MSG_LOAD_BITMAP
@@ -4354,8 +4532,8 @@ com.wo2b.tu123.ui.settings.LockViewActivity:
     private static final int LOCK_MODE_CHANGED
 com.wo2b.tu123.ui.settings.SettingsActivity:
     private static final java.lang.String TAG
+    103:106:private void onSuperPowerClick(android.view.View)
 com.wo2b.tu123.ui.settings.StorageManagerActivity:
-    private static final int MSG_LOAD_FILE
     private static final int MSG_DELETE_FILE
     private static final int MSG_DELETE_FILE_OK
     private static final int MSG_DELETE_FILE_FAIL
@@ -4364,9 +4542,14 @@ com.wo2b.tu123.ui.temp.articles.ArticleReaderActivity:
     public static final java.lang.String ARTICLE_ADDRESS
 com.wo2b.tu123.ui.uc.MyFavoritesActivity:
     private static final int MSG_LOAD_PHOTOS
-    169:173:private void selectSingle(int)
+    170:174:private void selectSingle(int)
 com.wo2b.tu123.ui.uc.PersonalTailorActivity:
     121:122:public void play(int,int)
+com.wo2b.tu123.ui.uc.UserCenterFragment:
+    113:125:public void onLoginCallback(android.os.Message)
+    129:132:private void onLoginSuccess(com.wo2b.xxx.webapp.manager.user.User)
+    136:138:private void onLoginError(int,java.lang.String)
+    142:144:private void onLogout()
 com.wo2b.tu123.ui.view.ImageRecommendView:
     private static final java.lang.String TAG
     private static final java.lang.String MEDULE
@@ -4443,41 +4626,48 @@ com.wo2b.wrapper.R$anim:
 com.wo2b.wrapper.R$attr
 com.wo2b.wrapper.R$bool
 com.wo2b.wrapper.R$color:
-    337:337:public R$color()
-com.wo2b.wrapper.R$dimen
+    346:346:public R$color()
+com.wo2b.wrapper.R$dimen:
+    490:490:public R$dimen()
 com.wo2b.wrapper.R$drawable:
-    610:610:public R$drawable()
+    632:632:public R$drawable()
 com.wo2b.wrapper.R$id:
-    988:988:public R$id()
+    1049:1049:public R$id()
 com.wo2b.wrapper.R$integer
 com.wo2b.wrapper.R$interpolator
 com.wo2b.wrapper.R$layout:
-    1263:1263:public R$layout()
+    1338:1338:public R$layout()
 com.wo2b.wrapper.R$menu:
-    1336:1336:public R$menu()
+    1414:1414:public R$menu()
 com.wo2b.wrapper.R$string:
-    1350:1350:public R$string()
+    1428:1428:public R$string()
 com.wo2b.wrapper.R$style:
-    1584:1584:public R$style()
+    1663:1663:public R$style()
 com.wo2b.wrapper.R$styleable:
-    1874:1874:public R$styleable()
-com.wo2b.wrapper.app.Rocky
-com.wo2b.wrapper.app.RockyAbsFragmentActivity:
+    1961:1961:public R$styleable()
+com.wo2b.wrapper.app.BaseFragmentActivity:
     public static final java.lang.String TAG
-    157:158:public void setActionBarIcon(android.graphics.drawable.Drawable)
-    168:169:public void setActionBarDisplayOptions(int,int)
-    373:377:public void startActivityExt(java.lang.Class)
-    386:388:public void startActivityExtAndFinish(java.lang.Class)
-    531:540:public void showToastOnUiThread(int,java.lang.String)
-com.wo2b.wrapper.app.RockyAbsFragmentActivity$5
-com.wo2b.wrapper.app.RockyFragmentActivity:
-    public static final java.lang.String TAG
+    public static final int MENU_GROUP_FIRST
+    public static final int MENU_ITEM_FIRST
+    public static final int MENU_ITEM_CONFIRM
+    public static final int MENU_ITEM_ADD
+    public static final int MENU_ITEM_EDIT
+    public static final int MENU_ITEM_SEARCH
     public static final int MENU_REQUEST_CODE
-com.wo2b.wrapper.app.RockyListFragmentActivity:
+    245:245:public android.support.v7.widget.Toolbar getToolbar()
+    285:286:public void setActionBarIcon(android.graphics.drawable.Drawable)
+    296:297:public void setActionBarDisplayOptions(int,int)
+    433:433:protected void onPositiveButtonClick()
+    544:548:public void startActivityExt(java.lang.Class)
+    557:559:public void startActivityExtAndFinish(java.lang.Class)
+    564:564:protected boolean isRootActivity()
+    708:717:public void showToastOnUiThread(int,java.lang.String)
+com.wo2b.wrapper.app.BaseFragmentActivity$5
+com.wo2b.wrapper.app.BaseFragmentListActivity:
     public static final int PAGE_COUNT_DEFAULT
-    622:622:protected java.util.LinkedList realGetListData()
-    657:657:public opensource.component.pulltorefresh.PullToRefreshBase$Mode getPullMode()
-com.wo2b.wrapper.app.RockyListFragmentActivity$RockyParams:
+    645:645:protected java.util.LinkedList realGetListData()
+    680:680:public opensource.component.pulltorefresh.PullToRefreshBase$Mode getPullMode()
+com.wo2b.wrapper.app.BaseFragmentListActivity$RockyParams:
     public static final int FIRST_QUERY_COUNT
     private java.lang.String text2
     private java.lang.String text3
@@ -4493,44 +4683,44 @@ com.wo2b.wrapper.app.RockyListFragmentActivity$RockyParams:
     private java.util.Date date3
     private java.util.Date date4
     private java.util.Date date5
-    822:822:public int getOffset()
-    827:828:public void setOffset(int)
-    832:832:public int getCount()
-    837:838:public void setCount(int)
-    852:852:public java.lang.String getText2()
-    857:858:public void setText2(java.lang.String)
-    862:862:public java.lang.String getText3()
-    867:868:public void setText3(java.lang.String)
-    872:872:public java.lang.String getText4()
-    877:878:public void setText4(java.lang.String)
-    882:882:public java.lang.String getText5()
-    887:888:public void setText5(java.lang.String)
-    892:892:public java.lang.Integer getNumber1()
-    897:898:public void setNumber1(java.lang.Integer)
-    902:902:public java.lang.Integer getNumber2()
-    907:908:public void setNumber2(java.lang.Integer)
-    912:912:public java.lang.Integer getNumber3()
-    917:918:public void setNumber3(java.lang.Integer)
-    922:922:public java.lang.Integer getNumber4()
-    927:928:public void setNumber4(java.lang.Integer)
-    932:932:public java.lang.Integer getNumber5()
-    937:938:public void setNumber5(java.lang.Integer)
-    942:942:public java.util.Date getDate1()
-    947:948:public void setDate1(java.util.Date)
-    952:952:public java.util.Date getDate2()
-    957:958:public void setDate2(java.util.Date)
-    962:962:public java.util.Date getDate3()
-    967:968:public void setDate3(java.util.Date)
-    972:972:public java.util.Date getDate4()
-    977:978:public void setDate4(java.util.Date)
-    982:982:public java.util.Date getDate5()
-    987:988:public void setDate5(java.util.Date)
-com.wo2b.wrapper.app.RockyListFragmentActivity$XModel:
-    739:739:public static com.wo2b.wrapper.app.RockyListFragmentActivity$XModel unknown()
-com.wo2b.wrapper.app.RockySearchActivity:
+    845:845:public int getOffset()
+    850:851:public void setOffset(int)
+    855:855:public int getCount()
+    860:861:public void setCount(int)
+    875:875:public java.lang.String getText2()
+    880:881:public void setText2(java.lang.String)
+    885:885:public java.lang.String getText3()
+    890:891:public void setText3(java.lang.String)
+    895:895:public java.lang.String getText4()
+    900:901:public void setText4(java.lang.String)
+    905:905:public java.lang.String getText5()
+    910:911:public void setText5(java.lang.String)
+    915:915:public java.lang.Integer getNumber1()
+    920:921:public void setNumber1(java.lang.Integer)
+    925:925:public java.lang.Integer getNumber2()
+    930:931:public void setNumber2(java.lang.Integer)
+    935:935:public java.lang.Integer getNumber3()
+    940:941:public void setNumber3(java.lang.Integer)
+    945:945:public java.lang.Integer getNumber4()
+    950:951:public void setNumber4(java.lang.Integer)
+    955:955:public java.lang.Integer getNumber5()
+    960:961:public void setNumber5(java.lang.Integer)
+    965:965:public java.util.Date getDate1()
+    970:971:public void setDate1(java.util.Date)
+    975:975:public java.util.Date getDate2()
+    980:981:public void setDate2(java.util.Date)
+    985:985:public java.util.Date getDate3()
+    990:991:public void setDate3(java.util.Date)
+    995:995:public java.util.Date getDate4()
+    1000:1001:public void setDate4(java.util.Date)
+    1005:1005:public java.util.Date getDate5()
+    1010:1011:public void setDate5(java.util.Date)
+com.wo2b.wrapper.app.BaseFragmentListActivity$XModel:
+    762:762:public static com.wo2b.wrapper.app.BaseFragmentListActivity$XModel unknown()
+com.wo2b.wrapper.app.BaseSearchActivity:
     public static final java.lang.String TAG
     155:155:public java.lang.String getKeyword()
-com.wo2b.wrapper.app.RockyWebViewActivity:
+com.wo2b.wrapper.app.BaseWebViewActivity:
     public static final java.lang.String EXTRA_LOAD_URL
     public static final java.lang.String EXTRA_TITLE_BAR_FLAG
     public static final java.lang.String EXTRA_BOTTOM_BAR_FLAG
@@ -4552,57 +4742,64 @@ com.wo2b.wrapper.app.RockyWebViewActivity:
     512:512:public boolean onJsPrompt(android.webkit.WebView,java.lang.String,java.lang.String,java.lang.String,android.webkit.JsPromptResult)
     517:517:public boolean onJsBeforeUnload(android.webkit.WebView,java.lang.String,java.lang.String,android.webkit.JsResult)
     522:522:public boolean onJsTimeout()
-com.wo2b.wrapper.app.RockyWebViewActivity$AndroidBridge:
+com.wo2b.wrapper.app.BaseWebViewActivity$AndroidBridge:
     646:646:public void testCallback()
-com.wo2b.wrapper.app.RockyWebViewActivity$WebViewDownloadSettings:
-    658:658:public RockyWebViewActivity$WebViewDownloadSettings()
-com.wo2b.wrapper.app.background.DaemonService:
-    private static final java.lang.String TAG
-    108:112:private void registerNetworkBroadcastReceiver()
-    119:123:private void unregisterNetworkBroadcastReceiver()
-    128:150:public boolean isNetworkAvailable()
-com.wo2b.wrapper.app.extra.RockyTabFragmentActivity:
+com.wo2b.wrapper.app.BaseWebViewActivity$WebViewDownloadSettings:
+    658:658:public BaseWebViewActivity$WebViewDownloadSettings()
+com.wo2b.wrapper.app.Rocky
+com.wo2b.wrapper.app.extra.BaseFragmentTabActivity:
     public static final java.lang.String TAG
     131:131:protected android.view.View getViewPager()
     288:288:public android.view.View getTabRootView()
     298:299:public void setTabFragmentBackground(int)
     308:308:public int getSelectIndex()
     318:318:public int getTabCount()
-com.wo2b.wrapper.app.extra.RockyTabFragmentActivity$TabFragmentPagerAdapter:
+com.wo2b.wrapper.app.extra.BaseFragmentTabActivity$TabFragmentPagerAdapter:
     221:221:public int getIconResId(int)
     226:230:public void setCount(int)
 com.wo2b.wrapper.app.extra.TabItem:
     20:21:public TabItem(int,int)
-com.wo2b.wrapper.app.fragment.RockyFragment:
+com.wo2b.wrapper.app.fragment.BaseFragment:
     private static final java.lang.String TAG
-    126:127:public void setActionBarTitle(java.lang.CharSequence)
-    136:137:public void setActionBarIcon(int)
-    146:147:public void setActionBarIcon(android.graphics.drawable.Drawable)
-    157:158:public void setActionBarDisplayOptions(int,int)
-    271:271:protected boolean hasActionBar()
-    281:292:public int getApplicationActionBarIcon()
-    416:426:public void showToast(java.lang.String)
-    444:453:public void showToastOnUiThread(int)
-    457:466:public void showToastOnUiThread(java.lang.String)
-    470:479:public void showToastOnUiThread(int,java.lang.String)
-com.wo2b.wrapper.app.fragment.RockyFragment$3
-com.wo2b.wrapper.app.fragment.RockyFragment$4
-com.wo2b.wrapper.app.fragment.RockyFragment$5
-com.wo2b.wrapper.app.fragment.RockyListFragment
-com.wo2b.wrapper.app.fragment.RockyListFragment$1
-com.wo2b.wrapper.app.fragment.RockyListFragment$2
-com.wo2b.wrapper.app.fragment.RockyListFragment$3
-com.wo2b.wrapper.app.fragment.RockyListFragment$4
-com.wo2b.wrapper.app.fragment.RockyListFragment$5
-com.wo2b.wrapper.app.fragment.RockyListFragment$6
-com.wo2b.wrapper.app.fragment.RockyListFragment$7
-com.wo2b.wrapper.app.fragment.RockyListFragment$GetDataTask
-com.wo2b.wrapper.app.fragment.RockyListFragment$RockyListAdapter
-com.wo2b.wrapper.app.fragment.RockyListFragment$RockyParams
-com.wo2b.wrapper.app.fragment.RockyListFragment$XModel
-com.wo2b.wrapper.compoment.anim.SwitchActivity
-com.wo2b.wrapper.compoment.anim.ViewAnimCreator
-com.wo2b.wrapper.compoment.anim.ViewAnimUtils
+    122:123:public void setActionBarTitle(java.lang.CharSequence)
+    132:133:public void setActionBarIcon(int)
+    142:143:public void setActionBarIcon(android.graphics.drawable.Drawable)
+    153:154:public void setActionBarDisplayOptions(int,int)
+    267:267:protected boolean hasActionBar()
+    277:288:public int getApplicationActionBarIcon()
+    359:359:public final android.support.v7.app.ActionBarActivity getSupportActivity()
+    443:458:public void showToast(java.lang.String)
+    481:495:public void showToastOnUiThread(int)
+    499:513:public void showToastOnUiThread(java.lang.String)
+    517:531:public void showToastOnUiThread(int,java.lang.String)
+com.wo2b.wrapper.app.fragment.BaseFragment$3
+com.wo2b.wrapper.app.fragment.BaseFragment$4
+com.wo2b.wrapper.app.fragment.BaseFragment$5
+com.wo2b.wrapper.app.fragment.BaseListFragment
+com.wo2b.wrapper.app.fragment.BaseListFragment$1
+com.wo2b.wrapper.app.fragment.BaseListFragment$2
+com.wo2b.wrapper.app.fragment.BaseListFragment$3
+com.wo2b.wrapper.app.fragment.BaseListFragment$4
+com.wo2b.wrapper.app.fragment.BaseListFragment$5
+com.wo2b.wrapper.app.fragment.BaseListFragment$6
+com.wo2b.wrapper.app.fragment.BaseListFragment$7
+com.wo2b.wrapper.app.fragment.BaseListFragment$GetDataTask
+com.wo2b.wrapper.app.fragment.BaseListFragment$RockyListAdapter
+com.wo2b.wrapper.app.fragment.BaseListFragment$RockyParams
+com.wo2b.wrapper.app.fragment.BaseListFragment$XModel
+com.wo2b.wrapper.app.fragment.LazyFragment:
+    private static final java.lang.String TAG
+com.wo2b.wrapper.app.fragment.LazyListFragment
+com.wo2b.wrapper.app.service.DaemonService:
+    private static final java.lang.String TAG
+    132:154:public boolean isNetworkAvailable()
+com.wo2b.wrapper.component.anim.SwitchActivity
+com.wo2b.wrapper.component.anim.ViewAnimCreator
+com.wo2b.wrapper.component.anim.ViewAnimUtils
+com.wo2b.wrapper.component.cache.CacheConfig
+com.wo2b.wrapper.component.cache.CacheData
+com.wo2b.wrapper.component.cache.CacheImage
+com.wo2b.wrapper.component.cache.CacheImage$1
 com.wo2b.wrapper.component.common.CommentActivity:
     public static final java.lang.String EXTRA_MODULE
     public static final java.lang.String EXTRA_TITLEID
@@ -4649,57 +4846,58 @@ com.wo2b.wrapper.component.image.ImageAutoPlayActivity:
     public static final java.lang.String EXTRA_POSITION
     public static final java.lang.String EXTRA_CACHE_ON_DISC
     public static final java.lang.String EXTRA_IMAGEVIEW_SCALETYPE
-    230:231:public static void startImageAutoPlay(android.app.Activity,java.util.ArrayList,java.lang.String,java.lang.String)
-    261:262:public static void startImageAutoPlay(android.app.Activity,java.util.ArrayList,java.lang.String,java.lang.String,boolean,int)
+    225:226:public static void startImageAutoPlay(android.app.Activity,java.util.ArrayList,java.lang.String,java.lang.String)
+    256:257:public static void startImageAutoPlay(android.app.Activity,java.util.ArrayList,java.lang.String,java.lang.String,boolean,int)
+com.wo2b.wrapper.component.image.ImageAutoPlayImageSwitcherActivity
+com.wo2b.wrapper.component.image.ImageAutoPlayImageSwitcherActivity$1
 com.wo2b.wrapper.component.news.BaiduNewsDetailActivity
 com.wo2b.wrapper.component.news.BaiduNewsListActivity
 com.wo2b.wrapper.component.news.News
 com.wo2b.wrapper.component.news.NewsManager
 com.wo2b.wrapper.component.user.UserActivity:
     public static final java.lang.String CALLBACK_FLAG
-com.wo2b.wrapper.component.user.UserGetPwdFragment
-com.wo2b.wrapper.component.user.UserGetPwdFragment$1
-com.wo2b.wrapper.component.user.UserGetPwdFragment$2
+    94:122:public void onLoginCallback(android.os.Message)
+    129:130:private void onLoginCmd()
+    176:178:private void onLoginFail(int,java.lang.String)
+    185:194:private void onLogoutCmd()
+    239:245:private void resetPwdCmd()
+    252:260:private void onResetPwdOK()
+com.wo2b.wrapper.component.user.UserGetPwdByEmailFragment:
+    29:29:public UserGetPwdByEmailFragment()
 com.wo2b.wrapper.component.user.UserLoginFragment:
     private static final int MENU_GROUP
     private static final int MENU_ITEM_REGISTER
+    147:158:public void onLoginCallback(android.os.Message)
 com.wo2b.wrapper.preference.RockyKeyValues
 com.wo2b.wrapper.preference.RockyKeyValues$Keys
 com.wo2b.wrapper.preference.RockyKeyValues$Values
 com.wo2b.wrapper.preference.XPreferenceManager:
-    60:60:public java.lang.String getSleepMode()
-    68:68:public boolean putSleepMode(java.lang.String)
-    78:78:public boolean isSetWallpaper()
-    88:88:public boolean isAutoPlay()
-    98:98:public boolean cacheLocalable()
-    108:108:public boolean imageDownloadable()
-    118:118:public boolean hasMusicBackground()
-    128:128:public boolean isPasswordLock()
-com.wo2b.wrapper.view.BottomView:
-    private boolean mFocusable
-    private boolean mTouchable
-    private boolean mOutsideTouchable
-    private com.wo2b.sdk.view.Transparency mTransparency
-    private int[] mCommandList
-    77:78:public void setTopIfNecessary()
-    87:87:public android.view.View getContentView()
-com.wo2b.wrapper.view.BottomView$Builder:
-    private int mWidth
-    private int mHeight
-    189:190:public com.wo2b.wrapper.view.BottomView$Builder setTheme(int)
-    201:202:public com.wo2b.wrapper.view.BottomView$Builder setContentView(android.view.View)
-    237:238:public com.wo2b.wrapper.view.BottomView$Builder setTransparency(com.wo2b.sdk.view.Transparency)
+    57:57:public java.lang.String getSleepMode()
+    65:65:public boolean putSleepMode(java.lang.String)
+    75:75:public boolean isSetWallpaper()
+    85:85:public boolean isAutoPlay()
+    95:95:public boolean cacheLocalable()
+    105:105:public boolean imageDownloadable()
+    115:115:public boolean hasMusicBackground()
+    125:125:public boolean isPasswordLock()
 com.wo2b.wrapper.view.EmptyView:
-    37:39:public EmptyView(android.content.Context,android.util.AttributeSet,int)
-    43:45:public EmptyView(android.content.Context,android.util.AttributeSet)
-    165:173:public void onUnknownError()
-    180:188:public void onShow(int,java.lang.String)
+    57:59:public EmptyView(android.content.Context,android.util.AttributeSet,int)
+    63:65:public EmptyView(android.content.Context,android.util.AttributeSet)
+    176:177:public synchronized void onUnknownError()
+    184:196:public synchronized void onShow(int,java.lang.String)
+com.wo2b.wrapper.view.EmptyViewProgressBar
+com.wo2b.wrapper.view.EmptyViewProgressBar$1
+com.wo2b.wrapper.view.EmptyViewProgressBar$OnEmptyViewClickListener
 com.wo2b.wrapper.view.XImageSwitcher:
     private static final int MIN_X
     private static final int MIN_Y
     private static final int SCROLL_PERIOD_DEFAULT
     protected opensource.component.imageloader.core.SaveImageOptions mSaveOptions
     114:115:public void addImagePath(java.lang.String)
+    124:139:public void addImagePath(java.util.List)
+    158:159:public void startAutoScroll(int)
+    168:179:public void startAutoScroll(int,int)
+    200:201:public void changeScrollPeriod(int)
     280:280:public java.lang.String getCurrentImagePath(int)
 com.wo2b.wrapper.view.XListView:
     private static final java.lang.String TAG
@@ -4707,10 +4905,53 @@ com.wo2b.wrapper.view.XPreference:
     protected static final int STATE_NONE
     protected static final int STATE_ARROW
     protected static final int STATE_CHECKBOX
+    protected static final int STATE_CUSTOM
     286:301:public void addHintIcon(int)
     305:310:public void removeHintIcon(int)
     317:319:public void removeAllHintIcons()
-    560:566:public void bindBadgeViewWarningRightText(java.lang.String,int)
+    580:587:public void bindBadgeViewWarningRightText(java.lang.String,int)
+    654:674:public void bindBadgeViewForever(int)
+    685:718:public void bindBadgeViewToTitle(java.lang.String,int,int)
+com.wo2b.wrapper.view.XPreference$4
+com.wo2b.wrapper.view.XPreference$5
+com.wo2b.wrapper.view.XPreferenceGreen
+com.wo2b.wrapper.view.XPreferenceGreen$1
+com.wo2b.wrapper.view.XPreferenceGreen$2
+com.wo2b.sdk.view.viewpager.AutoScrollPagerAdapter:
+    43:45:public void addItem(java.lang.Object)
+com.wo2b.sdk.view.viewpager.AutoScrollPoster:
+    private static final java.lang.String TAG
+com.wo2b.sdk.view.viewpager.AutoScrollViewPager:
+    private static final java.lang.String TAG
+    private static final int SCROLL_PERIOD_DEFAULT
+com.wo2b.sdk.view.viewpager.AutoScrollableView:
+    private static final java.lang.String TAG
+    56:59:public void addItem(java.lang.Object)
+com.wo2b.sdk.view.viewpager.AutoScroller:
+    public static final int DEFAULT_DURATION
+    public static final int FACTOR_LONG
+    public static final int FACTOR_SHORT
+    49:50:public AutoScroller(android.content.Context)
+    81:82:public void setDurationX(int)
+    91:91:public int getDurationX()
+    117:117:public double getFactor()
+com.wo2b.sdk.view.viewpager.DepthPageTransformer
+com.wo2b.sdk.view.viewpager.IPagerAdapter:
+    public abstract int getCount()
+com.wo2b.wrapper.view.dialog.BottomMenu:
+    private boolean mFocusable
+    private boolean mTouchable
+    private boolean mOutsideTouchable
+    private com.wo2b.sdk.view.Transparency mTransparency
+    private int[] mCommandList
+    61:62:public void setTopIfNecessary()
+    71:71:public android.view.View getContentView()
+com.wo2b.wrapper.view.dialog.BottomMenu$Builder:
+    private int mWidth
+    private int mHeight
+    172:173:public com.wo2b.wrapper.view.dialog.BottomMenu$Builder setTheme(int)
+    184:185:public com.wo2b.wrapper.view.dialog.BottomMenu$Builder setContentView(android.view.View)
+    220:221:public com.wo2b.wrapper.view.dialog.BottomMenu$Builder setTransparency(com.wo2b.sdk.view.Transparency)
 com.wo2b.wrapper.view.dialog.DialogGuide:
     57:58:public DialogGuide(android.content.Context,int)
     62:63:public DialogGuide(android.content.Context)
@@ -4738,6 +4979,7 @@ com.wo2b.wrapper.view.dialog.DialogUtils:
     17:20:private DialogUtils()
 com.wo2b.wrapper.view.dialog.RockyDialog:
     25:26:public RockyDialog(android.content.Context,boolean,android.content.DialogInterface$OnCancelListener)
+com.wo2b.xxx.webapp.BO
 com.wo2b.xxx.webapp.ResultSet
 com.wo2b.xxx.webapp.Wo2bAsyncHttpClient:
     14:14:public Wo2bAsyncHttpClient()
@@ -4770,17 +5012,17 @@ com.wo2b.xxx.webapp.manager.user.GradeManager:
     28:31:private GradeManager()
 com.wo2b.xxx.webapp.manager.user.UserManager:
     private static final java.lang.String TAG
-    82:86:public void sendBroadcast(java.lang.String)
-    96:96:public void sendIntegralBroadcast(com.wo2b.xxx.webapp.manager.user.UserGold)
-    106:106:public com.wo2b.xxx.webapp.manager.user.User getUserInfo(long)
-    235:235:public com.wo2b.xxx.webapp.manager.user.User modifyUserInfo(java.lang.String,java.lang.String,java.lang.String)
-    255:255:public java.lang.String getMemoryUserName()
-    265:266:public void setUserInfo(com.wo2b.xxx.webapp.manager.user.User)
-    285:286:public void setLogin(boolean)
-    293:293:public com.wo2b.xxx.webapp.manager.user.gold.UserGoldManager getUserGoldManager()
-    304:320:public com.wo2b.xxx.webapp.manager.user.UserGold getUserGold()
-    428:430:public java.lang.String getLocalUserName()
-    537:540:public void resetPwd(android.content.Context,java.lang.String,java.lang.String,com.wo2b.xxx.webapp.Wo2bResHandler)
+    81:85:public void sendBroadcast(java.lang.String)
+    95:95:public void sendIntegralBroadcast(com.wo2b.xxx.webapp.manager.user.UserGold)
+    105:105:public com.wo2b.xxx.webapp.manager.user.User getUserInfo(long)
+    222:222:public com.wo2b.xxx.webapp.manager.user.User modifyUserInfo(java.lang.String,java.lang.String,java.lang.String)
+    242:242:public java.lang.String getMemoryUserName()
+    252:253:public void setUserInfo(com.wo2b.xxx.webapp.manager.user.User)
+    272:273:public void setLogin(boolean)
+    280:280:public com.wo2b.xxx.webapp.manager.user.gold.UserGoldManager getUserGoldManager()
+    291:307:public com.wo2b.xxx.webapp.manager.user.UserGold getUserGold()
+    415:417:public java.lang.String getLocalUserName()
+    524:527:public void resetPwd(android.content.Context,java.lang.String,java.lang.String,com.wo2b.xxx.webapp.Wo2bResHandler)
 com.wo2b.xxx.webapp.manager.user.gold.UserGoldManager:
     25:26:public void findGold(com.wo2b.xxx.webapp.Wo2bResHandler)
     37:38:public void awardGold(int,java.lang.String,com.wo2b.xxx.webapp.Wo2bResHandler)
@@ -4844,53 +5086,6 @@ opensource.component.cropper.util.PaintUtil:
     private static final float DEFAULT_CORNER_THICKNESS_DP
     private static final float DEFAULT_GUIDELINE_THICKNESS_PX
     24:24:public PaintUtil()
-opensource.component.de.greenrobot.event.EventBus:
-    private static final java.lang.String DEFAULT_METHOD_NAME
-    85:87:public static void clearCaches()
-    95:96:public static void skipMethodVerificationFor(java.lang.Class)
-    100:101:public static void clearSkipMethodNameVerifications()
-    123:127:public void configureLogSubscriberExceptions(boolean)
-    150:151:public void register(java.lang.Object,int)
-    158:159:public void register(java.lang.Object,java.lang.String)
-    166:167:public void registerSticky(java.lang.Object)
-    174:175:public void registerSticky(java.lang.Object,int)
-    182:183:public void registerSticky(java.lang.Object,java.lang.String)
-    198:199:public varargs void register(java.lang.Object,java.lang.Class,java.lang.Class[])
-    206:207:public varargs void register(java.lang.Object,java.lang.String,java.lang.Class,java.lang.Class[])
-    214:215:public varargs void registerSticky(java.lang.Object,java.lang.Class,java.lang.Class[])
-    222:223:public varargs void registerSticky(java.lang.Object,java.lang.String,java.lang.Class,java.lang.Class[])
-    227:242:private synchronized varargs void register(java.lang.Object,java.lang.String,boolean,java.lang.Class,java.lang.Class[])
-    294:294:public synchronized boolean isRegistered(java.lang.Object)
-    302:317:public synchronized varargs void unregister(java.lang.Object,java.lang.Class[])
-    381:394:public void cancelEventDelivery(java.lang.Object)
-    402:407:public void postSticky(java.lang.Object)
-    415:415:public java.lang.Object getStickyEvent(java.lang.Class)
-    426:426:public java.lang.Object removeStickyEvent(java.lang.Class)
-    437:437:public boolean removeStickyEvent(java.lang.Object)
-    453:456:public void removeAllStickyEvents()
-opensource.component.de.greenrobot.event.EventBus$PostCallback
-opensource.component.de.greenrobot.event.SubscriberMethodFinder:
-    private static final int MODIFIERS_IGNORE
-    110:113:static void clearCaches()
-    116:120:static void skipMethodVerificationFor(java.lang.Class)
-    123:124:public static void clearSkipMethodVerifications()
-opensource.component.de.greenrobot.event.util.AsyncExecutor
-opensource.component.de.greenrobot.event.util.AsyncExecutor$1
-opensource.component.de.greenrobot.event.util.AsyncExecutor$Builder
-opensource.component.de.greenrobot.event.util.AsyncExecutor$RunnableEx
-opensource.component.de.greenrobot.event.util.ErrorDialogConfig
-opensource.component.de.greenrobot.event.util.ErrorDialogFragmentFactory
-opensource.component.de.greenrobot.event.util.ErrorDialogFragmentFactory$Honeycomb
-opensource.component.de.greenrobot.event.util.ErrorDialogFragmentFactory$Support
-opensource.component.de.greenrobot.event.util.ErrorDialogFragments
-opensource.component.de.greenrobot.event.util.ErrorDialogFragments$Honeycomb
-opensource.component.de.greenrobot.event.util.ErrorDialogFragments$Support
-opensource.component.de.greenrobot.event.util.ErrorDialogManager
-opensource.component.de.greenrobot.event.util.ErrorDialogManager$HoneycombManagerFragment
-opensource.component.de.greenrobot.event.util.ErrorDialogManager$SupportManagerFragment
-opensource.component.de.greenrobot.event.util.ExceptionToResourceMapping
-opensource.component.de.greenrobot.event.util.HasExecutionScope
-opensource.component.de.greenrobot.event.util.ThrowableFailureEvent
 opensource.component.imageloader.cache.disc.BaseDiscCache:
     private static final java.lang.String ERROR_ARG_NULL
     43:44:public BaseDiscCache(java.io.File)
@@ -5141,106 +5336,6 @@ opensource.component.imageloader.utils.L:
     42:43:public static void disableLogging()
     50:51:public static varargs void i(java.lang.String,java.lang.Object[])
 opensource.component.imageloader.utils.StorageUtils
-opensource.component.menudrawer.BuildLayerFrameLayout:
-    24:28:public BuildLayerFrameLayout(android.content.Context)
-    31:35:public BuildLayerFrameLayout(android.content.Context,android.util.AttributeSet)
-    38:42:public BuildLayerFrameLayout(android.content.Context,android.util.AttributeSet,int)
-    45:46:void setHardwareLayersEnabled(boolean)
-opensource.component.menudrawer.ColorDrawable
-opensource.component.menudrawer.ColorDrawable$ColorState
-opensource.component.menudrawer.DraggableDrawer
-opensource.component.menudrawer.DraggableDrawer$1
-opensource.component.menudrawer.DraggableDrawer$2
-opensource.component.menudrawer.DraggableDrawer$3
-opensource.component.menudrawer.DraggableDrawer$4
-opensource.component.menudrawer.FloatScroller:
-    47:50:public FloatScroller(android.view.animation.Interpolator)
-    67:68:public final void forceFinished(boolean)
-    76:76:public final int getDuration()
-    94:94:public final float getStart()
-    103:103:public final float getFinal()
-    143:145:public void abortAnimation()
-    155:159:public void extendDuration(int)
-    167:167:public int timePassed()
-    171:174:public void setFinal(float)
-opensource.component.menudrawer.MenuDrawer:
-    private static final java.lang.String TAG
-    private static final boolean DEBUG
-    protected static final int ANIMATION_DELAY
-    private static final int DEFAULT_DRAG_BEZEL_DP
-    private static final int DEFAULT_DROP_SHADOW_DP
-    public static final int MENU_DRAG_CONTENT
-    public static final int MENU_DRAG_WINDOW
-    public static final int TOUCH_MODE_NONE
-    public static final int TOUCH_MODE_BEZEL
-    public static final int TOUCH_MODE_FULLSCREEN
-    public static final int STATE_CLOSED
-    public static final int STATE_CLOSING
-    public static final int STATE_DRAGGING
-    public static final int STATE_OPENING
-    public static final int STATE_OPEN
-    static final int INDICATOR_ANIM_DURATION
-    private static final int DEFAULT_ANIMATION_DURATION
-    protected android.graphics.drawable.Drawable mMenuOverlay
-    private final android.graphics.Rect mTempRect
-    protected int mTouchBezelSize
-    protected int mTouchSize
-    protected int mTouchMode
-    protected boolean mHardwareLayersEnabled
-    409:409:public static opensource.component.menudrawer.MenuDrawer attach(android.app.Activity)
-    420:420:public static opensource.component.menudrawer.MenuDrawer attach(android.app.Activity,opensource.component.menudrawer.MenuDrawer$Type)
-    431:431:public static opensource.component.menudrawer.MenuDrawer attach(android.app.Activity,opensource.component.menudrawer.Position)
-    443:443:public static opensource.component.menudrawer.MenuDrawer attach(android.app.Activity,opensource.component.menudrawer.MenuDrawer$Type,opensource.component.menudrawer.Position)
-    457:473:public static opensource.component.menudrawer.MenuDrawer attach(android.app.Activity,opensource.component.menudrawer.MenuDrawer$Type,opensource.component.menudrawer.Position,int)
-    482:501:private static opensource.component.menudrawer.MenuDrawer createMenuDrawer(android.app.Activity,int,opensource.component.menudrawer.Position,opensource.component.menudrawer.MenuDrawer$Type)
-    513:516:private static void attachToContent(android.app.Activity,opensource.component.menudrawer.MenuDrawer)
-    522:529:private static void attachToDecor(android.app.Activity,opensource.component.menudrawer.MenuDrawer)
-    532:536:MenuDrawer(android.app.Activity,int)
-    539:540:public MenuDrawer(android.content.Context)
-    543:544:public MenuDrawer(android.content.Context,android.util.AttributeSet)
-    547:549:public MenuDrawer(android.content.Context,android.util.AttributeSet,int)
-    552:614:protected void initDrawer(android.content.Context,android.util.AttributeSet,int)
-    638:638:protected int dpToPx(int)
-    927:928:public void toggleMenu()
-    public abstract void toggleMenu(boolean)
-    941:942:public void openMenu()
-    public abstract void openMenu(boolean)
-    955:956:public void closeMenu()
-    public abstract void closeMenu(boolean)
-    1089:1096:protected void updateTouchAreaSize()
-    public abstract void peekDrawer()
-    public abstract void peekDrawer(long)
-    public abstract void peekDrawer(long,long)
-    1381:1381:public boolean isDrawerIndicatorEnabled()
-    1503:1527:protected void logDrawerState(int)
-    1583:1585:public final android.os.Parcelable saveState()
-    1101:1101:static synthetic void access$0(opensource.component.menudrawer.MenuDrawer)
-    245:245:static synthetic android.graphics.Rect access$1(opensource.component.menudrawer.MenuDrawer)
-opensource.component.menudrawer.MenuDrawer$1
-opensource.component.menudrawer.MenuDrawer$2
-opensource.component.menudrawer.MenuDrawer$OnInterceptMoveEventListener:
-    public abstract boolean isViewDraggable(android.view.View,int,int,int)
-opensource.component.menudrawer.NoClickThroughFrameLayout
-opensource.component.menudrawer.OverlayDrawer
-opensource.component.menudrawer.OverlayDrawer$1
-opensource.component.menudrawer.PeekInterpolator
-opensource.component.menudrawer.Scroller
-opensource.component.menudrawer.SinusoidalInterpolator
-opensource.component.menudrawer.SlideDrawable:
-    29:29:public float getOffset()
-opensource.component.menudrawer.SlidingDrawer
-opensource.component.menudrawer.StaticDrawer
-opensource.component.menudrawer.ViewHelper:
-    8:9:private ViewHelper()
-opensource.component.menudrawer.compat.ActionBarHelper:
-    private static final java.lang.String TAG
-    static final boolean DEBUG
-opensource.component.menudrawer.compat.ActionBarHelperCompat:
-    private static final java.lang.String TAG
-    16:17:private ActionBarHelperCompat()
-opensource.component.menudrawer.compat.ActionBarHelperNative:
-    private static final java.lang.String TAG
-    18:19:private ActionBarHelperNative()
 opensource.component.nineoldandroids.animation.Animator
 opensource.component.nineoldandroids.animation.Animator$AnimatorListener
 opensource.component.nineoldandroids.animation.AnimatorInflater
@@ -5312,6 +5407,11 @@ opensource.component.nineoldandroids.view.ViewPropertyAnimatorPreHC$AnimatorEven
 opensource.component.nineoldandroids.view.ViewPropertyAnimatorPreHC$NameValuesHolder
 opensource.component.nineoldandroids.view.ViewPropertyAnimatorPreHC$PropertyBundle
 opensource.component.nineoldandroids.view.animation.AnimatorProxy
+opensource.component.otto.AnnotatedHandlerFinder:
+    161:163:private AnnotatedHandlerFinder()
+opensource.component.otto.Bus:
+    public static final java.lang.String DEFAULT_IDENTIFIER
+    143:144:public Bus(opensource.component.otto.ThreadEnforcer)
 opensource.component.photoview.Compat:
     private static final int SIXTY_FPS_INTERVAL
     25:25:public Compat()
@@ -5462,75 +5562,6 @@ opensource.component.pulltorefresh.internal.ViewCompat:
 opensource.component.pulltorefresh.internal.ViewCompat$SDK11
 opensource.component.pulltorefresh.internal.ViewCompat$SDK16:
     58:58:ViewCompat$SDK16()
-opensource.component.slidingmenu.CanvasTransformerBuilder
-opensource.component.slidingmenu.CanvasTransformerBuilder$1
-opensource.component.slidingmenu.CanvasTransformerBuilder$2
-opensource.component.slidingmenu.CanvasTransformerBuilder$3
-opensource.component.slidingmenu.CanvasTransformerBuilder$4
-opensource.component.slidingmenu.CanvasTransformerBuilder$5
-opensource.component.slidingmenu.CanvasTransformerBuilder$6
-opensource.component.slidingmenu.CustomViewAbove:
-    private static final java.lang.String TAG
-    private static final boolean DEBUG
-    private static final boolean USE_CACHE
-    private static final int MAX_SETTLE_DURATION
-    private static final int MIN_DISTANCE_FOR_FLING
-    private static final int INVALID_POINTER
-    151:152:public CustomViewAbove(android.content.Context)
-    155:157:public CustomViewAbove(android.content.Context,android.util.AttributeSet)
-    160:187:void initCustomViewAbove()
-    276:278:opensource.component.slidingmenu.CustomViewAbove$OnPageChangeListener setInternalPageChangeListener(opensource.component.slidingmenu.CustomViewAbove$OnPageChangeListener)
-    282:285:public void addIgnoredView(android.view.View)
-    288:289:public void removeIgnoredView(android.view.View)
-    292:293:public void clearIgnoredViews()
-    350:356:public int getChildWidth(int)
-    361:361:public boolean isSlidingEnabled()
-    375:376:void smoothScrollTo(int,int)
-    896:913:protected boolean canScroll(android.view.View,boolean,int,int,int)
-    87:87:static synthetic opensource.component.slidingmenu.CustomViewBehind access$0(opensource.component.slidingmenu.CustomViewAbove)
-opensource.component.slidingmenu.CustomViewAbove$2
-opensource.component.slidingmenu.CustomViewAbove$SimpleOnPageChangeListener
-opensource.component.slidingmenu.CustomViewBehind:
-    private static final java.lang.String TAG
-    private static final int MARGIN_THRESHOLD
-    36:37:public CustomViewBehind(android.content.Context)
-    40:43:public CustomViewBehind(android.content.Context,android.util.AttributeSet)
-opensource.component.slidingmenu.MenuInterface
-opensource.component.slidingmenu.SlidingMenu:
-    public static final int SLIDING_WINDOW
-    public static final int SLIDING_CONTENT
-    public static final int TOUCHMODE_MARGIN
-    public static final int TOUCHMODE_FULLSCREEN
-    public static final int TOUCHMODE_NONE
-    public static final int LEFT
-    public static final int RIGHT
-    public static final int LEFT_RIGHT
-    171:172:public SlidingMenu(android.content.Context)
-    181:183:public SlidingMenu(android.app.Activity,int)
-    192:193:public SlidingMenu(android.content.Context,android.util.AttributeSet)
-    203:283:public SlidingMenu(android.content.Context,android.util.AttributeSet,int)
-    292:293:public void attachToActivity(android.app.Activity,int)
-    303:338:public void attachToActivity(android.app.Activity,int,boolean)
-    439:439:public boolean isSlidingEnabled()
-    484:485:public void showMenu()
-    493:494:public void showMenu(boolean)
-    501:502:public void showSecondaryMenu()
-    511:512:public void showSecondaryMenu(boolean)
-    534:535:public void toggle()
-    543:548:public void toggle(boolean)
-    556:556:public boolean isMenuShowing()
-    565:565:public boolean isSecondaryMenuShowing()
-    857:858:public void addIgnoredView(android.view.View)
-    866:867:public void removeIgnoredView(android.view.View)
-    873:874:public void clearIgnoredViews()
-    71:71:static synthetic opensource.component.slidingmenu.SlidingMenu$OnOpenListener access$0(opensource.component.slidingmenu.SlidingMenu)
-    75:75:static synthetic opensource.component.slidingmenu.SlidingMenu$OnCloseListener access$1(opensource.component.slidingmenu.SlidingMenu)
-    73:73:static synthetic opensource.component.slidingmenu.SlidingMenu$OnOpenListener access$2(opensource.component.slidingmenu.SlidingMenu)
-opensource.component.slidingmenu.SlidingMenu$1
-opensource.component.slidingmenu.SlidingMenu$OnCloseListener:
-    public abstract void onClose()
-opensource.component.slidingmenu.SlidingMenu$OnOpenListener:
-    public abstract void onOpen()
 opensource.component.viewpagerindicator.CirclePageIndicator:
     private static final int INVALID_POINTER
     69:70:public CirclePageIndicator(android.content.Context)

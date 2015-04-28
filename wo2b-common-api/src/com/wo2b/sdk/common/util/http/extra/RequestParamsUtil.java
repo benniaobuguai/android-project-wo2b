@@ -15,7 +15,7 @@ import com.wo2b.sdk.common.util.http.RequestParams;
 /**
  * 辅助工具, 主要针对{@link RequestParams}部分方法, 在外部无法访问
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * @email ixueyongjia@gmail.com
  */
 public class RequestParamsUtil

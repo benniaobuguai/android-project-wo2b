@@ -26,7 +26,7 @@
 
     <ListView
         android:id="@+id/files_listview"
-        style="@style/tu_listview_default"
+        style="@style/global_listview_default"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:scrollbars="vertical" />

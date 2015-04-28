@@ -3,7 +3,7 @@ package com.wo2b.wrapper.component.news;
 /**
  * 新闻
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * @email ixueyongjia@gmail.com
  * @version 1.0.0
  * @date 2014-11-2

@@ -20,7 +20,7 @@ import com.wo2b.tu123.R;
 /**
  * 底部显示的删除控件.
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * @email ixueyongjia@gmail.com
  * 
  */

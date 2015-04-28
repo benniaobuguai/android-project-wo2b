@@ -22,7 +22,7 @@ import com.alibaba.fastjson.util.IOUtils;
 import com.wo2b.sdk.assistant.log.Log;
 import com.wo2b.sdk.core.RockyConfig;
 import com.wo2b.wrapper.R;
-import com.wo2b.wrapper.app.RockyFragmentActivity;
+import com.wo2b.wrapper.app.BaseFragmentActivity;
 
 /**
  * 图片裁剪, 不应该过分关注业务逻辑, 目标图片输出到哪里, 不需要考虑. 最终, 图片信息会返回给请求方.
@@ -32,10 +32,10 @@ import com.wo2b.wrapper.app.RockyFragmentActivity;
  * <li></li>
  * </ul>
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * @email ixueyongjia@gmail.com
  */
-public class CropperActivity extends RockyFragmentActivity
+public class CropperActivity extends BaseFragmentActivity
 {
 
 	private static final String TAG = "Image.CropperActivity";

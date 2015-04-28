@@ -5,17 +5,17 @@ import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.webkit.WebSettings;
 
-import com.wo2b.wrapper.app.RockyWebViewActivity;
+import com.wo2b.wrapper.app.BaseWebViewActivity;
 
 /**
  * 百度新闻详情
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * @email ixueyongjia@gmail.com
  * @version 1.0.0
  * @date 2014-11-3
  */
-public class BaiduNewsDetailActivity extends RockyWebViewActivity
+public class BaiduNewsDetailActivity extends BaseWebViewActivity
 {
 
 	private String mNewsTitle;

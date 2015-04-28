@@ -6,29 +6,30 @@ import android.text.TextUtils;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
-import android.widget.EditText;
 
 import com.wo2b.sdk.common.util.DeviceInfoManager;
 import com.wo2b.sdk.common.util.RegexUtil;
 import com.wo2b.wrapper.R;
-import com.wo2b.wrapper.app.RockyFragmentActivity;
+import com.wo2b.wrapper.app.BaseFragmentActivity;
+import com.wo2b.wrapper.view.LabelEditText;
 import com.wo2b.xxx.webapp.Wo2bResHandler;
 import com.wo2b.xxx.webapp.manager.user.UserManager;
 
 /**
  * 用户注册
  * 
- * @author Rocky
- * @email ixueyongjia@gmail.com
- * 
+ * @author 笨鸟不乖
+ * @email benniaobuguai@gmail.com
+ * @version 1.0.0
+ * @date 2015-4-13
  */
-public class UserRegisterActivity extends RockyFragmentActivity implements View.OnClickListener
+public class UserRegisterActivity extends BaseFragmentActivity implements View.OnClickListener
 {
 
-	private EditText et_user_name;
-	private EditText et_password;
-	private EditText et_password2;
-	private EditText et_email;
+	private LabelEditText username_let;
+	private LabelEditText password_let;
+	private LabelEditText password2_let;
+	private LabelEditText email_phone_let;
 	private Button btn_ok;
 
 	private UserManager mUserManager;
@@ -40,7 +41,6 @@ public class UserRegisterActivity extends RockyFragmentActivity implements View.
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.wrapper_user_register);
 		initView();
-		bindEvents();
 
 		mUserManager = UserManager.getInstance();
 	}
@@ -49,16 +49,13 @@ public class UserRegisterActivity extends RockyFragmentActivity implements View.
 	{
 		setActionBarTitle(R.string.user_register);
 
-		et_user_name = (EditText) findViewById(R.id.et_user_name);
-		et_password = (EditText) findViewById(R.id.et_password);
-		et_password2 = (EditText) findViewById(R.id.et_password2);
-		et_email = (EditText) findViewById(R.id.et_email);
-		btn_ok = (Button) findViewById(R.id.btn_ok);
-	}
+		username_let = findViewByIdExt(R.id.username_let);
+		password_let = findViewByIdExt(R.id.password_let);
+		password2_let = findViewByIdExt(R.id.password2_let);
+		email_phone_let = findViewByIdExt(R.id.email_phone_let);
+		username_let.editTextFocus();
 
-	@Override
-	protected void bindEvents()
-	{
+		btn_ok = (Button) findViewById(R.id.btn_ok);
 		btn_ok.setOnClickListener(this);
 	}
 
@@ -73,10 +70,10 @@ public class UserRegisterActivity extends RockyFragmentActivity implements View.
 
 	private void onRegisterClick(View view)
 	{
-		final String username = et_user_name.getText().toString();
-		final String password = et_password.getText().toString();
-		final String password2 = et_password2.getText().toString();
-		final String email = et_email.getText().toString();
+		final String username = username_let.getText().toString();
+		final String password = password_let.getText().toString();
+		final String password2 = password2_let.getText().toString();
+		final String email = email_phone_let.getText().toString();
 
 		if (TextUtils.isEmpty(username))
 		{

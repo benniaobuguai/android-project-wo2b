@@ -2,7 +2,7 @@ package com.wo2b.wrapper.preference;
 
 /**
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * 
  */
 public interface RockyKeyValues

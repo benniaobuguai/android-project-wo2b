@@ -12,7 +12,7 @@ import java.util.zip.InflaterInputStream;
 /**
  * ZLib压缩工具
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * @email benniaobuguai@gmail.com
  * @version 1.0.0
  * @date 2014-12-28

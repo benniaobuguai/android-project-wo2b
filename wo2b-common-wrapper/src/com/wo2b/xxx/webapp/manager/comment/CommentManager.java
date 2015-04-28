@@ -8,7 +8,7 @@ import com.wo2b.xxx.webapp.openapi.impl.CommentOpenApi;
 /**
  * 评论开放接口
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * @email ixueyongjia@gmail.com
  */
 public class CommentManager

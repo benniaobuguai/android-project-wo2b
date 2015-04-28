@@ -5,7 +5,7 @@ import com.wo2b.sdk.core.exception.SdkParseException;
 /**
  * 默认的版本信息解析器
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * 
  */
 public class VersionInfoDefaultParser extends VersionInfoParser

@@ -18,7 +18,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.wo2b.sdk.common.util.ViewUtils;
-import com.wo2b.wrapper.app.RockySearchActivity;
+import com.wo2b.wrapper.app.BaseSearchActivity;
 import com.wo2b.tu123.R;
 import com.wo2b.tu123.business.base.DatabaseHelper;
 import com.wo2b.tu123.business.image.AlbumBiz;
@@ -29,11 +29,11 @@ import com.wo2b.tu123.ui.image.ImageGridActivity;
 /**
  * Search Activity.
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * @email ixueyongjia@gmail.com
  * 
  */
-public class SearchActivity extends RockySearchActivity<AlbumInfo> implements OnClickListener
+public class SearchActivity extends BaseSearchActivity<AlbumInfo> implements OnClickListener
 {
 	
 	private static final String TAG = "SearchActivity";

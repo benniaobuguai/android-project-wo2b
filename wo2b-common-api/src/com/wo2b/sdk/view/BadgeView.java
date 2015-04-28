@@ -23,7 +23,7 @@ import android.widget.TextView;
 
 /**
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * @email ixueyongjia@gmail.com
  * @version 1.0.0
  * @date 2014-10-15
@@ -38,6 +38,8 @@ public class BadgeView extends TextView
 	public static final int POSITION_CENTER = 5;
 	public static final int POSITION_CENTER_LEFT = 6;
 	public static final int POSITION_CENTER_RIGHT = 7;
+	public static final int POSITION_LEFT = 8;
+	public static final int POSITION_RIGHT = 9;
 
 	private static final int DEFAULT_MARGIN_DIP = 5;
 	private static final int DEFAULT_LR_PADDING_DIP = 5;
@@ -323,8 +325,8 @@ public class BadgeView extends TextView
 	}
 
 	/**
-	 * Increment the numeric badge label. If the current badge label cannot be converted to
-	 * an integer value, its label will be set to "0".
+	 * Increment the numeric badge label. If the current badge label cannot be converted to an integer value, its label
+	 * will be set to "0".
 	 * 
 	 * @param offset the increment offset.
 	 */
@@ -353,8 +355,8 @@ public class BadgeView extends TextView
 	}
 
 	/**
-	 * Decrement the numeric badge label. If the current badge label cannot be converted to
-	 * an integer value, its label will be set to "0".
+	 * Decrement the numeric badge label. If the current badge label cannot be converted to an integer value, its label
+	 * will be set to "0".
 	 * 
 	 * @param offset the decrement offset.
 	 */
@@ -368,9 +370,7 @@ public class BadgeView extends TextView
 
 		int r = dipToPixels(DEFAULT_CORNER_RADIUS_DIP);
 		float[] outerR = new float[]
-		{
-				r, r, r, r, r, r, r, r
-		};
+		{ r, r, r, r, r, r, r, r };
 
 		RoundRectShape rr = new RoundRectShape(outerR, null, null);
 		ShapeDrawable drawable = new ShapeDrawable(rr);
@@ -409,11 +409,19 @@ public class BadgeView extends TextView
 				break;
 			case POSITION_CENTER_LEFT:
 				lp.gravity = Gravity.CENTER | Gravity.LEFT;
-				lp.setMargins(0, 0, 0, 0);
+				lp.setMargins(badgeMarginH, 0, 0, 0);
 				break;
 			case POSITION_CENTER_RIGHT:
 				lp.gravity = Gravity.CENTER | Gravity.RIGHT;
-				lp.setMargins(0, 0, 0, 0);
+				lp.setMargins(0, 0, badgeMarginH, 0);
+				break;
+			case POSITION_LEFT:
+				lp.gravity = Gravity.CENTER_VERTICAL | Gravity.LEFT;
+				lp.setMargins(badgeMarginH, 0, 0, 0);
+				break;
+			case POSITION_RIGHT:
+				lp.gravity = Gravity.CENTER_VERTICAL | Gravity.RIGHT;
+				lp.setMargins(0, 0, badgeMarginH, 0);
 				break;
 			default:
 				break;

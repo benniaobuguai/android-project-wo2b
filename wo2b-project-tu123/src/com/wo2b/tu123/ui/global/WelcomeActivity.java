@@ -13,17 +13,17 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 
-import com.wo2b.wrapper.app.RockyFragmentActivity;
+import com.wo2b.wrapper.app.BaseFragmentActivity;
 import com.wo2b.tu123.R;
 import com.wo2b.wrapper.component.common.Wo2bAppListActivity;
 
 /**
  * Welcome Activity.
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * 
  */
-public class WelcomeActivity extends RockyFragmentActivity implements OnClickListener
+public class WelcomeActivity extends BaseFragmentActivity implements OnClickListener
 {
 	
 	private static final int[] WELCOME_PAGES = new int[] { 

@@ -5,15 +5,15 @@ import android.media.SoundPool;
 import android.os.Bundle;
 import android.util.SparseIntArray;
 
-import com.wo2b.wrapper.app.RockyFragmentActivity;
+import com.wo2b.wrapper.app.BaseFragmentActivity;
 import com.wo2b.tu123.R;
 
 /**
  * Personal Tailor.
- * @author Rocky
+ * @author 笨鸟不乖
  * 
  */
-public class PersonalTailorActivity extends RockyFragmentActivity
+public class PersonalTailorActivity extends BaseFragmentActivity
 {
 	
 	private SoundPool mSoundPool;

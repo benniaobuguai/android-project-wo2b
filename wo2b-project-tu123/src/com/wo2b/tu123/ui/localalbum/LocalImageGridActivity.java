@@ -37,7 +37,7 @@ import com.wo2b.tu123.ui.image.AbsListViewBaseActivity;
 /**
  * Local image gridview layout.
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * @email ixueyongjia@gmail.com
  * 
  */

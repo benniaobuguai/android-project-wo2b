@@ -13,7 +13,7 @@ import com.wo2b.tu123.model.image.PhotoInfo;
 
 /**
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * 
  */
 public class PhotoBiz extends BaseBiz<PhotoInfo>

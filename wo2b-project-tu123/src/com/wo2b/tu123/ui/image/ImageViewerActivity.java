@@ -22,7 +22,6 @@ import android.os.Bundle;
 import android.os.Parcelable;
 import android.provider.MediaStore;
 import android.support.v4.view.PagerAdapter;
-import android.support.v4.view.ViewPager;
 import android.support.v4.view.WindowCompat;
 import android.text.TextUtils;
 import android.view.KeyEvent;
@@ -30,7 +29,6 @@ import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.Window;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.view.animation.Animation.AnimationListener;
@@ -43,11 +41,8 @@ import android.widget.ProgressBar;
 
 import com.wo2b.sdk.common.util.DateUtils;
 import com.wo2b.sdk.common.util.io.FileUtils;
+import com.wo2b.sdk.view.viewpager.ViewPagerCompat;
 import com.wo2b.sdk.view.pulltorefresh.PullToRefreshViewPager;
-import com.wo2b.wrapper.app.RockyFragmentActivity;
-import com.wo2b.wrapper.component.image.CropperActivity;
-import com.wo2b.wrapper.component.image.ImageAutoPlayActivity;
-import com.wo2b.wrapper.preference.XPreferenceManager;
 import com.wo2b.tu123.R;
 import com.wo2b.tu123.business.base.UserDatabaseHelper;
 import com.wo2b.tu123.business.image.MyFavoritesBiz;
@@ -60,14 +55,18 @@ import com.wo2b.tu123.ui.global.RockyIntent;
 import com.wo2b.tu123.ui.widget.VerticalPopupMenu;
 import com.wo2b.tu123.ui.widget.VerticalPopupMenu.OnPopupMenuClickListener;
 import com.wo2b.tu123.ui.widget.VerticalPopupMenu.PopupMenuItem;
+import com.wo2b.wrapper.app.BaseFragmentActivity;
+import com.wo2b.wrapper.component.image.CropperActivity;
+import com.wo2b.wrapper.component.image.ImageAutoPlayActivity;
+import com.wo2b.wrapper.preference.XPreferenceManager;
 
 /**
  * 大图浏览模式
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * 
  */
-public class ImageViewerActivity extends RockyFragmentActivity
+public class ImageViewerActivity extends BaseFragmentActivity
 {
 
 	private static final String TAG = "ImageViewerActivity";
@@ -105,7 +104,7 @@ public class ImageViewerActivity extends RockyFragmentActivity
 	private Uri mCurrentUri;
 	
 	private PullToRefreshViewPager mPullToRefreshViewPager;
-	private ViewPager mViewPager;
+	private ViewPagerCompat mViewPager;
 	private ImageView mFavoriteView;
 	
 	private static final String STATE_POSITION = "STATE_POSITION";
@@ -116,11 +115,13 @@ public class ImageViewerActivity extends RockyFragmentActivity
 	{
 		//getWindow().setFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON, WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 		supportRequestWindowFeature(WindowCompat.FEATURE_ACTION_BAR_OVERLAY);
-		
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.image_viewer);
+		
+		getSupportActionBar().setBackgroundDrawable(getResources().getDrawable(R.drawable.actionbar_bg_translucent));
+		
 
-		final long useDayCount = XPreferenceManager.getInstance().getUseDayCount();
+		final long useDayCount = XPreferenceManager.getUseDayCount();
 		if (useDayCount <= NOTICE_MAX || useDayCount % NOTICE_CYCLE == 0)
 		{
 			if (!getSupportActionBar().isShowing())
@@ -135,7 +136,7 @@ public class ImageViewerActivity extends RockyFragmentActivity
 		mExtraDirectory = bundle.getString(RockyIntent.EXTRA_DIRECTORY);
 		String title = photoInfoSet.getAlbumname();
 		getSupportActionBar().setTitle(title);
-		getSupportActionBar().setBackgroundDrawable(getResources().getDrawable(R.drawable.actionbar_bg_translucent));
+		//getToolbar().setBackgroundResource(R.drawable.actionbar_bg_translucent);
 		
 		mPhotoList = photoInfoSet.getData();
 		
@@ -183,18 +184,6 @@ public class ImageViewerActivity extends RockyFragmentActivity
 	
 	@Override
 	protected void initView()
-	{
-		
-	}
-	
-	@Override
-	protected void setDefaultValues()
-	{
-		
-	}
-	
-	@Override
-	protected void bindEvents()
 	{
 		
 	}
@@ -637,7 +626,6 @@ public class ImageViewerActivity extends RockyFragmentActivity
 			@Override
 			public void onAnimationEnd(Animation animation)
 			{
-				// TODO Auto-generated method stub
 				mFavoriteView.setVisibility(View.GONE);
 			}
 		});

@@ -5,7 +5,7 @@ import com.wo2b.sdk.common.util.encrypt.AESUtil;
 /**
  * 与www.wo2b.com约定的加密算法
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * @email ixueyongjia@gmail.com
  */
 public class Wo2bSecurity

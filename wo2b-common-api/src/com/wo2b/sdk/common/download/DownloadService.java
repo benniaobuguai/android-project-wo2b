@@ -7,7 +7,6 @@ import java.util.Random;
 
 import org.apache.http.Header;
 import org.apache.http.HttpStatus;
-import org.apache.http.params.CoreProtocolPNames;
 
 import android.app.Notification;
 import android.app.NotificationManager;
@@ -32,8 +31,11 @@ import com.wo2b.sdk.core.cache.RockyCacheFactory;
 /**
  * 后台下载服务
  * 
- * @author Administrator
- * 
+ * @author 笨鸟不乖
+ * @email benniaobuguai@gmail.com
+ * @version 1.0.0
+ * @since 2014-10-10
+ * @Modify 2015-4-28
  */
 public class DownloadService extends Service
 {
@@ -701,7 +703,7 @@ public class DownloadService extends Service
 	/**
 	 * 下载具体的请求类
 	 * 
-	 * @author Rocky
+	 * @author 笨鸟不乖
 	 * @email ixueyongjia@gmail.com
 	 * @version 1.0.0
 	 * @date 2014-10-11
@@ -749,7 +751,7 @@ public class DownloadService extends Service
 	/**
 	 * 下载查询
 	 * 
-	 * @author Rocky
+	 * @author 笨鸟不乖
 	 * @email ixueyongjia@gmail.com
 	 * @version 1.0.0
 	 * @date 2014-10-11

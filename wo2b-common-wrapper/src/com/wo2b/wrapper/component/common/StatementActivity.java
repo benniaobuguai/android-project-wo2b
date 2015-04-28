@@ -3,17 +3,17 @@ package com.wo2b.wrapper.component.common;
 import android.os.Bundle;
 
 import com.wo2b.wrapper.R;
-import com.wo2b.wrapper.app.RockyWebViewActivity;
+import com.wo2b.wrapper.app.BaseWebViewActivity;
 
 /**
  * 声明
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * @email ixueyongjia@gmail.com
  * @version 1.0.0
  * @date 2014-10-15
  */
-public class StatementActivity extends RockyWebViewActivity
+public class StatementActivity extends BaseWebViewActivity
 {
 
 	@Override

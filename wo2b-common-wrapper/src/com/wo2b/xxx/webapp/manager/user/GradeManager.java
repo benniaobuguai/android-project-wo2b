@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * 用户等级
  * 
- * @author Rocky
+ * @author 笨鸟不乖
  * @email ixueyongjia@gmail.com
  * @version 2.0.0
  * @date 2014-11-16

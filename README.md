@@ -1,14 +1,4 @@
 
-## 部分截图
-
-<p>
-   <img src="https://github.com/benniaobuguai/android-project-wo2b/blob/master/wo2b-xxx-apk/screenshot/1.png" width="270" alt="Screenshot"/>
-   <img src="https://github.com/benniaobuguai/android-project-wo2b/blob/master/wo2b-xxx-apk/screenshot/2.png" width="270" alt="Screenshot"/>
-   <img src="https://github.com/benniaobuguai/android-project-wo2b/blob/master/wo2b-xxx-apk/screenshot/3.png" width="270" alt="Screenshot"/>
-</p>
-
-
-
 ## 项目结构
 当前项目只是其中一个例子，wo2b-common-wrapper本身是一套通用的项目框架，能够让你基于此项目快速搭建属于你自己的项目框架。
 >wo2b-project-tu123  
@@ -56,7 +46,13 @@
 
 
 ### 
+## 部分截图
 
+<p>
+   <img src="https://github.com/benniaobuguai/android-project-wo2b/blob/master/wo2b-xxx-apk/screenshot/1.png" width="270" alt="Screenshot"/>
+   <img src="https://github.com/benniaobuguai/android-project-wo2b/blob/master/wo2b-xxx-apk/screenshot/2.png" width="270" alt="Screenshot"/>
+   <img src="https://github.com/benniaobuguai/android-project-wo2b/blob/master/wo2b-xxx-apk/screenshot/3.png" width="270" alt="Screenshot"/>
+</p>
 
 
 

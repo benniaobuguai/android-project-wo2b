@@ -9,7 +9,7 @@
 \-----wo2b-tp-umeng  
 
 
-![framework](https://github.com/benniaobuguai/android-project-wo2b/blob/master/wo2b-xxx-design/Framework.png)
+![framework](https://github.com/benniaobuguai/android-project-wo2b/blob/master/wo2b-xxx-design/framework.png)
 
 
 ***
